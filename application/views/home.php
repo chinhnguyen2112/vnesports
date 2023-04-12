@@ -42,7 +42,7 @@
                     <?php foreach ($blog_tag as $key => $val) {
                   if($key == 0) { ?>
                     <div class="box_content_big">
-                        <a class="big_title">
+                        <a class="big_title" href="/<?= $val['alias'] ?>">
                             <div class="title_big"><?= $val['title'] ?></div>
                         </a>
                         <div class="big_content">
@@ -59,7 +59,7 @@
                     </div>
                     <?php } else { ?>
                     <div class="item_small">
-                        <a class="content_small">
+                        <a class="content_small" href="/<?= $val['alias'] ?>">
                           <?= $val['title'] ?>
                         </a>
                         <div class="sapo"><?= $val['sapo'] ?></div>
