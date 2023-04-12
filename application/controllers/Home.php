@@ -31,7 +31,7 @@ class Home extends CI_Controller
     public function home()
     {
         $data['canonical'] = base_url();
-        $data['blog'] = $this->Madmin->get_limit('', 'blogs', 0, 20);
+        $data['blog'] = $this->Madmin->get_limit('', 'blogs', 0, 15);
         $tags = $this->Madmin->query_sql("SELECT id FROM tags WHERE parent = 25");
         $where = '';
         foreach($tags as $key => $val)   { 
