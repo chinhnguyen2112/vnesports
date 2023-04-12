@@ -88,7 +88,7 @@
 .box_title span {
     line-height: 1.5 !important;
 }
-.box_title span, p {
+.box_title span, .box_title p {
     color: #6c6e70 !important;
     font-weight: unset !important;
 }
@@ -116,7 +116,7 @@
     font-size: 16px;
     font-weight: bold;
 }
-.item_small span,p {
+.item_small span, .box_title p {
     line-height: 1.5 !important;
 }
 .item_small span {
@@ -241,7 +241,7 @@
 }
 
 .title_blog_top {
-    font-size: 15px;
+    font-size: 22px;
     color: #FFFFFF;
     font-weight: 500;
     line-height: initial;
@@ -249,7 +249,7 @@
 
 .blog_top {
     background: #090f20;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
     margin-bottom: 20px;
 }
 
@@ -272,7 +272,7 @@
     
 }
 .this_content_left img {
-    width: 40%;
+    width: 45%;
 }
 
 .title_blog_left {
@@ -298,7 +298,7 @@
 
 .box_content_blog {
     display: -webkit-box;
-    -webkit-line-clamp: 3;
+    -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
