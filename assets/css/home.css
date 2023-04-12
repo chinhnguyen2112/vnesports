@@ -16,6 +16,108 @@
     width: 65%;
 }
 
+
+
+
+.right_home .box_content {
+    padding: 20px;
+    background: #eae0c7;
+    margin-top: -25px;
+    margin-bottom: 25px;
+    border-bottom: 1px solid #eee;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    display: flex;
+}
+.box_content .box_content_title {
+    margin-bottom: 15px;
+}
+.box_content_title p {
+    font-weight: 500;
+    color: #008837;
+    display: flex;
+    align-items: center;
+}
+.box_content_big {
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+    border-bottom: 1px solid #eee;
+}
+.box_content_big .name_chuyenmuc {
+    color: #008837;
+    margin: 5px 0;
+    text-align: left;
+}
+.box_content_big .big_content {
+    margin-top: 10px;
+    display: flex;
+}
+.box_content .sapo {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.big_title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #000;
+}
+.big_title p {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.box_title .sapo {
+    
+    font-size: 13px;
+    color: #6c6e70 !important;
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.box_title span {
+    line-height: 1.5 !important;
+}
+.box_title span, p {
+    color: #6c6e70 !important;
+    font-weight: unset !important;
+}
+
+
+.big_content a {
+    flex-shrink: 0;
+    margin-right: 15px;
+}
+.big_content img {
+    width: 305px;
+    height: 168px;
+}
+.item_small {
+    width: 48%;
+}
+.item_small .content_small {
+    color: #000;
+}
+.item_small:last-child {
+    border-left: 1px solid #eee;
+    padding-left: 10px;
+}
+.item_small a {
+    font-size: 16px;
+    font-weight: bold;
+}
+.item_small span,p {
+    line-height: 1.5 !important;
+}
+.item_small span {
+    font-size: 13px !important;
+    color: #6c6e70 !important;
+    
+}
 .des_post,
 .des_post p,
 .des_post span {
@@ -252,6 +354,31 @@
         padding: 0 20px;
     }
 }
+@media only screen and (max-width: 768px) {
+    .box_content_big {
+        padding-bottom: 0px;
+        margin-bottom: 20px;
+    }
+    .big_content {
+        display: block !important;
+    }
+    .big_content img {
+        width: 100%;
+    }
+    .box_content_small {
+        display: block;
+    }
+    .box_content_small .item_small {
+        width: 100%;
+        padding: 0;
+    }
+    .box_content_small .item_small {
+        padding-bottom: 5px;
+        margin-bottom: 15px;
+        border-bottom: 1px solid #fff;
+    }
+    
+}
 
 @media only screen and (max-width: 540px) {
     .container_widget {
@@ -329,4 +456,35 @@
     .date_post {
         margin-bottom: 5px;
     }
+}
+@media only screen and (max-width: 375px) {
+    .right_home .box_content {
+        margin-top: 10px;
+        padding: 10px;
+        display: block;
+
+    }
+    .box_content_big {
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+    }
+    .box_content .name_chuyenmuc {
+        color: #008837;
+        margin: 5px 0;
+        text-align: left;
+        font-size: 12px;
+    }
+    .box_content_small {
+        margin: 0;
+    }
+    .item_small {
+        width: 100%;
+        border-bottom: 1px solid #eee;
+        margin-top: 10px;
+    }
+    .item_small:last-child {
+        border-left: none;
+        padding-left: 0;
+    }
+    
 }
