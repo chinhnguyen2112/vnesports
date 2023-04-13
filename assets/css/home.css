@@ -118,11 +118,6 @@
     margin-right: 15px;
 }
 
-.big_content img {
-    /* width: 50%; */
-    /* height: 168px; */
-}
-
 .item_small {
     width: 48%;
 }
@@ -145,8 +140,12 @@
 }
 
 .item_small span,
-.box_title p {
-    line-height: 1 !important;
+.item_small p {
+    line-height: 1.5 !important;
+}
+
+.item_small span,
+.item_small p {
     font-size: 13px !important;
     color: #6c6e70 !important;
 }
@@ -559,9 +558,7 @@
     .date_post {
         margin-bottom: 5px;
     }
-}
 
-@media only screen and (max-width: 375px) {
     .this_nanner_all img {
         height: auto;
     }
