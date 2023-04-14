@@ -34,16 +34,16 @@ class Home extends CI_Controller
         $data['blog'] = $this->Madmin->get_limit('', 'blogs', 0, 15);
         $tags = $this->Madmin->query_sql("SELECT id FROM tags WHERE parent = 25");
         $where = '';
-        foreach($tags as $key => $val)   { 
-            if($key == 0) {
-                $where .= ' FIND_IN_SET(' .$val['id'] . ',tag) ';
+        foreach ($tags as $key => $val) {
+            if ($key == 0) {
+                $where .= ' FIND_IN_SET(' . $val['id'] . ',tag) ';
             } else {
-                $where .= ' OR FIND_IN_SET(' .$val['id'] . ',tag) ';
+                $where .= ' OR FIND_IN_SET(' . $val['id'] . ',tag) ';
             }
-        }    
+        }
         $blog_tag = $this->Madmin->query_sql("SELECT * FROM blogs WHERE $where ORDER BY id DESC LIMIT 3");
         $data['blog_tag'] = $blog_tag;
-        $data['meta_title'] = 'VnEspost - Kết nối thông tin kiến thức nền tảng Game Online';
+        $data['meta_title'] = 'VnEsports: Đọc Tin Tức eSports Online Cập Nhật 24h';
         $data['content'] = 'home';
         $data['list_js'] = [
             'slick.min.js',
