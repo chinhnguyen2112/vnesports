@@ -41,7 +41,7 @@ class Home extends CI_Controller
                 $where .= ' OR FIND_IN_SET(' . $val['id'] . ',tag) ';
             }
         }
-        $blog_tag = $this->Madmin->query_sql("SELECT * FROM blogs WHERE $where ORDER BY id DESC LIMIT 3");
+        $blog_tag = $this->Madmin->query_sql("SELECT * FROM blogs WHERE $where ORDER BY id DESC LIMIT 4");
         $data['blog_tag'] = $blog_tag;
         $data['meta_title'] = 'VnEsports: Đọc Tin Tức eSports Online Cập Nhật 24h';
         $data['content'] = 'home';
