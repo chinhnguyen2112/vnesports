@@ -49,7 +49,8 @@
                                     <p>Xu hướng: Nền tảng Web Apps Giao Lưu Cùng Idol Yêu Thích</p>
                                 </div>
                             </div>
-                            <?php } else  if ($key == 1) { ?> <div class="box_content_big">
+                            <?php } else  if ($key == 1) { ?> 
+                            <div class="box_content_big">
                                 <a class="big_title" href="/<?= $val['alias'] ?>">
                                     <div class="title_big"><?= $val['title'] ?></div>
                                 </a>
@@ -67,7 +68,7 @@
                                         <div class="sapo"><?= $val['sapo'] ?></div>
                                     </div>
                                 </div>
-                        </div>
+                            </div>
                         <?php } else { ?>
                         <div class="item_small">
                             <a class="content_small" href="/<?= $val['alias'] ?>">
