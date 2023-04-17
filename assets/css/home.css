@@ -49,6 +49,14 @@
 .box_content .box_content_title {
     margin-bottom: 15px;
 }
+.title_link {
+    display: flex;
+}
+.title_link img {
+    width: 20px;
+    height: 16px;
+    margin-right: 8px;
+}
 
 .box_content_title p {
     font-weight: 500;
@@ -67,11 +75,15 @@
     color: #008837;
     margin: 5px 0;
     text-align: left;
+    display: ;
 }
 
 .box_content_big .big_content {
-    margin-top: 10px;
+    margin-top: 15px;
     display: flex;
+}
+.big_content img {
+    border-radius: 5px;
 }
 
 .box_content .sapo {
@@ -106,7 +118,7 @@
     font-size: 13px;
     color: #6c6e70 !important;
     display: -webkit-box;
-    -webkit-line-clamp: 8;
+    -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
@@ -117,8 +129,10 @@
 
 .box_title span,
 .box_title p {
+    text-align: left !important;
     color: #6c6e70 !important;
     font-weight: unset !important;
+    text-align: left !important;
 }
 
 
@@ -159,6 +173,7 @@
 .item_small p {
     font-size: 13px !important;
     color: #6c6e70 !important;
+    text-align: left !important;
 }
 
 
@@ -267,11 +282,12 @@
     background-color: #5dc2a7;
     border-radius: 15px;
     text-align: center;
-    margin: 0 30px 20px;
+    margin: 10px auto;
     color: #fff;
     cursor: pointer;
     font-weight: 700;
-    padding: 10px 0 10px 10px;
+    padding: 10px 15px 10px 15px;
+    width: max-content;
 }
 
 .linl_all_detail {
@@ -516,7 +532,7 @@
     }
 
     .homeContent {
-        padding: 0;
+        padding: 0 0 10px 0;
     }
 
     .right_home {
