@@ -12,7 +12,7 @@
 
 .content {
     padding-top: 20px;
-    background: #f8f8f8;
+    background: #fff;
 }
 
 .box_text_banner {
@@ -348,11 +348,12 @@ p.name_game {
 }
 
 .date_post {
-    margin-bottom: 10px;
-    color: #ffc600;
-    font-weight: 500;
-    font-size: 13px;
-    line-height: 15px;
+    /* margin-bottom: 10px; */
+    /* color: #ffc600; */
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 28px;
+    color: #777777;
 }
 
 .des_blog {
@@ -446,18 +447,19 @@ p.name_game {
 
 .title_blog_top {
     font-size: 20px;
-    color: #FFFFFF;
+    color: #000;
     font-weight: 500;
     line-height: 25px;
-    margin-bottom: 10px;
+    margin-bottom: 0px;
 }
 
 .linl_all_detail {
+    background: #F4F4F4;
     color: unset;
 }
 
 .blog_top {
-    background: #090f20;
+    background: #F4F4F4;
     /* padding: 15px 20px; */
     display: flex;
     flex-direction: column;
@@ -470,7 +472,7 @@ p.name_game {
     font-size: 13px;
     color: #6c6e70 !important;
     display: -webkit-box;
-    -webkit-line-clamp: 2;
+    -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
     margin-bottom: 15px;
@@ -479,7 +481,7 @@ p.name_game {
     font-weight: normal !important;
     line-height: 22px !important;
     font-size: 14px !important;
-    color: #eee !important;
+    color: #777777 !important;
 }
 
 .fl_date {
@@ -497,6 +499,7 @@ p.name_game {
     /* float: left; */
     border-bottom: 1px solid #ccc;
     margin-bottom: 15px;
+    padding-bottom: 17px;
 }
 
 .this_train_right:last-child {
