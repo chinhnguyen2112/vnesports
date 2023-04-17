@@ -3,7 +3,7 @@
         <div class="breadcrumb">
             <a href="/">Trang chủ</a>
             <span> / </span>
-            <a class="link_breadcrumb" href="#"><?= $breadcrumb ?></a>
+            <a class="link_breadcrumb" href="/<?= $cate_alias ?>"><?= $breadcrumb ?></a>
             <span> / </span>
             <span class="this_breadcrumb"><?= $blog['title'] ?></span>
         </div>

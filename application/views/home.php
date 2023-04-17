@@ -44,10 +44,10 @@
                             <?php foreach ($blog_tag as $key => $val) {
                                 if ($key == 0) { ?>
                             <div class="box_content_title">
-                                <a class="title_link" href="/<?= $val['alias'] ?>">
+                                <div class="title_link">
                                     <img src="/images/icon-title.png" />
-                                    <p><?= $val['title'] ?></p>
-                                </a>
+                                    <p>Xu hướng: Nền tảng Web Apps Giao Lưu Cùng Idol Yêu Thích</p>
+                                </div>
                             </div>
                             <?php } else  if ($key == 1) { ?> <div class="box_content_big">
                                 <a class="big_title" href="/<?= $val['alias'] ?>">

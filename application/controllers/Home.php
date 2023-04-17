@@ -105,11 +105,13 @@ class Home extends CI_Controller
             $data['blog_same'] = $this->Madmin->query_sql("SELECT * FROM blogs WHERE chuyenmuc = {$blog['chuyenmuc']} AND id != {$blog['id']}  ORDER BY updated_at DESC LIMIT 3");
             $cate = $this->Madmin->query_sql_row("SELECT *  FROM category  WHERE id = {$blog['chuyenmuc']} ");
             $title_page = $cate['name'];
+            $cate_alias = $cate['alias'];
             if ($cate['parent'] > 0) {
                 $cate_parent = $this->Madmin->query_sql_row("SELECT *  FROM category  WHERE id = {$cate['parent']} ");
                 $title_page = $cate_parent['name'] . ' - ' . $cate['name'];
             }
             $data['breadcrumb'] = $title_page;
+            $data['cate_alias'] = $cate_alias;
             $data['blog'] = $blog;
             $data['content'] = 'detail_blog';
             $data['list_js'] = [
