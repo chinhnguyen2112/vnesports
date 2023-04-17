@@ -482,6 +482,7 @@ p.name_game {
     line-height: 22px !important;
     font-size: 14px !important;
     color: #777777 !important;
+    margin: 0 !important;
 }
 
 .fl_date {
