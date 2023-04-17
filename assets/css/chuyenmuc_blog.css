@@ -80,6 +80,8 @@
     margin-top: 40px;
     margin-bottom: 20px;
     padding-bottom: 30px;
+    padding-right: 15px;
+    padding-left: 15px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -87,18 +89,22 @@
 
 .train_content .top_blog {
     width: 100%;
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    gap: 30px;
+    /* justify-content: space-between; */
+    grid-template-columns: auto 300px;
 }
 
 .top_blog .top_left {
-    width: 70%;
+    /* width: 70%; */
     display: flex;
     flex-direction: column;
+    gap: 18px;
 }
 .list_blog_top {
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
+    gap: 18px;
 }
 
 /* css list game  */
@@ -107,7 +113,6 @@
 }
 
 .top_bxh {
-    margin-top: 20px;
     display: flex;
     justify-content: flex-start;
     border: 1px solid #ccc;
@@ -231,7 +236,7 @@ p.name_game {
 
 /* ------  */
 .top_blog .top_right {
-    width: calc(30% - 20px) !important;
+    /* width: calc(30% - 20px) !important; */
 }
 
 .left_about {
@@ -354,10 +359,11 @@ p.name_game {
     /* text-align: left; */
     display: -webkit-box;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
+    -webkit-line-clamp: 3;
     overflow: hidden;
     /* margin-bottom: 10px; */
-    font-size: 14px !important;
+    font-size: 13px !important;
+    line-height: 21px !important;
 }
 
 .list_blog .des_blog {
@@ -428,21 +434,22 @@ p.name_game {
 }
 
 .left_blog {
-    width: 60%;
+    width: 71.6%;
     float: left;
 }
 
 .blog_top img {
     width: 100%;
     margin-bottom: 10px;
+    height: 317px;
 }
 
 .title_blog_top {
-    font-size: 27px;
+    font-size: 20px;
     color: #FFFFFF;
     font-weight: 500;
-    line-height: initial;
-    margin-bottom: 20px;
+    line-height: 25px;
+    margin-bottom: 10px;
 }
 
 .linl_all_detail {
@@ -459,6 +466,21 @@ p.name_game {
 .blog_top p {
     padding: 0 15px;
 }
+.sapo_blog_top {
+    font-size: 13px;
+    color: #6c6e70 !important;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+.sapo_blog_top p, .sapo_blog_top span {
+    font-weight: normal !important;
+    line-height: 22px !important;
+    font-size: 14px !important;
+    color: #eee !important;
+}
 
 .fl_date {
     display: flex;
@@ -467,7 +489,7 @@ p.name_game {
 }
 
 .right_blog {
-    width: calc(40% - 20px);
+    width: 35.4%;
     /* float: right; */
 }
 
@@ -494,16 +516,19 @@ p.name_game {
 }
 
 .this_train_right .title_blog {
-    font-size: 18px;
+    font-size: 14px;
     margin-bottom: 10px;
+    line-height: 22px;
 }
 
 .des_blog p,
 .des_blog span {
     text-align: left !important;
-    font-size: 15px !important;
-    line-height: 24px !important;
+    font-size: 13px !important;
+    font-weight: normal !important;
+    line-height: 21px !important;
     margin-top: 0 !important;
+    color: #777777 !important;
 }
 
 .list_blog {
@@ -759,8 +784,22 @@ a.H4abc {
 }
 
 @media only screen and (max-width: 768px) {
+    .train_content {
+        margin-top: 20px;
+        padding: 0;
+    }
+    .train_content .top_blog {
+        display: flex;
+        justify-content: space-between;
+        gap: unset;
+    }
     .top_left {
+        width: 70%;
+        display: flex;
         flex-direction: column;
+    }
+    .top_right {
+        width: calc(30% - 20px) !important;
     }
 
     .top_left .left_blog,
@@ -770,6 +809,10 @@ a.H4abc {
     .list_blog_top {
         display: flex;
         flex-direction: column;
+        gap: unset;
+    }
+    .sapo_blog_top {
+        margin-bottom: 10px;
     }
 
     .right_blog {
@@ -811,6 +854,9 @@ a.H4abc {
 }
 
 @media only screen and (max-width: 540px) {
+    .content_about {
+        padding: 15px;
+    }
     .banner_all {
         flex-direction: column;
     }
@@ -838,6 +884,10 @@ a.H4abc {
     .train_content {
         flex-direction: column;
         margin-top: 20px;
+        padding: 0;
+    }
+    .top_blog {
+        flex-direction: column;
     }
 
     .title_list {
@@ -928,13 +978,16 @@ a.H4abc {
         height: auto;
     }
 
-    .top_blog {
+    .train_content .top_blog {
+        display: flex;
         flex-direction: column;
     }
 
     .top_blog .top_left,
     .top_blog .top_right {
         width: 100% !important;
+        display: flex;
+        flex-direction: column;
     }
 
     .title_blog_top {

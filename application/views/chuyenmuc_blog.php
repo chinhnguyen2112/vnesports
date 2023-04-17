@@ -38,10 +38,11 @@
                                     if ($key == 0) { ?>
                                         <a class="linl_all_detail" title="<?= $val['title'] ?>" href="/<?= $val['alias'] ?>/">
                                             <img src="/<?= $val['image'] ?>" alt="<?= $val['title'] ?>">
-                                            <div class="fl_date">
-                                                <p class="date_post"><?= date('d-m-Y', $val['created_at']) ?></p>
-                                            </div>
                                             <p class="title_blog_top"><?= $val['title'] ?></p>
+                                            <div class="sapo_blog_top"><?= $val['sapo'] ?></div>
+                                            <div class="fl_date">
+                                                <!-- <p class="date_post"><?= date('d-m-Y', $val['created_at']) ?></p> -->
+                                            </div>
                                         </a>
                                 <?php }
                                 } ?>
