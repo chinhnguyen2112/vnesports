@@ -103,6 +103,7 @@ class Home extends CI_Controller
                 redirect('/' . $alias . '/');
             }
             $data['blog_same'] = $this->Madmin->query_sql("SELECT * FROM blogs WHERE chuyenmuc = {$blog['chuyenmuc']} AND id != {$blog['id']}  ORDER BY updated_at DESC LIMIT 3");
+            $data['blog_new'] = $this->Madmin->query_sql("SELECT * FROM blogs WHERE  id != {$blog['id']}  ORDER BY id DESC LIMIT 5");
             $cate = $this->Madmin->query_sql_row("SELECT *  FROM category  WHERE id = {$blog['chuyenmuc']} ");
             $title_page = $cate['name'];
             $cate_alias = $cate['alias'];
@@ -130,25 +131,20 @@ class Home extends CI_Controller
             }
             $id_parent = $tags['id'];
             $list_tag = $this->Madmin->query_sql("SELECT *  FROM tags  WHERE parent = $id_parent ");
-            $where = '  FIND_IN_SET(tag,' . $id_parent . ') ';
+            $where = '  FIND_IN_SET(' . $id_parent . ',tag) ';
             foreach ($list_tag as $key => $val) {
-                if ($key == 0) {
-                    $where .= ' OR ( FIND_IN_SET(tag,' . $val['id'] . ') ';
-                } else if ($key == count($list_tag) - 1) {
-                    $where .= ' OR FIND_IN_SET(tag,' . $val['id'] . ')  )';
-                } else {
-                    $where .= ' OR FIND_IN_SET(tag,' . $val['id'] . ') ';
-                }
+                $where .= ' OR FIND_IN_SET(' . $val['id'] . ',tag) ';
             }
+            // echo $where;
             $page = $this->uri->segment(3);
             if ($page < 1 || $page == '') {
                 $page = 1;
             }
             $limit = 18;
             $start = $limit * ($page - 1);
-            $count = $this->Madmin->query_sql("SELECT blogs.*,category.name as name_cate,category.alias as alias_cate,category.image as img_cate FROM blogs INNER JOIN category ON category.id = blogs.chuyenmuc WHERE   $where ");
+            $count = $this->Madmin->query_sql("SELECT blogs.*,category.name as name_cate,category.alias as alias_cate,category.image as img_cate FROM blogs INNER JOIN category ON category.id = blogs.chuyenmuc WHERE $where ");
             pagination('/' . $tags['alias'], count($count), $limit);
-            $data['blog'] = $this->Madmin->query_sql("SELECT * FROM blogs  WHERE   $where ORDER BY id DESC LIMIT $start,$limit");
+            $data['blog'] = $this->Madmin->query_sql("SELECT * FROM blogs  WHERE $where ORDER BY id DESC LIMIT $start,$limit");
             $data['title_page'] = $tags['name'];
             $data['meta_title'] = $tags['meta_title'];
             $data['meta_des'] = $tags['meta_des'];
@@ -212,6 +208,7 @@ class Home extends CI_Controller
         $blog = $this->Madmin->query_sql_row("SELECT blogs.*,category.name as name_cate,category.alias as alias_cate,category.image as img_cate FROM blogs INNER JOIN category ON category.id = blogs.chuyenmuc WHERE blogs.alias = '$alias' ");
         if ($blog != null) {
             $data['blog_same'] = $this->Madmin->query_sql("SELECT * FROM blogs WHERE chuyenmuc = {$blog['chuyenmuc']} AND id != {$blog['id']}  ORDER BY updated_at DESC LIMIT 3");
+            $data['blog_new'] = $this->Madmin->query_sql("SELECT * FROM blogs WHERE  id != {$blog['id']}  ORDER BY id DESC LIMIT 6");
             $cate = $this->Madmin->query_sql_row("SELECT *  FROM category  WHERE id = {$blog['chuyenmuc']} ");
             $title_page = $cate['name'];
             if ($cate['parent'] > 0) {

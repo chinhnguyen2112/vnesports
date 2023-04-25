@@ -25,6 +25,13 @@
                     <div class="content_blog" id="content_blog">
                         <?= $content_tag ?>
                     </div>
+                    <div class="hide_show_content">
+                        <p class="hide_show_text">Xem thêm</p>
+                        <div class="list_img_arrow">
+                            <img src="/images/arrow.svg" alt="xem thêm">
+                            <img src="/images/arrow.svg" alt="xem thêm">
+                        </div>
+                    </div>
                 </div>
             </div>
         <?php } ?>

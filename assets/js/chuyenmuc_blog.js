@@ -85,8 +85,8 @@ $(".load_more").click(function () {
 	var show_more = $(this);
 	var form_data = new FormData();
 	form_data.append("page", page);
-	var id_chuyenmuc = $('#chuyen_muc').val();
-	form_data.append("id_chuyenmuc", id_chuyenmuc)
+	var id_chuyenmuc = $("#chuyen_muc").val();
+	form_data.append("id_chuyenmuc", id_chuyenmuc);
 	$.ajax({
 		url: "/load_more_cate",
 		type: "POST",
@@ -133,4 +133,17 @@ $(".name_top").hover(function () {
 			$(".box_hot").show();
 		}
 	}
+});
+var check_click = 0;
+$(".hide_show_content").click(function () {
+	if (check_click % 2 == 0) {
+		$(".hide_show_text").text("Ẩn bớt");
+		$(".list_img_arrow").css("rotate", "270deg");
+		$(".content_blog").css("height", "unset");
+	} else {
+		$(".hide_show_text").text("Xem thêm");
+		$(".list_img_arrow").css("rotate", "90deg");
+		$(".content_blog").css("height", "150px");
+	}
+	++check_click;
 });

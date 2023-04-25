@@ -334,6 +334,10 @@ li.page_item.page-item-59.page_item_has_children {
     margin-left: 20px;
 }
 
+.cate_ft a {
+    text-align: left !important;
+}
+
 @media only screen and (max-width: 1024px) {
     .footer-cta {
         margin-top: 45px;

@@ -56,41 +56,44 @@
 
 .right_detail {
     margin-bottom: 20px;
-    width: 100%;
-    /* position: sticky; */
-    top: 75px;
-    display: inline-block;
-    float: left;
+    width: max-content;
     background: #FBFDFF;
     box-shadow: 0px 0px 20px rgba(19, 23, 54, 0.1);
     border-radius: 8px;
 }
+
 .sidebar_content {
     width: 340px;
 }
+
 .sidebar_box {
     margin-bottom: 20px;
 }
+
 .box_heading {
     text-align: center;
     padding: 4px 10px;
-    background: linear-gradient(90deg,#cc0355 0,#ea003a 0,#5447a4 100%);
-    border-radius: 5px 5px 0 0;
+    background: #ea9912;
+    /* border-radius: 5px 5px 0 0; */
 }
+
 .box_heading img {
     width: 22px;
 }
+
 .box_heading a {
-    font-family: Montserrat,sans-serif;
+    font-family: Montserrat, sans-serif;
     color: #fff;
     text-transform: uppercase;
     font-size: 16px;
     font-weight: 600;
     display: block;
 }
+
 .box_content {
     background-color: #f3f3f3;
 }
+
 .item_content_sidebar {
     font-size: 14px;
     font-weight: 600;
@@ -98,56 +101,66 @@
     padding-bottom: 8px;
     padding-left: 15px;
     position: relative;
-    font-family: Montserrat,sans-serif;
+    font-family: Montserrat, sans-serif;
     border: 1px solid #dedede;
 }
+
 .icon_li {
     margin-right: 10px;
     width: 13px;
 }
+
 .item_content_sidebar a {
     text-transform: uppercase;
     color: #cb0030;
-    font-size: 12px;
+    font-size: 14px;
 }
+
 .item_hot_news {
     display: block;
     padding: 13px 18px;
     position: relative;
     border: 1px solid #dedede;
 }
+
 .item_hot_news a {
-    font-family: Montserrat,sans-serif;
+    font-family: Montserrat, sans-serif;
     font-weight: 500;
     line-height: 22px;
     color: #333;
 }
+
 .item_hot_news a:hover {
     color: #ea9912;
 }
+
 .btn_see_more {
     background: #533c94;
     border: none;
     width: 100%;
     text-align: center;
     cursor: pointer;
-    transition: all .4s ease 0s,transform .4s ease 0s,visibility .4s linear 0s!important;
+    transition: all .4s ease 0s, transform .4s ease 0s, visibility .4s linear 0s !important;
 }
+
 .btn_see_more:hover {
     background: #eeebeb;
 }
+
 .btn_see_more:hover a {
     color: #333;
 }
+
 .btn_see_more a {
     color: #fff;
     text-transform: uppercase;
     font-size: 13px;
-    font-family: Montserrat,sans-serif;
+    font-family: Montserrat, sans-serif;
     padding: 5px;
     font-weight: 500;
     display: block;
 }
+
 .title_detail {
     line-height: 1.2;
     font-weight: 700;
@@ -189,6 +202,7 @@ h3,
     font-weight: 600 !important;
     margin-bottom: 12px !important;
     color: #0040ff !important;
+    text-align: left !important;
 }
 
 h4,
@@ -199,6 +213,7 @@ h4,
     font-weight: 500 !important;
     margin-bottom: 12px !important;
     color: #0040ff !important;
+    text-align: left !important;
 }
 
 h5,
@@ -209,6 +224,7 @@ h5 p,
 h6 p {
     font-weight: 500 !important;
     color: #0040ff !important;
+    text-align: left !important;
 }
 
 .widget_home {
@@ -263,6 +279,7 @@ h6 p {
     margin-bottom: 0;
     margin-top: 4px;
 }
+
 .main_content_blog {
     display: flex;
     padding-top: 30px;
@@ -349,22 +366,39 @@ figcaption {
 }
 
 .mucluc_blog {
-    padding: 24px;
+    padding: 10px 15px;
 }
 
 .title_mucluc {
     margin-bottom: 0;
-    font-weight: 500;
-    font-size: 18px;
+    font-weight: 700;
+    font-size: 16px;
     line-height: 24px;
-    text-transform: uppercase;
+    text-transform: capitalize;
     color: #131736;
-    margin-bottom: 8px;
+    /* margin-bottom: 8px; */
+    text-align: center;
 }
 
 .list_mucluc li {
     padding: 3px 0;
     border-bottom: 1px solid #DBDBDB;
+}
+
+.show_ml {
+    font-size: 13px;
+    text-transform: unset !important;
+    cursor: pointer;
+    color: #ea9912;
+}
+
+.show_ml:hover {
+    text-decoration: underline;
+}
+
+.list_mucluc {
+    display: none;
+    margin-bottom: 8px;
 }
 
 .list_mucluc a {
@@ -402,12 +436,12 @@ figcaption {
     font-size: 25px !important;
     line-height: 32px !important;
     color: #0040ff !important;
-    /* margin-top: 0; */
+    text-align: left !important;
     margin: 12px 0 !important;
 }
 
 .blog_same {
-    margin-top: 30px;
+    /* margin-top: 30px; */
     padding-bottom: 40px;
 }
 
@@ -415,11 +449,13 @@ figcaption {
     display: flex;
     width: 100%;
 }
+
 .img_item {
     float: left;
     width: 250px;
     min-height: 150px;
 }
+
 .name_cate {
     position: relative;
     margin-right: 8px;
@@ -427,8 +463,9 @@ figcaption {
     text-transform: uppercase;
     font-size: 12px;
     font-weight: 600;
-    font-family: Montserrat,sans-serif;
+    font-family: Montserrat, sans-serif;
 }
+
 .name_cate::after {
     content: "";
     background-color: #868686;
@@ -446,7 +483,7 @@ figcaption {
     line-height: 12px;
     margin-left: 5px;
     color: #868686;
-    font-family: Montserrat,sans-serif;
+    font-family: Montserrat, sans-serif;
 }
 
 .title_handbook {
@@ -454,8 +491,9 @@ figcaption {
     color: #454545;
     font-size: 20px;
     line-height: 24px;
-    font-family: Montserrat,sans-serif;
+    font-family: Montserrat, sans-serif;
 }
+
 .title_handbook:hover {
     color: #ffc600;
 }
@@ -470,6 +508,7 @@ figcaption {
     margin-bottom: 10px;
     margin-top: 0px !important;
 }
+
 .this_des_handbook p {
     text-align: left !important;
     color: #333 !important;
@@ -478,6 +517,7 @@ figcaption {
     font-size: 14px !important;
     font-weight: normal !important;
 }
+
 .this_des_handbook span {
     font-size: 14px;
     font-weight: normal !important;
@@ -541,33 +581,40 @@ a.H4abc {
 
 .content_blog ul li {
     line-height: 1.5 !important;
+    white-space: unset !important;
 }
 
 .box_tag {
-    margin-top: 20px;
+    margin: 20px 0;
     display: flex;
     flex-wrap: wrap;
     gap: 5px;
 }
 
 .title_tag {
-    font-size: 18px;
     line-height: 1.5;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #312e61;
     font-weight: 600;
-    /* margin-right: 10px; */
+}
+
+.title_tag img {
+    width: 20px;
+    transform: rotate(90deg);
+    margin-right: 5px;
 }
 
 .this_tag {
-    color: #414141;
-    font-size: 12px;
-    font-weight: 600;
-    /* font-weight: normal; */
-    /* text-transform: uppercase; */
-    /* margin-right: 5px; */
-    background-color: #eee;
-    padding: 5px;
-    border-radius: 3px;
     width: fit-content;
+    color: #333;
+    font-size: 11px;
+    font-weight: 500;
+    border: 1px #ddd solid;
+    border-radius: 30px;
+    padding: 6px 12px;
+    line-height: unset;
 }
 
 .img_blog_same {
@@ -580,6 +627,15 @@ a.H4abc {
     padding-left: 20px;
 }
 
+.sapo p,
+.sapo span {
+    margin-bottom: 10px !important;
+    /* text-indent: 20px; */
+    font-size: 17px !important;
+    line-height: 1.5 !important;
+    text-align: justify !important;
+}
+
 @media only screen and (max-width: 1024px) {
     .container_widget_about {
         padding: 20px;
@@ -589,10 +645,6 @@ a.H4abc {
         font-size: 28px;
         line-height: 48px;
         margin-bottom: 0px;
-    }
-
-    .box_author img {
-        /* width: 56px; */
     }
 
     .box_author {
@@ -650,10 +702,6 @@ a.H4abc {
         margin-bottom: 8px !important;
     }
 
-    .this_handbook img {
-        /* margin-bottom: 16px; */
-    }
-
     .title_handbook {
         font-size: 16px;
         line-height: 24px;
@@ -665,26 +713,25 @@ a.H4abc {
         line-height: 20px;
     }
 
-    .this_handbook {
-        /* width: calc((100% - 40px) / 3); */
-    }
-
     .this_des_handbook p,
     .this_des_handbook span {
         margin: 0 !important;
         line-height: unset !important;
     }
 }
+
 @media only screen and (max-width: 768px) {
     .main_content_blog {
         display: flex;
         flex-direction: column;
         padding-top: 0;
     }
+
     .blog_content {
         margin-top: 0;
         width: 100%;
     }
+
     .sidebar_content {
         width: 100%;
     }
@@ -696,6 +743,7 @@ a.H4abc {
         flex-direction: column;
         padding-top: 0;
     }
+
     .blog_content {
         width: 100%;
         margin-top: 0;
@@ -768,9 +816,11 @@ a.H4abc {
         display: flex;
         flex-direction: column;
     }
+
     .img_item {
         width: 100%;
     }
+
     .data_handbook {
         width: 100%;
         padding-left: 0;
@@ -799,6 +849,7 @@ a.H4abc {
     .this_handbook a {
         gap: 5px;
     }
+
     .hot_news {
         margin-bottom: 20px;
     }

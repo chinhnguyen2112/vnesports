@@ -1,5 +1,5 @@
 * {
-    font-family: 'Roboto',Arial,Helvetica,sans-serif;
+    font-family: Montserrat, sans-serif !important;
 }
 
 body {
@@ -100,7 +100,7 @@ img.img_logo_bot_header {
 }
 
 .this_menu span a {
-    padding: 2px 13px;
+    padding: 2px 9px;
     color: #ffffff;
     cursor: pointer;
     border-radius: 4px;
