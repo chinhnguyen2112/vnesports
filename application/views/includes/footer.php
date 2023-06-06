@@ -44,8 +44,6 @@ if (count($menu_cate_parent) > 2) {
                 </div> -->
                 <p class="address_ft cate_ft"><a href="#">Giới thiệu</a></p>
                 <p class="address_ft cate_ft"><a href="#">Liên hệ</a></p>
-                <p class="address_ft cate_ft"><a href="#">Chính sách bảo mật</a></p>
-                <p class="address_ft cate_ft"><a href="#">Câu hỏi thường gặp</a></p>
             </div>
         </div>
         <div class="list_footer pd_mb mg_ft ">
