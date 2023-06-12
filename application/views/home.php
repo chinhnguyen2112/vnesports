@@ -1,9 +1,9 @@
 <div class="content">
     <div class="content_about body_width">
-        <div class="banner_all">
+        <!-- <div class="banner_all">
             <div class="this_nanner_all"><img src="/images/banner1.gif" alt="banner"></div>
             <div class="this_nanner_all"><img src="/images/banner2.gif" alt="banner"></div>
-        </div>
+        </div> -->
         <div class="train_content">
             <div class="top_blog">
                 <div class="top_left">
@@ -103,14 +103,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="top_right">
-                    <div class="slick_banner">
-                        <img class="img_banner_slick" src="/images/banner/pic1.gif" alt="banner">
-                        <img class="img_banner_slick" src="/images/banner/pic2.gif" alt="banner">
-                        <img class="img_banner_slick" src="/images/banner/pic3.gif" alt="banner">
-                        <img class="img_banner_slick" src="/images/banner/pic4.gif" alt="banner">
-                    </div>
-                </div>
+                <?php include('includes/sidebar.php') ?>
             </div>
             <div class="list_blog">
                 <?php foreach ($blog as $key => $val) {
@@ -127,7 +120,7 @@
                         </div>
                 <?php }
                 } ?>
-                <div class="box_content">
+                <div class="box_content" style="display: none;">
                     <?php foreach ($blog_tag as $key => $val) {
                         if ($key == 0) { ?>
                             <div class="box_content_title">
@@ -180,7 +173,12 @@
                         </div>
                 <?php }
                 } ?>
-                <div class="load_more">Xem Thêm</div>
+                <div class="load_more">
+                    <div class="div_bgr_load">
+                        <span>Hiển thị thêm tin</span>
+                        <img src="/images/arrow_loadmore.svg" alt="xem thêm">
+                    </div>
+                </div>
             </div>
         </div>
     </div>
