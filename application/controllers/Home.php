@@ -143,7 +143,6 @@ class Home extends CI_Controller
             foreach ($list_tag as $key => $val) {
                 $where .= ' OR FIND_IN_SET(' . $val['id'] . ',tag) ';
             }
-            // echo $where;
             $page = $this->uri->segment(3);
             if ($page < 1 || $page == '') {
                 $page = 1;
