@@ -91,6 +91,7 @@ class Home extends CI_Controller
             $data['blog'] = $this->Madmin->get_limit_or("time_post <= $time", $count_or, 'blogs', $start, $limit);
             $data['blog_new'] = $this->Madmin->query_sql("SELECT * FROM blogs WHERE   time_post <= $time  ORDER BY id DESC LIMIT 5");
             $data['title_page'] = $title_page;
+            $data['content_cate'] = $chuyenmuc['content'];
             $data['chuyenmuc'] = $chuyenmuc['id'];
             $data['meta_title'] = $chuyenmuc['meta_title'];
             $data['meta_des'] = $chuyenmuc['meta_des'];
