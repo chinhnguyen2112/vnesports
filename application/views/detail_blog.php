@@ -37,14 +37,16 @@
                         <?= $blog['content'] ?>
                     </div>
                 </div>
-                <div class="box_tag">
-                    <p class="title_tag"><img src="/images/icon-chu-de.svg" alt="Chủ đề"> Chủ đề:</p>
-                    <?php $tag = explode(',', $blog['tag']);
-                    foreach ($tag as $key_tag => $val) {
-                        $this_tag = tag(['id' => $val]);
-                        echo '<a href="/' . $this_tag[0]['alias'] . '/" class="this_tag">' . $this_tag[0]['name'] . '</a>';
-                    } ?>
-                </div>
+                <?php if ($blog['tag'] != '') { ?>
+                    <div class="box_tag">
+                        <p class="title_tag"><img src="/images/icon-chu-de.svg" alt="Chủ đề"> Chủ đề:</p>
+                        <?php $tag = explode(',', $blog['tag']);
+                        foreach ($tag as $key_tag => $val) {
+                            $this_tag = tag(['id' => $val]);
+                            echo '<a href="/' . $this_tag[0]['alias'] . '/" class="this_tag">' . $this_tag[0]['name'] . '</a>';
+                        } ?>
+                    </div>
+                <?php } ?>
                 <?php if ($blog_same != null) { ?>
                     <div class="blog_same">
                         <div class="list_blog_same">
