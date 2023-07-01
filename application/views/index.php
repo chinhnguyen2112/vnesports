@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="vi">
 
-<head>
+<head><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8909964658809892"     crossorigin="anonymous"></script>
   <meta charset="UTF-8" />
   <?php if (isset($index) && $index == 1) { ?>
     <meta name="robots" content="index,follow" />
