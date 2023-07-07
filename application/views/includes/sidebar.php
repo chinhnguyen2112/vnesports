@@ -10,7 +10,7 @@
                     <img class="icon_li" src="/images/icons8-star-50.png" />
                     Game Bắn Súng
                     <strong>
-                        <a href="#">CSGO</a>
+                        <a href="/csgo/">CSGO</a>
                     </strong>
                 </li>
                 <li class="item_content_sidebar">
