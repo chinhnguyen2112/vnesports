@@ -600,4 +600,10 @@ a.H4abc {
     .box_data_top {
         border-radius: unset;
     }
+    .btn_heading {
+        flex-direction: column-reverse;
+    }
+    .btn_heading .heading_table, .btn_heading .heading_show {
+        width: 100%;
+    }
 }
