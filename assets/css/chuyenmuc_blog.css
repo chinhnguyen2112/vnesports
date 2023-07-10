@@ -339,6 +339,7 @@
 }
 .table_bot table {
     background: #fff;
+    width: 100%;
 }
 .btn_heading {
     display: flex;

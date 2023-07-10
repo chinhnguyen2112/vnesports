@@ -7,22 +7,6 @@
                         <span class="span_tag">TAG</span>
                         <span class="this_breadcrumb"><?= $title_page ?></span>
                     </div>
-                    <?php if (isset($content_tag) && $content_tag != '') { ?>
-                        <div class="blog_content">
-                            <div class="left_detail">
-                                <div class="content_blog" id="content_blog">
-                                    <?= $content_tag ?>
-                                </div>
-                                <div class="hide_show_content">
-                                    <p class="hide_show_text">Xem thêm</p>
-                                    <div class="list_img_arrow">
-                                        <img src="/images/arrow.svg" alt="xem thêm">
-                                        <img src="/images/arrow.svg" alt="xem thêm">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    <?php } ?>
                     <div class="blog_top">
                         <?php foreach ($blog as $key => $val) {
                             if ($key == 0) { ?>
@@ -51,11 +35,42 @@
                                 </div>
                         <?php }
                         } ?>
-                        <div class="load_more">
-                            <div class="div_bgr_load">
-                                <span>Hiển thị thêm tin</span>
-                                <img src="/images/arrow_loadmore.svg" alt="xem thêm">
-                            </div>
+                        <div id="table_bot" class="table_bot">
+                            <table>
+                                <tr class="btn_heading">
+                                    <th class="heading_table">
+                                        <h1><?= $meta_title ?></h1>
+                                    </th>
+                                    <th class="heading_show">
+                                        <div class="load_more">
+                                            <div class="div_bgr_load">
+                                                <span id="span_show" class="span_show_more">Hiển thị thêm tin</span>
+                                                <span id="span_end" class="span_show_more">Hết !</span>
+                                            </div>
+                                        </div>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <?php if (isset($content_tag) && $content_tag != '') { ?>
+                                            <div class="blog_content">
+                                                <div class="left_detail">
+                                                    <div class="content_blog" id="content_blog">
+                                                        <?= $content_tag ?>
+                                                    </div>
+                                                    <div class="hide_show_content">
+                                                        <p class="hide_show_text">Xem thêm</p>
+                                                        <div class="list_img_arrow">
+                                                            <img src="/images/arrow.svg" alt="xem thêm">
+                                                            <img src="/images/arrow.svg" alt="xem thêm">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        <?php } ?>
+                                    </td>
+                                </tr>
+                            </table>
                         </div>
                     </div>
                 </div>
