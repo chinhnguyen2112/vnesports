@@ -262,13 +262,6 @@ a.H4abc {
 .content_blog ul li {
     line-height: 1.5 !important;
 }
-
-.left_detail {
-    display: inline-block;
-    opacity: 1;
-    transition: opacity 2s linear;
-}
-
 .load_more {
     width: max-content;
     position: relative;
@@ -307,6 +300,7 @@ a.H4abc {
     position: relative;
     overflow: hidden;
     height: 70px;
+    padding: 0 10px;
 }
 
 .content_blog:before {
@@ -320,6 +314,15 @@ a.H4abc {
     pointer-events: none;
     grid-row: 100px;
     transition: all ease-in .25s;
+}
+.hide_show_content {
+    cursor: pointer;
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
 }
 
 .hide_show_content p {
@@ -363,6 +366,7 @@ a.H4abc {
 
 .content_blog a {
     box-shadow: inset 0 -4px 0 #7be2af;
+    font-weight: 300 !important;
     color: #000;
 }
 
@@ -375,6 +379,50 @@ a.H4abc {
     border-radius: 0 5px 5px 0;
     padding: 15px;
 }
+.table_bot {
+    margin-top: 30px;
+    padding: 1px;
+    background: linear-gradient(90deg, #cc0355 0, #5447a4 0, #ea003a 100%);
+}
+.table_bot table {
+    background: #fff;
+}
+.btn_heading {
+    display: flex;
+    justify-content: space-between;
+    background: linear-gradient(90deg, #cc0355 0, #5447a4 0, #ea003a 100%);
+    padding-bottom: 1px;
+    gap: 1px;
+}
+.btn_heading .heading_table {
+    width: 79%;
+    align-items: center;
+    display: flex;
+}
+.btn_heading th {
+    background: #fff;
+}
+.btn_heading h1 {
+    font-weight: 700;
+    color: #533c94;
+    padding-left: 10px;
+    text-align: start;
+}
+.heading_show {
+    width: 21%;
+}
+.load_more {
+    width: max-content;
+    position: relative;
+    background: linear-gradient(90deg, #cc0355 0, #5447a4 0, #ea003a 100%);
+    padding: 1px;
+    border-radius: 35px;
+    margin: 10px auto;
+}
+#span_end, .only_mobile {
+    display: none;
+}
+
 
 @media only screen and (max-width: 1024px) {
     .content_about {
@@ -388,11 +436,6 @@ a.H4abc {
     .title_blog a {
         font-size: 21px;
         line-height: 26px;
-    }
-
-    .left_detail {
-        width: 100%;
-        margin: 0;
     }
 
 }
