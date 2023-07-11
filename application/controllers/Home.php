@@ -155,7 +155,7 @@ class Home extends CI_Controller
             $data['blog'] = $this->Madmin->query_sql("SELECT * FROM blogs  WHERE time_post <= $time AND ( $where ) ORDER BY id DESC LIMIT $start,$limit");
             $data['blog_new'] = $this->Madmin->query_sql("SELECT * FROM blogs WHERE time_post <= $time  ORDER BY id DESC LIMIT 5");
             $data['title_page'] = $tags['name'];
-            $data['meta_title'] = $tags['meta_title'];
+            $data['meta_title'] = $tags['meta_key'];
             $data['meta_des'] = $tags['meta_des'];
             $data['meta_key'] = $tags['meta_key'];
             $data['content_tag'] = $tags['content'];
