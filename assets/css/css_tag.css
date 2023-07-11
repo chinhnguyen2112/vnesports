@@ -262,15 +262,6 @@ a.H4abc {
 .content_blog ul li {
     line-height: 1.5 !important;
 }
-.load_more {
-    width: max-content;
-    position: relative;
-    background: linear-gradient(90deg, #cc0355 0, #5447a4 0, #ea003a 100%);
-    padding: 1px;
-    border-radius: 35px;
-    margin: 20px auto 0;
-}
-
 .div_bgr_load {
     background: #fff;
     padding: 6px 15px 7px 10px;
@@ -414,7 +405,7 @@ a.H4abc {
 .load_more {
     width: max-content;
     position: relative;
-    background: linear-gradient(90deg, #cc0355 0, #5447a4 0, #ea003a 100%);
+    background: #fff;
     padding: 1px;
     border-radius: 35px;
     margin: 10px auto;
@@ -601,7 +592,11 @@ a.H4abc {
         border-radius: unset;
     }
     .btn_heading {
-        flex-direction: column-reverse;
+        flex-direction: column;
+    }
+    .btn_heading h1 {
+        text-align: center;
+        margin:auto;
     }
     .btn_heading .heading_table, .btn_heading .heading_show {
         width: 100%;
