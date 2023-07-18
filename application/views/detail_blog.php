@@ -17,6 +17,7 @@
                             <div class="text_author">
                                 <p class="date_blog">Đăng ngày: <?= date('d-m-Y', $blog['created_at']) ?></p>
                             </div>
+                            <a rel="nofollow" class="follow_ggnew" href="https://news.google.com/publications/CAAqBwgKMLKv0Asw8crnAw?hl=vi&gl=VN&ceid=VN%3Avi">Theo dõi VnEsports trên <img src="/images/googlelogo.svg" alt=""> News</a>
                         </div>
                     </div>
                 </div>
