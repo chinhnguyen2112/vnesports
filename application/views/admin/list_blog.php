@@ -159,6 +159,9 @@
                     <div class="card-body">
                         <div class="box_search_forrm">
                             <p>Bộ lọc</p>
+                            <input id="url_search" class="key_search" placeholder="Nhập url..." value="<?= $this->input->get('url_search') ?>" />
+                            <input id="key_search" class="key_search" placeholder="Nhập từ khóa..." value="<?= $this->input->get('key_search') ?>" />
+
                             <select name="" id="tag">
                                 <option value="">Chọn tag</option>
                                 <?php $list_tag = tag();
@@ -246,9 +249,11 @@
 </div>
 <script>
     function filter_ds() {
-        var tag = $('#tag').val();
+        var url_search = $('#url_search').val();
+        var key_search = $('#key_search').val();
         var cate = $('#cate').val();
-        var url = '/list_blog?tag=' + tag + '&cate=' + cate;
+        var tag = $('#tag').val();
+        var url = '/list_blog?key_search=' + key_search + '&cate=' + cate + '&tag=' + tag + '&url_search=' + url_search;
         window.location.href = url;
     }
 </script>

@@ -230,15 +230,24 @@
         public function list_blog()
         {
             if (admin()) {
+                $url_search = str_replace('https://vnesports.vn/', '', $this->input->get('url_search'));
+                $url_search = str_replace('/', '', $url_search);
+                $key_search = $this->input->get('key_search');
                 $tag = $this->input->get('tag');
                 $cate = $this->input->get('cate');
                 $x = 0;
-                $where['id >'] = 0;
+                $where = "id > 0 ";
                 if ($tag != '') {
-                    $where['FIND_IN_SET(tag,' .  $tag . ') AND id >'] = 0;
+                    $where .= " AND FIND_IN_SET(tag,$tag)";
                 }
                 if ($cate > 0) {
-                    $where['chuyenmuc'] = $cate;
+                    $where .= " AND chuyenmuc =  $cate ";
+                }
+                if ($key_search != '') {
+                    $where .= " AND  title LIKE '%$key_search%' ";
+                }
+                if ($url_search != '') {
+                    $where .= " AND  alias LIKE '%$url_search%' ";
                 }
                 $page = $this->uri->segment(2);
                 if ($page < 1 || $page == '') {
