@@ -182,6 +182,7 @@ h3,
     color: #0040ff !important;
     text-align: left !important;
     margin-top: 0 !important;
+    width: -webkit-fill-available;
 }
 
 h4,
@@ -211,6 +212,7 @@ h6 span {
     margin-bottom: 10px !important;
     font-size: 17px !important;
     line-height: 1.5 !important;
+    width: -webkit-fill-available;
 }
 
 .content_blog ul {
@@ -234,6 +236,7 @@ figcaption {
     margin-top: 0;
     text-align: left !important;
     margin: 12px 0 !important;
+    width: -webkit-fill-available;
 }
 
 figure {
@@ -262,6 +265,7 @@ a.H4abc {
 .content_blog ul li {
     line-height: 1.5 !important;
 }
+
 .div_bgr_load {
     background: #fff;
     padding: 6px 15px 7px 10px;
@@ -306,6 +310,7 @@ a.H4abc {
     grid-row: 100px;
     transition: all ease-in .25s;
 }
+
 .hide_show_content {
     cursor: pointer;
     margin-top: 5px;
@@ -370,14 +375,17 @@ a.H4abc {
     border-radius: 0 5px 5px 0;
     padding: 15px;
 }
+
 .table_bot {
     margin-top: 30px;
     padding: 1px;
     background: linear-gradient(90deg, #cc0355 0, #5447a4 0, #ea003a 100%);
 }
+
 .table_bot table {
     background: #fff;
 }
+
 .btn_heading {
     display: flex;
     justify-content: space-between;
@@ -385,23 +393,28 @@ a.H4abc {
     padding-bottom: 1px;
     gap: 1px;
 }
+
 .btn_heading .heading_table {
     width: 79%;
     align-items: center;
     display: flex;
 }
+
 .btn_heading th {
     background: #fff;
 }
+
 .btn_heading h1 {
     font-weight: 700;
     color: #533c94;
     padding-left: 10px;
     text-align: start;
 }
+
 .heading_show {
     width: 21%;
 }
+
 .load_more {
     width: max-content;
     position: relative;
@@ -410,7 +423,9 @@ a.H4abc {
     border-radius: 35px;
     margin: 10px auto;
 }
-#span_end, .only_mobile {
+
+#span_end,
+.only_mobile {
     display: none;
 }
 
@@ -591,14 +606,18 @@ a.H4abc {
     .box_data_top {
         border-radius: unset;
     }
+
     .btn_heading {
         flex-direction: column;
     }
+
     .btn_heading h1 {
         text-align: center;
-        margin:auto;
+        margin: auto;
     }
-    .btn_heading .heading_table, .btn_heading .heading_show {
+
+    .btn_heading .heading_table,
+    .btn_heading .heading_show {
         width: 100%;
     }
 }
