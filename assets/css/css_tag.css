@@ -362,7 +362,7 @@ a.H4abc {
 
 .content_blog a {
     box-shadow: inset 0 -4px 0 #7be2af;
-    font-weight: 300 !important;
+    /* font-weight: 300 !important; */
     color: #000;
 }
 
