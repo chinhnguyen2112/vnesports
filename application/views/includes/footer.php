@@ -56,6 +56,7 @@ if (count($menu_cate_parent) > 2) {
                 <p class="p_down_ft"><img src="/images/sms.svg" alt="VnEsport"> Tòa soạn</p>
                 <p class="p_down_ft"><img src="/images/icon-eclick.svg" alt="VnEsport"> Quảng cáo</p>
                 <p class="p_down_ft"><img src="/images/logo_vlight.svg" alt="VnEsport"> Hợp tác bản quyền</p>
+                <a rel="nofollow" href="https://www.dmca.com/Protection/Status.aspx?id=d2441786-b99f-4f19-804a-7eb799b566ba&refurl=https%3a%2f%2fvnesports.vn%2f&rlo=true"><img src="https://images.dmca.com/Badges/dmca_protected_sml_120am.png?ID=d2029178-63cc-4769-84c4-4b39e24fc3f1" alt="DMCA.com Protection Status"></a>
             </div>
             <div class="box_ft">
                 <p class="title_down_ft">Đường dây nóng</p>
