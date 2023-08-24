@@ -52,6 +52,14 @@
                     </strong>
                     Riot Games
                 </li>
+                <li class="item_content_sidebar">
+                    <img class="icon_li" src="/images/icons8-star-50.png" />
+                    Gaming Philippines
+                    <strong>
+                        <a rel="dofollow" href="https://tobet88.org/">TOBET88</a>
+                    </strong>
+
+                </li>
             </ul>
         </div>
     </div>
