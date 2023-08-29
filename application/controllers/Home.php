@@ -71,6 +71,9 @@ class Home extends CI_Controller
             if ($_SERVER['REQUEST_URI'] != '/' . $alias . '/') {
                 redirect('/' . $alias . '/');
             }
+            if ($alias == 'lich-thi-dau') {
+                return $this->lich_thi_dau($chuyenmuc);
+            }
             $page = $this->uri->segment(3);
             if ($page < 1 || $page == '') {
                 $page = 1;
@@ -92,6 +95,7 @@ class Home extends CI_Controller
             $data['blog_new'] = $this->Madmin->query_sql("SELECT * FROM blogs WHERE   time_post <= $time  ORDER BY id DESC LIMIT 5");
             $data['title_page'] = $title_page;
             $data['content_cate'] = $chuyenmuc['content'];
+            $data['meta_img'] = $chuyenmuc['image'];
             $data['chuyenmuc'] = $chuyenmuc['id'];
             $data['meta_title'] = $chuyenmuc['meta_title'];
             $data['meta_des'] = $chuyenmuc['meta_des'];
@@ -172,6 +176,26 @@ class Home extends CI_Controller
             redirect('/');
         }
         $data['index'] = 1;
+        $this->load->view('index', $data);
+    }
+    public function lich_thi_dau($chuyenmuc)
+    {
+        $time = time();
+        $data['content'] = 'lich_thi_dau';
+        $data['blog_new'] = $this->Madmin->query_sql("SELECT * FROM blogs WHERE   time_post <= $time  ORDER BY id DESC LIMIT 5");
+        $data['canonical'] = base_url() . $chuyenmuc['alias'] . '/';
+        $data['title_page'] = $chuyenmuc['name'];
+        $data['meta_title'] = $chuyenmuc['meta_title'];
+        $data['meta_des'] = $chuyenmuc['meta_des'];
+        $data['meta_key'] = $chuyenmuc['name'];
+        $data['meta_img'] = $chuyenmuc['image'];
+        $data['index'] = 1;
+        $data['list_css'] = [
+            'chuyenmuc_blog.css',
+        ];
+        $data['list_js'] = [
+            'lich_thi_dau.js',
+        ];
         $this->load->view('index', $data);
     }
     public function tag($alias1, $alias2)
