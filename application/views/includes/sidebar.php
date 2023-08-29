@@ -1,4 +1,28 @@
 <link rel="stylesheet" href="/assets/css/css_sidebar.css">
+<style>
+    .guest_post {
+        background: #8dc642;
+        margin-bottom: 20px;
+        border-radius: 16px;
+        padding: 10px 0;
+    }
+
+    .guest_post p {
+        color: #fff;
+        font-size: 18px;
+        font-weight: 600;
+        text-align: center;
+        margin-bottom: 5px;
+    }
+
+    .guest_post a {
+        font-size: 20px;
+        font-weight: 700;
+        display: block;
+        text-align: center;
+        color: #000;
+    }
+</style>
 <div class="sidebar_content">
     <div class="sidebar_box">
         <div class="box_heading">
@@ -57,6 +81,14 @@
                     Gaming Philippines
                     <strong>
                         <a rel="dofollow" href="https://tobet88.org/">TOBET88</a>
+                    </strong>
+
+                </li>
+                <li class="item_content_sidebar">
+                    <img class="icon_li" src="/images/icons8-star-50.png" />
+                    Tải phần mềm tại
+                    <strong>
+                        <a rel="nofollow" href="https://kashi.com.vn/">Kashi.com.vn</a>
                     </strong>
 
                 </li>
