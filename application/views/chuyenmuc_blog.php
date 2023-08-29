@@ -8,7 +8,7 @@
                 </div>
                 <div class="right_brea">
                     <svg>
-                        <polyline points="50 40, 120 40, 150 18, 240 18, 270 40, 978 40 "></polyline>
+                        <polyline points="50 40, 120 40, 150 18, 240 18, 270 40, 1100 40 "></polyline>
                     </svg>
                 </div>
             </div>
