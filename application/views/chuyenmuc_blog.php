@@ -2,9 +2,15 @@
     <div class="content_about body_width">
         <div class="banner_blog">
             <div class="breadcrumb">
-                <a href="/">Trang chủ</a>
-                <span> / </span>
-                <span class="this_breadcrumb"><?= $title_page ?></span>
+                <div class="left_brea">
+                    <span class="before"></span>
+                    <span class="this_breadcrumb"><?= $title_page ?></span>
+                </div>
+                <div class="right_brea">
+                    <svg>
+                        <polyline points="50 40, 120 40, 150 18, 240 18, 270 40, 978 40 "></polyline>
+                    </svg>
+                </div>
             </div>
         </div>
         <div class="train_content">
