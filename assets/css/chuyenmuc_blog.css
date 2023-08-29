@@ -60,7 +60,7 @@
     height: 2px;
     background: #524cd0;
     bottom: -7px;
-    right: 0;
+    right: 35px;
 }
 .right_brea {
     width: 100%;
@@ -76,7 +76,9 @@
     stroke-linejoin: round;
     fill: none;
 }
-
+.line_monbile {
+    display: none;
+}
 .train_content {
     margin-top: 25px;
     margin-bottom: 20px;
@@ -570,9 +572,6 @@ a.H4abc {
     background: #7be2af;
 }
 @media only screen and (max-width: 1024px) {
-    .right_brea {
-        display: none;
-    }
     .content_about {
         padding: 20px;
     }
@@ -673,7 +672,10 @@ a.H4abc {
 }
 
 @media only screen and (max-width: 540px) {
-    .this_breadcrumb::after {
+    .line_monbile {
+        display: block;
+    }
+    .line_pc {
         display: none;
     }
     .content_about {
