@@ -52,6 +52,7 @@
     line-height: 24px !important;
     color: #ff3100 !important;
     position:relative;
+    width: max-content;
 }
 .this_breadcrumb::after {
     content: "";
