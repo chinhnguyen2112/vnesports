@@ -63,6 +63,10 @@
             </ul>
         </div>
     </div>
+    <div class="guest_post">
+        <p>Tải phần mềm tại</p>
+        <a rel="nofollow" href="https://kashi.com.vn/">Kashi.com.vn</a>
+    </div>
     <div class="hot_news">
         <div class="box_heading">
             <a href="#">
