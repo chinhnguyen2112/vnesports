@@ -13,9 +13,8 @@
                     <div class="left_blog">
                         <h1 class="title_h1"><?= $blog['title'] ?></h1>
                         <div class="box_author">
-                            <img src="/images/date.svg" alt="Ngày đăng">
-                            <div class="text_author">
-                                <p class="date_blog">Đăng ngày: <?= date('d-m-Y', $blog['created_at']) ?></p>
+                            <div class="box_date">
+                                <p class="date_blog"><?= replace_date($blog['created_at']) ?></p>
                             </div>
                             <a rel="nofollow" class="follow_ggnew" target="_blank" href="https://news.google.com/publications/CAAqBwgKMLKv0Asw8crnAw?hl=vi&gl=VN&ceid=VN:vi">Theo dõi VnEsports trên <img src="/images/googlelogo.svg" alt=""> News</a>
                         </div>
