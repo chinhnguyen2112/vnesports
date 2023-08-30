@@ -29,4 +29,4 @@
     .top_blog {
         display: block;
     }
-</style>-
+</style>
