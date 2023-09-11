@@ -18,7 +18,13 @@
             <div class="top_blog">
                 <div class="top_left">
                     <div class="list_blog_top">
-                        <iframe src="https://es.imespewbw.com/esport.aspx?LanguageCode=vn" id="BodyContentPlaceHolderBase_BodyContentPlaceHolderSite_iframeContent" marginwidth="0" scrolling="no" class="myframe" marginheight="0" style="border: none; width: 100%; height: 800px; overflow: hidden;" name="iframeContent" allowfullscreen="" frameborder="0"></iframe>
+                        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KPB4CSH&gtm_auth=Ln4buOxbvoh33x6CFPz6xA&gtm_preview=env-1&gtm_cookies_win=x"></noscript>
+                        <div id="fb-root"></div>
+                        <div id="root"></div>
+                        <script defer="defer" src="https://www.gosugamers.vn/assets/scripts/runtime.0d3975f18c6771b8311f.js"></script>
+                        <script defer="defer" src="https://www.gosugamers.vn/assets/scripts/543.97345d7f8a0d320619ee.js"></script>
+                        <script defer="defer" src="https://www.gosugamers.vn/assets/scripts/main.b7b1387e7f00cb4abfd0.js"></script>
+                        <iframe src="https://64e1050d2fd0bbc484309af4fd76d0f8.safeframe.googlesyndication.com/safeframe/1-0-40/html/container.html"></iframe>
                     </div>
                 </div>
             </div>
@@ -28,5 +34,9 @@
 <style>
     .top_blog {
         display: block;
+    }
+
+    #lc {
+        display: none;
     }
 </style>

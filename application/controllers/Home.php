@@ -189,12 +189,9 @@ class Home extends CI_Controller
         $data['meta_des'] = $chuyenmuc['meta_des'];
         $data['meta_key'] = $chuyenmuc['name'];
         $data['meta_img'] = $chuyenmuc['image'];
-        $data['index'] = 1;
+        // $data['index'] = 1;
         $data['list_css'] = [
             'chuyenmuc_blog.css',
-        ];
-        $data['list_js'] = [
-            'lich_thi_dau.js',
         ];
         $this->load->view('index', $data);
     }

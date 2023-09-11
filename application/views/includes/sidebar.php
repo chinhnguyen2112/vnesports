@@ -80,25 +80,31 @@
                     <img class="icon_li" src="/images/icons8-star-50.png" />
                     Gaming Philippines
                     <strong>
-                        <a rel="dofollow" href="https://tobet88.org/">TOBET88</a>
+                        <a rel="nofollow" href="https://tobet88.org/">TOBET88</a>
                     </strong>
 
                 </li>
                 <li class="item_content_sidebar">
                     <img class="icon_li" src="/images/icons8-star-50.png" />
+                    <strong>
+                        <a rel="nofollow" href="https://mu88.tips/">MU88</a>
+                    </strong>
+
+                </li>
+                <!-- <li class="item_content_sidebar">
+                    <img class="icon_li" src="/images/icons8-star-50.png" />
                     Tải phần mềm tại
                     <strong>
                         <a rel="nofollow" href="https://kashi.com.vn/">Kashi.com.vn</a>
                     </strong>
-
-                </li>
+                </li> -->
             </ul>
         </div>
     </div>
-    <div class="guest_post">
+    <!-- <div class="guest_post">
         <p>Tải phần mềm tại</p>
         <a rel="nofollow" href="https://kashi.com.vn/">Kashi.com.vn</a>
-    </div>
+    </div> -->
     <div class="hot_news">
         <div class="box_heading">
             <a href="#">
