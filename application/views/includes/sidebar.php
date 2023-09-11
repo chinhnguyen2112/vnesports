@@ -80,14 +80,14 @@
                     <img class="icon_li" src="/images/icons8-star-50.png" />
                     Gaming Philippines
                     <strong>
-                        <a rel="nofollow" href="https://tobet88.org/">TOBET88</a>
+                        <a rel="dofollow" href="https://tobet88.org/">TOBET88</a>
                     </strong>
 
                 </li>
                 <li class="item_content_sidebar">
                     <img class="icon_li" src="/images/icons8-star-50.png" />
                     <strong>
-                        <a rel="nofollow" href="https://mu88.tips/">MU88</a>
+                        <a rel="dofollow" href="https://mu88.tips/">MU88</a>
                     </strong>
 
                 </li>
