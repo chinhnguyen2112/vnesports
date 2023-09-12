@@ -5,69 +5,78 @@ if (count($menu_cate_parent) > 2) {
 } ?>
 <footer id="colophon" class="site-footer" role="contentinfo">
     <div class="footer-widgets body_width">
-        <div class="box_logo_ft">
-            <img class="logo_ft" src="/images/logo.png">
-        </div>
-        <div class="list_footer bg_mb ">
-            <!-- <p class="title_ft">Giới thiệu</p> -->
-            <div id="text-1" class="widget widget--footer widget_text">
-                <p class="address_ft">Game Esports ở thời điểm hiện tại càng trở nên phổ biến & được xem như một trò chơi thể thao điện tử được Thế Giới công nhận. VnEsports nhận ra được tất cả Gamer đều muốn được có những thông tin tốt nhất về các thể loại game nên VnEsports đã thành lập ra một trang thông tin điện tử giúp cho Gamer có cơ hội được biết nhiều thông tin về các thể loại Esports nhiều hơn.</p>
-            </div>
-        </div>
-        <div class="list_footer pd_mb mg_ft">
-            <div id="text-1" class="widget widget--footer widget_text">
-                <!-- <div class="textwidget">
-                    <p>Danh mục</p>
-                </div> -->
-                <div class="fl_ft">
-                    <div class="left_ft">
-                        <?php foreach ($menu_cate_parent as $key =>  $val) {
-                            if ($key < count($menu_cate_parent) / 2) { ?>
-                                <p class="address_ft cate_ft"><a href="/<?= $val['alias'] ?>/"><?= $val['name'] ?></a></p>
-                        <?php }
-                        } ?>
-                    </div>
-                    <div class="left_ft">
-                        <?php foreach ($menu_cate_parent as $key => $val) {
-                            if ($key >= count($menu_cate_parent) / 2) { ?>
-                                <p class="address_ft cate_ft"><a href="/<?= $val['alias'] ?>/"><?= $val['name'] ?></a></p>
-                        <?php }
-                        } ?>
+        <div class="content_footer">
+            <div class="ft_left">
+                <img class="logo_ft" src="/images/logo.png" alt="logo footer">
+                <div class="widget">
+                    <p class="title_widget">WEB GIẢI TRÍ ESPORTS VIỆT NAM & THẾ GIỚI</p>
+                    <div class="contact_infor">
+                        <ul class="list_contact">
+                            <li style="width:100%">
+                                <img src="/images/icon_address_ft.png" alt="icon address">
+                                <p>Số 111 đường Mễ Trì - Quận Nam Từ Liêm - Hà Nội.</p>
+                            </li>
+                            <li>
+                                <img src="/images/icon_website_ft.png" alt="icon website">
+                                <p>vnesports.vn -</p>
+                            </li>
+                            <li style="margin-left:3px;width:51%">
+                                <img src="/images/icon_mail_ft.png" alt="icon email">
+                                <p>vnesports@gmail.com</p>
+                            </li>
+                            <li>
+                                <img src="/images/icon_fb_ft.png" alt="icon facebook">
+                                <p>fb.com/vnesports.vn</p>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="list_footer pd_mb list_footer_50">
-            <div id="text-1" class="widget widget--footer widget_text">
-                <!-- <div class="textwidget">
-                    <p>Về chúng tôi</p>
-                </div> -->
-                <p class="address_ft cate_ft"><a href="#">Giới thiệu</a></p>
-                <p class="address_ft cate_ft"><a href="#">Liên hệ</a></p>
-            </div>
-        </div>
-        <div class="list_footer pd_mb mg_ft ">
-            <div class="box_ft">
-                <p class="title_down_ft">Tải ứng dụng</p>
-                <p class="btn_down_ft p_down_ft"><img src="/images/favicon.png" alt="VnEsport"> VnEsport</p>
-                <p class="btn_down_ft p_down_ft"><img src="/images/favicon.png" alt="VnEsport"> International</p>
-
-                <p class="title_down_ft">Liên hệ</p>
-                <p class="p_down_ft"><img src="/images/sms.svg" alt="VnEsport"> Tòa soạn</p>
-                <p class="p_down_ft"><img src="/images/icon-eclick.svg" alt="VnEsport"> Quảng cáo</p>
-                <p class="p_down_ft"><img src="/images/logo_vlight.svg" alt="VnEsport"> Hợp tác bản quyền</p>
-                <a rel="nofollow" href="https://www.dmca.com/Protection/Status.aspx?id=d2441786-b99f-4f19-804a-7eb799b566ba&refurl=https%3a%2f%2fvnesports.vn%2f&rlo=true"><img src="https://images.dmca.com/Badges/dmca_protected_sml_120am.png?ID=d2029178-63cc-4769-84c4-4b39e24fc3f1" alt="DMCA.com Protection Status"></a>
-            </div>
-            <div class="box_ft">
-                <p class="title_down_ft">Đường dây nóng</p>
-                <p class="p_hotline"><span>083.888.0123</span> <span class="mini_hotline_ft">(Hà Nội)</span> </p>
-                <p class="p_hotline"><span>082.233.3555</span> <span class="mini_hotline_ft">(Hà Nội)</span> </p>
+            <div class="ft_right">
+                <div class="r_01">
+                    <p class="title_r">CHUYÊN MỤC</p>
+                    <div class="list_links">
+                        <?php $menu_cate_parent = chuyen_muc('parent = 0 AND id != 42 AND id != 41');
+                        foreach ($menu_cate_parent as $val) {
+                            $menu_cate = chuyen_muc(['parent' => $val['id']]); ?>
+                            <div class="item_link_ft" id="this_menu">
+                                <span onclick="big_item_menu(this,1)">
+                                    <a href="/<?= $val['alias'] ?>/">
+                                        <img src="/images/icon_arrow_ft.png" alt="icon arrow footer">
+                                        <?= $val['name'] ?>
+                                    </a>
+                                </span>
+                            </div>
+                        <?php } ?>
+                    </div>
+                </div>
+                <div class="r_02">
+                    <p class="title_r">ĐĂNG KÝ NHẬN TIN</p>
+                    <form class="form_email" id="newsletter">
+                        <p><strong>Đăng ký nhận bản tin</strong> , bài viết tư vấn câp nhật hằng ngày.</p>
+                        <input class="input_text" type="email" name="email" placeholder="Email Address" required>
+                        <input class="btn_submit_form" value="SIGN UP" type="submit">
+                    </form>
+                </div>
             </div>
         </div>
     </div>
     <div class="copyright">
-        <div class=" body_width">
-            <div class="site-info">© Copyright 2022 VnEsports All Rights Reserved.</div>
+        <div class="content_copy body_width">
+            <div class="site-info"> © 2022 VnEsports</div>
+            <div class="list_link_bottom">
+                <ul>
+                    <li>
+                        <a href="/gioi-thieu/">Giới thiệu</a>
+                    </li>
+                    <li>
+                        <a href="/lien-he/">Liên hệ</a>
+                    </li>
+                    <li>
+                        <a href="#">Chính sách</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
 </footer>
