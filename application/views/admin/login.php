@@ -5,7 +5,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>OHS Admin</title>
+    <title>Vnesports Admin</title>
     <!-- base:css -->
     <link rel="stylesheet" href="/assets/css/admin/vendors/typicons/typicons.css">
     <link rel="stylesheet" href="/assets/css/admin/vendors/css/vendor.bundle.base.css">
@@ -88,7 +88,7 @@
             submitHandler: function() {
                 var formData = new FormData($('#frm_login')[0]);
                 $.ajax({
-                    url: "/login_admin",
+                    url: "/admin/login_admin",
                     type: "POST",
                     cache: false,
                     contentType: false,

@@ -17,6 +17,8 @@
         border: none;
         background: linear-gradient(95.83deg, #8AC02C 68.93%, #398100 113.08%);
         color: #fff;
+        padding: 5px 10px;
+        text-decoration: unset !important;
     }
 
     .box_search_forrm {
@@ -143,7 +145,7 @@
 <?php $CI = &get_instance();  ?>
 <div class="change_content">
     <ul class="change_content_ul">
-        <li class="change_content_li" data-active="1">Danh sách tag</li>
+        <li class="change_content_li" data-active="1">Danh sách Page</li>
     </ul>
     <div class="main_change">
         <div class="doing">
@@ -151,57 +153,33 @@
                 <div class="card">
                     <div class="card-body">
                         <div class="box_search_forrm">
-                            <p>Bộ lọc</p>
-                            <input type="" id="filter_key" placeholder="Nhậm tên tag..." value="<?= $this->input->get('keyword') ?>">
-                            <select name="" id="parent">
-                                <option value="">Chọn tag lớn</option>
-                                <?php $tag = tag(['parent' => 0]);
-                                foreach ($tag as $val) {  ?>
-                                    <option <?= ($this->input->get('parent') == $val['id']) ? 'selected' : '' ?> value="<?= $val['id'] ?>"><?= $val['name'] ?></option>
-                                <?php } ?>
-                            </select>
-                            <button class="filter_btn" onclick="filter_ds()"><span>Lọc</span></button>
+                            <a rel="nofollow" class="a_excel" href="/admin/add_page/">Thêm mới</a>
                         </div>
                         <div class="table-responsive">
                             <table class="table table-striped">
                                 <thead>
                                     <tr>
-                                        <th>Tên tag</th>
-                                        <th>Xem tag</th>
+                                        <th>Title</th>
+                                        <th>Xem page</th>
+                                        <th>Url</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <?php foreach ($list as $key  => $val) {
-                                        $parent_tag = tag(['parent' => $val['id']]); ?>
+                                    <?php foreach ($list as $key  => $val) { ?>
                                         <tr>
-                                            <td><?= $val['name'] ?></td>
-                                            <td><a href="/<?= $val['alias'] ?>/" target="_blank">Xem tag</a></td>
+                                            <td><?= $val['title'] ?></td>
+                                            <td><a href="/<?= $val['alias'] ?>/" target="_blank">Xem page</a></td>
+                                            <td><?= base_url() . $val['alias'] ?>/</td>
                                             <td class="text-center">
                                                 <div class="btn-group">
-                                                    <a href="/admin/add_tag?id=<?= $val['id']; ?>" target="_blank">
+                                                    <a rel="nofollow" href="/admin/add_page?id=<?= $val['id']; ?>" target="_blank">
                                                         <button style="font-size: 16px;" class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Sửa tài khoản"><i class="fa fa-pencil"></i> Sửa</button>
                                                     </a>
 
                                                 </div>
                                             </td>
                                         </tr>
-                                        <?php if ($parent_tag != null) {
-                                            foreach ($parent_tag as $val_nav) { ?>
-                                                <tr>
-                                                    <td style="display: flex;    align-items: center;"><span style="background: #000;width: 20px;height: 1px;display: block;margin-right: 10px;" class="line_table"></span><span><?= $val_nav['name'] ?></span></td>
-                                                    <td><a href="/<?= $val_nav['alias'] ?>/" target="_blank">Xem tag</a></td>
-                                                    <td class="text-center">
-                                                        <div class="btn-group">
-                                                            <a href="/admin/add_tag?id=<?= $val_nav['id']; ?>" target="_blank">
-                                                                <button style="font-size: 16px;" class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Sửa tài khoản"><i class="fa fa-pencil"></i> Sửa</button>
-                                                            </a>
-
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                    <?php }
-                                        }
-                                    } ?>
+                                    <?php } ?>
                                 </tbody>
                             </table>
                         </div>
@@ -214,11 +192,3 @@
     </div>
 
 </div>
-<script>
-    function filter_ds() {
-        var keyword = $('#filter_key').val();
-        var parent = $('#parent').val();
-        var url = '/admin/list_tag?keyword=' + keyword + '&parent=' + parent;
-        window.location.href = url;
-    }
-</script>

@@ -172,29 +172,37 @@
     </div>
     <div class="form-group mb-3">
         <label class="label" for="name">Keyword</label>
-        <input type="text" name="meta_key" id="meta_key" value="<?= (isset($blog)) ? $blog['meta_key'] : ''; ?>" oninput="show_alias(this.value)" class="form-control">
+        <input type="text" name="meta_key" id="meta_key" value="<?= (isset($blog)) ? $blog['meta_key'] : ''; ?>" <?= (isset($blog)) ? '' : 'oninput="show_alias(this.value)"' ?> class="form-control">
+    </div>
+    <div class="form-group mb-3">
+        <label class="label" for="name">Meta Title (50 > 60 kí tụ)</label>
+        <input type="text" name="meta_title" value="<?= (isset($blog)) ? $blog['meta_title'] : ''; ?>" class="form-control">
     </div>
     <div class="form-group mb-3">
         <label class="label" for="name">Đường dẫn thân thiện</label>
-        <input type="text" name="alias" value="<?= (isset($blog)) ? $blog['alias'] : ''; ?>" oninput="show_alias(this.value)" id="alias" class="form-control">
+        <input type="text" name="alias" <?= (isset($blog) && check_admin() != 1) ? ' onmousedown="return false;"' : '' ?> oninput="show_alias(this.value)" value="<?= (isset($blog)) ? $blog['alias'] : ''; ?>" id="alias" class="form-control">
     </div>
     <div class="form-group mb-3">
         <label class="label" for="name">Chuyên mục</label>
         <select name="category" id="category" class="form-control">
             <?php
-            $chuyenmuc = chuyen_muc(['level !=' => 1]);
-            foreach ($chuyenmuc as $key => $val) {
-                $name = $val['name'];
-                if ($val['parent'] > 0) {
-                    $cate_parent = chuyen_muc(['id' => $val['parent']]);
-                    $name = $cate_parent[0]['name'] . ' - ' . $val['name'];
-                } ?>
-                <option <?= (isset($blog) &&  $blog['chuyenmuc'] == $val['id']) ? 'selected' : '' ?> value="<?= $val['id'] ?>"><?= $name ?></option>
-            <?php } ?>
+            $chuyenmuc = chuyen_muc(['parent' => 0]);
+            foreach ($chuyenmuc as $key => $val) { ?>
+                <option <?= (isset($blog) &&  $blog['chuyenmuc'] == $val['id']) ? 'selected' : '' ?> value="<?= $val['id'] ?>"><?= $val['name'] ?></option>
+                <?php
+                $cate_child = chuyen_muc(['parent' => $val['id']]);
+                foreach ($cate_child as $val_child) { ?>
+                    <option <?= (isset($blog) &&  $blog['chuyenmuc'] == $val_child['id']) ? 'selected' : '' ?> value="<?= $val_child['id'] ?>"> - <?= $val_child['name'] ?></option>
+                    <?php $cate_child_2 = chuyen_muc(['parent' => $val_child['id']]);
+                    foreach ($cate_child_2 as  $val_child_2) { ?>
+                        <option <?= (isset($blog) &&  $blog['chuyenmuc'] == $val_child_2['id']) ? 'selected' : '' ?> value="<?= $val_child_2['id'] ?>"> -- <?= $val_child_2['name'] ?></option>
+            <?php  }
+                }
+            } ?>
         </select>
     </div>
     <div class="form-group mb-3">
-        <label class="label" for="name">tag</label>
+        <label class="label" for="name">Tag</label>
         <select name="tag[]" id="tag" class="form-control select2" multiple>
             <?php
             $tag = tag();
@@ -205,10 +213,6 @@
                 <option <?= (isset($blog) &&  in_array($val['id'], $tag_blog)) ? 'selected' : '' ?> value="<?= $val['id'] ?>"><?= $name ?></option>
             <?php } ?>
         </select>
-    </div>
-    <div class="form-group mb-3">
-        <label class="label" for="name">Meta Title (50 > 60 kí tụ)</label>
-        <input type="text" name="meta_title" value="<?= (isset($blog)) ? $blog['meta_title'] : ''; ?>" class="form-control">
     </div>
     <div class="form-group mb-3">
         <label class="label" for="name">Meta Description</label>
@@ -226,6 +230,12 @@
         <label class="label" for="name">Hẹn giờ đăng </label>
         <input type="datetime-local" name="time_post" id="" value="<?= date("Y-m-d\TH:i:s", $time_post) ?>" class="form-control">
     </div>
+    <div class="form-group mb-3">
+        <select name="index_blog" id="index_blog" class="form-control">
+            <option <?= (isset($blog) &&  $blog['index_blog'] == 0) ? 'selected' : '' ?> value="0">Lưu nháp</option>
+            <option <?= (isset($blog) &&  $blog['index_blog'] == 1) ? 'selected' : '' ?> value="1">Xuất bản</option>
+        </select>
+    </div>
     <div class="form-group">
         <button type="submit" class="form-control btn btn-primary submit px-3"><?= (isset($id)) ? "Sửa" : "Thêm mới" ?></button>
     </div>
@@ -239,6 +249,12 @@
     CKEDITOR.replace('sapo');
 </script>
 <script>
+    $("#alias").keypress(function(evt) {
+        var num = String.fromCharCode(evt.which);
+        if (num == " ") {
+            evt.preventDefault();
+        }
+    });
     $('.select2').select2({
         placeholder: 'Chọn tag',
         'height': '100%'
@@ -266,6 +282,7 @@
     }
 
     function show_alias(str) {
+        str = str.trim();
         var alias = get_alias(str);
         $("#alias").val(alias);
     }
@@ -294,7 +311,7 @@
         },
         messages: {
             "image": {
-                required: 'chưa chọn ảnh đại diện',
+                required: "Chưa chọn ảnh đại diện",
             },
             "title": {
                 required: "Chưa nhập H1 bài viết",
@@ -317,7 +334,7 @@
             data.append("content", CKEDITOR.instances.editor.getData());
             data.append("sapo", CKEDITOR.instances.sapo.getData());
             $.ajax({
-                url: '/ajax_add_blog',
+                url: '/admin/ajax_add_blog',
                 type: "POST",
                 cache: false,
                 contentType: false,
@@ -354,25 +371,4 @@
             return false;
         }
     });
-    // $("#category").change(function(e) {
-    //     var id_error = $(this).val();
-    //     $.ajax({
-    //         type: "post",
-    //         url: "/Error_ctr/get_error",
-    //         data: {
-    //             "id": id_error
-    //         },
-    //         success: function(data) {
-    //             data = JSON.parse(data.replace('gi', ''));
-    //             if (data.length > 0) {
-    //                 var i = 0;
-    //                 var html = "<option value=''></option>";
-    //                 for (i = 0; i < data.length; i++) {
-    //                     html = html + `<option value="` + data[i].id + `">` + data[i].name + `</option>`;
-    //                 }
-    //                 $('#ls_error').html(html);
-    //             }
-    //         }
-    //     });
-    // });
 </script>

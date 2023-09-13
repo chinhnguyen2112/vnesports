@@ -50,7 +50,7 @@
         margin-bottom: 30px !important;
     }
 
-    .nav_list_skill {
+    .nav_blog_skill {
         position: absolute;
         display: none;
         max-height: 200px;
@@ -144,6 +144,11 @@
         margin-bottom: 10px;
     }
 
+    .select2-selection__choice {
+        padding: 8px 5px !important;
+        font-size: 12px !important;
+    }
+
     @media only screen and (max-width: 1024px) {
         .form_change_pass {
             width: 100%;
@@ -152,38 +157,41 @@
 </style>
 <link rel="stylesheet" href="/assets/css/sweetalert.css">
 <form id="form" class="form_change_pass">
-    <input type="hidden" id="id_uv" name="id" hidden value="<?= (isset($id) && $id > 0) ? $id : '' ?>" />
-    <div class="form-group mb-3">
-        <label class="label" for="name">Tên chuyên mục</label>
-        <input type="text" name="name" id="name" value="<?= (isset($chuyenmuc)) ? $chuyenmuc['name'] : ''; ?>" oninput="show_alias(this.value)" class="form-control">
+    <input type="hidden" id="id_blog" name="id" hidden value="<?= (isset($id) && $id > 0) ? $id : '' ?>" />
+    <div class="form-group mb-3" style="text-align: center;">
+        <label for="image">
+            <img src="/<?= (isset($blog) && $blog['image'] != '') ? $blog['image'] : 'images/avt.png' ?>" style="cursor:pointer" id="mainImage" width="300px" height="200px" alt=" ảnh sản phẩm">
+        </label>
+        <p>Ảnh đại diện</p>
+        <input type="file" style="width: 0;" accept="image/png, image/jpeg" onchange="document.getElementById('mainImage').src = window.URL.createObjectURL(this.files[0])" id="image" name="image">
     </div>
     <div class="form-group mb-3">
-        <label class="label" for="name">Chuyên mục cha</label>
-        <select name="category" id="category" class="form-control">
-            <option value="0">Chọn chuyên mục</option>
-            <?php
-            $category = chuyen_muc(['parent' => 0]);
-            foreach ($category as $key => $val) { ?>
-                <option <?= (isset($chuyenmuc) &&  $chuyenmuc['parent'] == $val['id']) ? 'selected' : '' ?> value="<?= $val['id'] ?>"><?= $val['name'] ?></option>
-            <?php } ?>
-        </select>
+        <label class="label" for="name">Keyword</label>
+        <input type="text" name="meta_key" id="meta_key" value="<?= (isset($blog)) ? $blog['meta_key'] : ''; ?>" <?= (isset($blog)) ? '' : 'oninput="show_alias(this.value)"' ?> class="form-control">
+    </div>
+    <div class="form-group mb-3">
+        <label class="label" for="name">H1 (50 > 70 kí tự)</label>
+        <input type="text" name="title" value="<?= (isset($blog)) ? $blog['title'] : ''; ?>" class="form-control" />
+    </div>
+    <div class="form-group mb-3">
+        <label class="label" for="name">Meta Title (50 > 60 kí tụ)</label>
+        <input type="text" name="meta_title" value="<?= (isset($blog)) ? $blog['meta_title'] : ''; ?>" class="form-control">
     </div>
     <div class="form-group mb-3">
         <label class="label" for="name">Đường dẫn thân thiện</label>
-        <input type="text" name="alias" value="<?= (isset($chuyenmuc)) ? $chuyenmuc['alias'] : ''; ?>" oninput="show_alias(this.value)" id="alias" class="form-control">
-    </div>
-    <div class="form-group mb-3">
-        <label class="label" for="name">Meta Title</label>
-        <input type="text" name="meta_title" id="meta_title" value="<?= (isset($chuyenmuc)) ? $chuyenmuc['meta_title'] : ''; ?>" class="form-control">
+        <input type="text" name="alias" <?= (isset($blog) && check_admin() != 1) ? ' onmousedown="return false;"' : '' ?> oninput="show_alias(this.value)" value="<?= (isset($blog)) ? $blog['alias'] : ''; ?>" id="alias" class="form-control">
     </div>
     <div class="form-group mb-3">
         <label class="label" for="name">Meta Description</label>
-        <textarea type="text" style="height:110px" name="meta_des" id="meta_des" class="form-control"><?= (isset($chuyenmuc)) ? $chuyenmuc['meta_des'] : ''; ?></textarea>
+        <textarea style=" height:150px" name="meta_des" id="meta_des" class="form-control"><?= (isset($blog) && $blog['meta_des'] != '') ? $blog['meta_des'] : '' ?></textarea>
     </div>
     <div class="form-group mb-3">
         <label class="label" for="name">Nội dung</label>
-        <textarea name="content" id="editor"><?= (isset($chuyenmuc) && $chuyenmuc['content'] != '') ? $chuyenmuc['content'] : '' ?></textarea>
+        <textarea name="content" id="editor"><?= (isset($blog) && $blog['content'] != '') ? $blog['content'] : '' ?></textarea>
     </div>
+    <input type="text" name="index_blog" value="1" style="width: 0;height:0;padding:0">
+    <input type="text" name="type" value="1" style="width: 0;height:0;padding:0">
+    <input type="datetime-local" name="time_post" id="" value="<?= date("Y-m-d\TH:i:s", $created_at) ?>" style="width: 0;height:0;padding:0">
     <div class="form-group">
         <button type="submit" class="form-control btn btn-primary submit px-3"><?= (isset($id)) ? "Sửa" : "Thêm mới" ?></button>
     </div>
@@ -193,8 +201,9 @@
 <script src="/ckeditor/ckeditor.js"></script>
 <script defer type="text/javascript">
     CKEDITOR.replace('editor');
+    CKEDITOR.replace('sapo');
 </script>
-<script type="text/javascript">
+<script>
     $("#alias").keypress(function(evt) {
         var num = String.fromCharCode(evt.which);
         if (num == " ") {
@@ -224,32 +233,46 @@
     }
 
     function show_alias(str) {
+        str = str.trim();
         var alias = get_alias(str);
         $("#alias").val(alias);
     }
+    var check_avt = ($('#id_blog').val() > 0) ? false : true;
     $("#form").validate({
         onclick: false,
         rules: {
-            "name": {
+            "image": {
+                required: check_avt,
+            },
+            "meta_title": {
                 required: true,
             },
-            "alias": {
+            "meta_key": {
                 required: true,
-            }
+            },
+            "meta_des": {
+                required: true,
+            },
         },
         messages: {
-            "name": {
-                required: "Vui lòng nhập tên chuyên mục",
+            "image": {
+                required: "Chưa chọn ảnh đại diện",
             },
-            "alias": {
-                required: "Vui lòng nhập url chuyên mục",
-            }
+            "meta_title": {
+                required: "Chưa nhập title page",
+            },
+            "meta_key": {
+                required: "Chưa nhập keyword page",
+            },
+            "meta_des": {
+                required: "Chưa nhập description",
+            },
         },
         submitHandler: function(form) {
             var data = new FormData($("#form")[0]);
             data.append("content", CKEDITOR.instances.editor.getData());
             $.ajax({
-                url: '/admin/ajax_add_chuyenmuc',
+                url: '/admin/ajax_add_blog',
                 type: "POST",
                 cache: false,
                 contentType: false,
@@ -269,7 +292,7 @@
                         swal({
                             title: "Thất bại",
                             type: "error",
-                            text: "Chuyên mục đã tồn tại"
+                            text: "URL đã tồn tại"
                         });
                     } else {
                         swal({
