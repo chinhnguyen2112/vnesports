@@ -87,19 +87,19 @@
                 <li class="item_content_sidebar">
                     <img class="icon_li" src="/images/icons8-star-50.png" />
                     <strong>
-                        <a rel="dofollow" href="https://mu88.tips/">MU88</a>
+                        <a target="_blank" rel="dofollow" href="https://mu88.tips/">MU88</a>
                     </strong>
                 </li>
                 <li class="item_content_sidebar">
                     <img class="icon_li" src="/images/icons8-star-50.png" />
                     <strong>
-                        <a rel="dofollow" href="https://ketquabongda.io/">ketquabongda</a>
+                        <a target="_blank" rel="dofollow" href="https://ketquabongda.io/">ketquabongda</a>
                     </strong>
                 </li>
                 <li class="item_content_sidebar">
                     <img class="icon_li" src="/images/icons8-star-50.png" />
                     <strong>
-                        <a rel="dofollow" href="https://123.cx">123b</a>
+                        <a target="_blank" rel="dofollow" href="https://123b.cx n">123b</a>
                     </strong>
                 </li>
                 <!-- <li class="item_content_sidebar">
