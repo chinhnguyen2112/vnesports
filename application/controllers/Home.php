@@ -32,8 +32,8 @@ class Home extends CI_Controller
     {
         $time = time();
         $data['canonical'] = base_url();
-        $data['blog'] = $this->Madmin->get_limit("time_post <= $time", 'blogs', 0, 20);
-        $data['blog_new'] = $this->Madmin->get_limit("time_post <= $time", 'blogs', 0, 5);
+        $data['blog'] = $this->Madmin->get_limit("time_post <= $time AND index_blog = 1 AND type = 0", 'blogs', 0, 20);
+        $data['blog_new'] = $this->Madmin->get_limit("time_post <= $time AND index_blog = 1 AND type = 0", 'blogs', 0, 5);
         $tags = $this->Madmin->query_sql("SELECT id FROM tags WHERE parent = 25");
         $where = "";
         foreach ($tags as $key => $val) {
@@ -43,7 +43,7 @@ class Home extends CI_Controller
                 $where .= ' OR FIND_IN_SET(' . $val['id'] . ',tag) ';
             }
         }
-        $blog_tag = $this->Madmin->query_sql("SELECT * FROM blogs WHERE  time_post <= $time AND ( $where ) ORDER BY id DESC LIMIT 4");
+        $blog_tag = $this->Madmin->query_sql("SELECT * FROM blogs WHERE  time_post <= $time AND index_blog = 1 AND type = 0 AND ( $where ) ORDER BY id DESC LIMIT 4");
         $data['blog_tag'] = $blog_tag;
         $data['meta_title'] = 'VnEsports: Web Giải Trí eSports Việt Nam & Thế Giới';
         $data['content'] = 'home';
@@ -84,15 +84,15 @@ class Home extends CI_Controller
             if ($chuyenmuc['parent'] == 0) {
                 $count_or['cate_parent'] = $chuyenmuc['id'];
             }
-            $count = $this->Madmin->num_rows_or("time_post <= $time", $count_or, 'blogs');
+            $count = $this->Madmin->num_rows_or("time_post <= $time AND index_blog = 1 AND type = 0", $count_or, 'blogs');
             pagination('/' . $chuyenmuc['alias'], $count, $limit);
             $chuyenmuc_parent = $this->Madmin->get_by(['id' => $chuyenmuc['parent']], 'category');
             $title_page = $chuyenmuc['name'];
             if ($chuyenmuc_parent != null) {
                 $title_page = $chuyenmuc_parent['name'] . ' - ' . $chuyenmuc['name'];
             }
-            $data['blog'] = $this->Madmin->get_limit_or("time_post <= $time", $count_or, 'blogs', $start, $limit);
-            $data['blog_new'] = $this->Madmin->query_sql("SELECT * FROM blogs WHERE   time_post <= $time  ORDER BY id DESC LIMIT 5");
+            $data['blog'] = $this->Madmin->get_limit_or("time_post <= $time AND index_blog = 1 AND type = 0", $count_or, 'blogs', $start, $limit);
+            $data['blog_new'] = $this->Madmin->query_sql("SELECT * FROM blogs WHERE   time_post <= $time AND index_blog = 1 AND type = 0  ORDER BY id DESC LIMIT 5");
             $data['title_page'] = $title_page;
             $data['content_cate'] = $chuyenmuc['content'];
             $data['meta_img'] = $chuyenmuc['image'];
@@ -114,8 +114,8 @@ class Home extends CI_Controller
             if (!admin() && $blog['time_post'] > $time) {
                 redirect('/');
             }
-            $data['blog_same'] = $this->Madmin->query_sql("SELECT * FROM blogs WHERE chuyenmuc = {$blog['chuyenmuc']} AND time_post <= $time AND id != {$blog['id']}  ORDER BY updated_at DESC LIMIT 6");
-            $data['blog_new'] = $this->Madmin->query_sql("SELECT * FROM blogs WHERE  id != {$blog['id']} AND time_post <= $time  ORDER BY id DESC LIMIT 5");
+            $data['blog_same'] = $this->Madmin->query_sql("SELECT * FROM blogs WHERE chuyenmuc = {$blog['chuyenmuc']} AND time_post <= $time AND index_blog = 1 AND type = 0 AND id != {$blog['id']}  ORDER BY updated_at DESC LIMIT 6");
+            $data['blog_new'] = $this->Madmin->query_sql("SELECT * FROM blogs WHERE  id != {$blog['id']} AND time_post <= $time AND index_blog = 1 AND type = 0  ORDER BY id DESC LIMIT 5");
             $cate = $this->Madmin->query_sql_row("SELECT *  FROM category  WHERE id = {$blog['chuyenmuc']} ");
             $title_page = $cate['name'];
             $cate_alias = $cate['alias'];
@@ -154,10 +154,10 @@ class Home extends CI_Controller
             }
             $limit = 18;
             $start = $limit * ($page - 1);
-            $count = $this->Madmin->query_sql("SELECT blogs.*,category.name as name_cate,category.alias as alias_cate,category.image as img_cate FROM blogs INNER JOIN category ON category.id = blogs.chuyenmuc WHERE time_post <= $time AND ( $where ) ");
+            $count = $this->Madmin->query_sql("SELECT blogs.*,category.name as name_cate,category.alias as alias_cate,category.image as img_cate FROM blogs INNER JOIN category ON category.id = blogs.chuyenmuc WHERE time_post <= $time AND index_blog = 1 AND type = 0 AND ( $where ) ");
             pagination('/' . $tags['alias'], count($count), $limit);
-            $data['blog'] = $this->Madmin->query_sql("SELECT * FROM blogs  WHERE time_post <= $time AND ( $where ) ORDER BY id DESC LIMIT $start,$limit");
-            $data['blog_new'] = $this->Madmin->query_sql("SELECT * FROM blogs WHERE time_post <= $time  ORDER BY id DESC LIMIT 5");
+            $data['blog'] = $this->Madmin->query_sql("SELECT * FROM blogs  WHERE time_post <= $time AND index_blog = 1 AND type = 0 AND ( $where ) ORDER BY id DESC LIMIT $start,$limit");
+            $data['blog_new'] = $this->Madmin->query_sql("SELECT * FROM blogs WHERE time_post <= $time AND index_blog = 1 AND type = 0  ORDER BY id DESC LIMIT 5");
             $data['title_page'] = $tags['name'];
             $data['meta_title'] = $tags['meta_title'];
             $data['meta_des'] = $tags['meta_des'];
@@ -182,7 +182,7 @@ class Home extends CI_Controller
     {
         $time = time();
         $data['content'] = 'lich_thi_dau';
-        $data['blog_new'] = $this->Madmin->query_sql("SELECT * FROM blogs WHERE   time_post <= $time  ORDER BY id DESC LIMIT 5");
+        $data['blog_new'] = $this->Madmin->query_sql("SELECT * FROM blogs WHERE   time_post <= $time AND index_blog = 1 AND type = 0  ORDER BY id DESC LIMIT 5");
         $data['canonical'] = base_url() . $chuyenmuc['alias'] . '/';
         $data['title_page'] = $chuyenmuc['name'];
         $data['meta_title'] = $chuyenmuc['meta_title'];
@@ -213,9 +213,9 @@ class Home extends CI_Controller
             }
             $limit = 18;
             $start = $limit * ($page - 1);
-            $count = $this->Madmin->query_sql("SELECT blogs.*,category.name as name_cate,category.alias as alias_cate,category.image as img_cate FROM blogs INNER JOIN category ON category.id = blogs.chuyenmuc WHERE  time_post <= $time AND FIND_IN_SET($id_tag,tag) ");
+            $count = $this->Madmin->query_sql("SELECT blogs.*,category.name as name_cate,category.alias as alias_cate,category.image as img_cate FROM blogs INNER JOIN category ON category.id = blogs.chuyenmuc WHERE  time_post <= $time AND index_blog = 1 AND type = 0 AND FIND_IN_SET($id_tag,tag) ");
             pagination('/' . $tags['alias'], count($count), $limit);
-            $data['blog'] = $this->Madmin->query_sql("SELECT * FROM blogs  WHERE time_post <= $time AND FIND_IN_SET($id_tag,tag) ORDER BY id DESC LIMIT $start,$limit");
+            $data['blog'] = $this->Madmin->query_sql("SELECT * FROM blogs  WHERE time_post <= $time AND index_blog = 1 AND type = 0 AND FIND_IN_SET($id_tag,tag) ORDER BY id DESC LIMIT $start,$limit");
             $data['title_page'] = $tags['name'];
             $data['meta_title'] = $tags['meta_title'];
             $data['meta_des'] = $tags['meta_des'];
@@ -243,8 +243,8 @@ class Home extends CI_Controller
             if (!admin() && $blog['time_post'] > $time) {
                 redirect('/');
             }
-            $data['blog_same'] = $this->Madmin->query_sql("SELECT * FROM blogs WHERE time_post <= $time AND chuyenmuc = {$blog['chuyenmuc']} AND id != {$blog['id']}  ORDER BY updated_at DESC LIMIT 3");
-            $data['blog_new'] = $this->Madmin->query_sql("SELECT * FROM blogs WHERE time_post <= $time AND  id != {$blog['id']}  ORDER BY id DESC LIMIT 6");
+            $data['blog_same'] = $this->Madmin->query_sql("SELECT * FROM blogs WHERE time_post <= $time AND index_blog = 1 AND type = 0 AND chuyenmuc = {$blog['chuyenmuc']} AND id != {$blog['id']}  ORDER BY updated_at DESC LIMIT 3");
+            $data['blog_new'] = $this->Madmin->query_sql("SELECT * FROM blogs WHERE time_post <= $time AND index_blog = 1 AND type = 0 AND  id != {$blog['id']}  ORDER BY id DESC LIMIT 6");
             $cate = $this->Madmin->query_sql_row("SELECT *  FROM category  WHERE id = {$blog['chuyenmuc']} ");
             $title_page = $cate['name'];
             if ($cate['parent'] > 0) {

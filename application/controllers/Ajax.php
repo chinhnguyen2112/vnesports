@@ -16,7 +16,7 @@ class Ajax extends CI_Controller
         $time = time();
         $page = $this->input->post('page');
         $page = 20 * ($page - 1);
-        $blog = $this->Madmin->get_limit("time_post <= $time ", 'blogs', $page, 20);
+        $blog = $this->Madmin->get_limit("time_post <= $time AND index_blog = 1 AND type = 0 ", 'blogs', $page, 20);
         $html = '';
         if ($blog != null) {
             foreach ($blog as $val) {
@@ -63,9 +63,9 @@ class Ajax extends CI_Controller
             foreach ($list_tag as $val) {
                 $where .= ' OR FIND_IN_SET(' . $val['id'] . ',tag) ';
             }
-            $blog_cate_sql = "SELECT blogs.*,category.name as name_cate,category.alias as alias_cate,category.image as image_cate FROM blogs INNER JOIN category ON blogs.chuyenmuc = category.id WHERE time_post <= $time AND $where ORDER BY blogs.id  DESC LIMIT $page,  10";
+            $blog_cate_sql = "SELECT blogs.*,category.name as name_cate,category.alias as alias_cate,category.image as image_cate FROM blogs INNER JOIN category ON blogs.chuyenmuc = category.id WHERE time_post <= $time AND index_blog = 1 AND type = 0 AND $where ORDER BY blogs.id  DESC LIMIT $page,  10";
         } else {
-            $blog_cate_sql = "SELECT blogs.*,category.name as name_cate,category.alias as alias_cate,category.image as image_cate FROM blogs INNER JOIN category ON blogs.chuyenmuc = category.id WHERE time_post <= $time AND blogs.chuyenmuc = $chuyen_muc ORDER BY blogs.id DESC LIMIT $page,  10";
+            $blog_cate_sql = "SELECT blogs.*,category.name as name_cate,category.alias as alias_cate,category.image as image_cate FROM blogs INNER JOIN category ON blogs.chuyenmuc = category.id WHERE time_post <= $time AND index_blog = 1 AND type = 0 AND blogs.chuyenmuc = $chuyen_muc ORDER BY blogs.id DESC LIMIT $page,  10";
         }
         $blog_cate = $this->Madmin->query_sql($blog_cate_sql);
         $html = '';
