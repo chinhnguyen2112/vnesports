@@ -105,19 +105,19 @@
                 <li class="item_content_sidebar">
                     <img class="icon_li" src="/images/icons8-star-50.png" />
                     <strong>
-                        <a target="_blank" rel="dofollow" href="https://xoilack.tv/">xôi lạc tv</a>
+                        <a target="_blank" rel="dofollow" href="https://xoilack.co/">xôi lạc tv</a>
                     </strong>
                 </li>
                 <li class="item_content_sidebar">
                     <img class="icon_li" src="/images/icons8-star-50.png" />
                     <strong>
-                        <a target="_blank" rel="dofollow" href="https://liverpoolmania.net/">xoilac tv trực tiếp bóng đá</a>
+                        <a target="_blank" rel="dofollow" href="https://eduvlog.org/">xoilac tv trực tiếp bóng đá</a>
                     </strong>
                 </li>
                 <li class="item_content_sidebar">
                     <img class="icon_li" src="/images/icons8-star-50.png" />
                     <strong>
-                        <a target="_blank" rel="dofollow" href="https://www.ictm2022.org/">cakhia tv trực tiếp bóng đá</a>
+                        <a target="_blank" rel="dofollow" href="https://corgipals.org/">cakhia tv trực tiếp bóng đá</a>
                     </strong>
                 </li>
                 <!-- <li class="item_content_sidebar">
