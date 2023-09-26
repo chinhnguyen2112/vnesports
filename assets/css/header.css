@@ -47,8 +47,9 @@ body {
 .main_header {
     position: fixed;
     width: 100%;
-    background: #ea9912;
+    background: #ffffff;
     z-index: 3;
+    border-bottom: 1px solid #ccc;
 }
 
 .header_bot {
@@ -58,7 +59,7 @@ body {
     -moz-transition: all .3s;
     transition: all .3s;
     width: -webkit-fill-available;
-    background: #ea9912;
+    background: #ffffff;
     margin: auto;
     display: flex;
     padding: 5px 20px;
@@ -101,7 +102,7 @@ img.img_logo_bot_header {
 
 .this_menu span a {
     padding: 2px 9px;
-    color: #ffffff;
+    color: #000000;
     cursor: pointer;
     border-radius: 4px;
     font-weight: 600;
@@ -111,7 +112,7 @@ img.img_logo_bot_header {
 }
 
 .this_menu span a {
-    color: #ffffff;
+    color: #000000;
     font-weight: 600;
 }
 
@@ -159,7 +160,7 @@ img.img_logo_bot_header {
 }
 
 .this_menu span a:hover {
-    color: #dadada;
+    color: #000000;
 }
 
 .menu_con p a:hover {
