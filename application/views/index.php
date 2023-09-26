@@ -51,6 +51,25 @@
     gtag('config', 'G-ZMHVTL8HF0');
   </script>
   <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8909964658809892" crossorigin="anonymous"></script> -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Vnesports",
+      "alternateName": "Vnesports",
+      "url": "https://vnesports.vn/",
+      "logo": "https://vnesports.vn/images/logo.png",
+      "sameAs": [
+        "https://vnesports.vn/",
+        "https://www.pinterest.com/gamevnesports/",
+        "https://soundcloud.com/vnesports-game",
+        "https://vnesports.tumblr.com/",
+        "https://twitter.com/VnEsportsgame/",
+        "https://www.youtube.com/@VnEsportsgame/about"
+      ]
+    }
+  </script>
+
 </head>
 
 <body>
