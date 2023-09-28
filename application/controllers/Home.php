@@ -69,7 +69,7 @@ class Home extends CI_Controller
         $tags = $this->Madmin->get_by(['alias' => $alias], 'tags');
         if ($chuyenmuc != null) { //chuyenmuc
             if ($_SERVER['REQUEST_URI'] != '/' . $alias . '/') {
-                redirect('/' . $alias . '/');
+                redirect('/' . $alias . '/', 'location', 301);
             }
             if ($alias == 'lich-thi-dau') {
                 return $this->lich_thi_dau($chuyenmuc);
@@ -109,7 +109,7 @@ class Home extends CI_Controller
             ];
         } else if ($blog != null) { // blog
             if ($_SERVER['REQUEST_URI'] != '/' . $alias . '/') {
-                redirect('/' . $alias . '/');
+                redirect('/' . $alias . '/', 'location', 301);
             }
             if (!admin() && $blog['time_post'] > $time) {
                 redirect('/');
@@ -140,7 +140,7 @@ class Home extends CI_Controller
             $data['meta_img'] = $blog['image'];
         } else if ($tags != null) {
             if ($_SERVER['REQUEST_URI'] != '/' . $alias . '/') {
-                redirect('/' . $alias . '/');
+                redirect('/' . $alias . '/', 'location', 301);
             }
             $id_parent = $tags['id'];
             $list_tag = $this->Madmin->query_sql("SELECT *  FROM tags  WHERE parent = $id_parent ");
@@ -173,7 +173,8 @@ class Home extends CI_Controller
                 'css_tag.css',
             ];
         } else {
-            redirect('/');
+            set_status_header(404);
+            return $this->load->view('errors/html/error_404');
         }
         $data['index'] = 1;
         $this->load->view('index', $data);
@@ -204,7 +205,7 @@ class Home extends CI_Controller
         $tags = $this->Madmin->get_by(['alias' => $alias2, 'parent >' => 0], 'tags');
         if ($tags['parent'] == $tags_parent['id']) {
             if ($_SERVER['REQUEST_URI'] != '/' . $alias1 . '/' . $alias2 . '/') {
-                redirect('/' . $alias1 . '/' . $alias2 . '/');
+                redirect('/' . $alias1 . '/' . $alias2 . '/', 'location', 301);
             }
             $id_tag = $tags['id'];
             $page = $this->uri->segment(3);
@@ -230,7 +231,8 @@ class Home extends CI_Controller
                 'chuyenmuc_blog.css',
             ];
         } else {
-            redirect('/');
+            set_status_header(404);
+            return $this->load->view('errors/html/error_404');
         }
         $data['index'] = 1;
         $this->load->view('index', $data);
@@ -266,13 +268,14 @@ class Home extends CI_Controller
             $data['meta_img'] = $blog['image'];
             $this->load->view('index', $data);
         } else {
-            redirect('/');
+            set_status_header(404);
+            return $this->load->view('errors/html/error_404');
         }
     }
     public function bxh()
     {
         if ($_SERVER['REQUEST_URI'] != '/bang-xep-hang/') {
-            redirect('/bang-xep-hang/');
+            redirect('/bang-xep-hang/', 'location', 301);
         }
         $chuyenmuc = $this->Madmin->get_by(['alias' => 'bang-xep-hang'], 'category');
         $data['title_page'] = "Bảng xếp hạng";
