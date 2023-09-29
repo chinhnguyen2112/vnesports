@@ -120,13 +120,13 @@
                         <a target="_blank" rel="dofollow" href="https://corgipals.org/">cakhia tv trực tiếp bóng đá</a>
                     </strong>
                 </li>
-                <!-- <li class="item_content_sidebar">
+                <li class="item_content_sidebar">
                     <img class="icon_li" src="/images/icons8-star-50.png" />
-                    Tải phần mềm tại
+                    Gaming
                     <strong>
-                        <a rel="nofollow" href="https://kashi.com.vn/">Kashi.com.vn</a>
+                        <a target="_blank" rel="dofollow" href="https://sunwin.cash/"> sunwin</a>
                     </strong>
-                </li> -->
+                </li>
             </ul>
         </div>
     </div>
