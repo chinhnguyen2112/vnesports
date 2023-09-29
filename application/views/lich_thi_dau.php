@@ -18,13 +18,9 @@
             <div class="top_blog">
                 <div class="top_left">
                     <div class="list_blog_top">
-                        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KPB4CSH&gtm_auth=Ln4buOxbvoh33x6CFPz6xA&gtm_preview=env-1&gtm_cookies_win=x"></noscript>
-                        <div id="fb-root"></div>
-                        <div id="root"></div>
-                        <script defer="defer" src="https://www.gosugamers.vn/assets/scripts/runtime.0d3975f18c6771b8311f.js"></script>
-                        <script defer="defer" src="https://www.gosugamers.vn/assets/scripts/543.97345d7f8a0d320619ee.js"></script>
-                        <script defer="defer" src="https://www.gosugamers.vn/assets/scripts/main.b7b1387e7f00cb4abfd0.js"></script>
-                        <iframe src="https://64e1050d2fd0bbc484309af4fd76d0f8.safeframe.googlesyndication.com/safeframe/1-0-40/html/container.html"></iframe>
+                        <iframe src="https://es.imespewbw.com/esport.aspx?LanguageCode=vn" id="BodyContentPlaceHolderBase_BodyContentPlaceHolderSite_iframeContent" marginwidth="0" scrolling="no" class="myframe" marginheight="0" style="border: none; width: 100%; height: 800px; overflow: hidden;" name="iframeContent" allowfullscreen="" frameborder="0"></iframe>
+                        <div class="hide_box"></div>
+                        <div class="hide_box_2"></div>
                     </div>
                 </div>
             </div>
@@ -36,7 +32,51 @@
         display: block;
     }
 
-    #lc {
-        display: none;
+    .list_blog_top {
+        position: relative;
+    }
+
+    .hide_box {
+        position: absolute;
+        width: 7%;
+        height: 90%;
+        top: 10%;
+        background: #000;
+        right: 6%;
+    }
+
+    .hide_box_2 {
+        position: absolute;
+        top: 5.9%;
+        height: 5%;
+        width: 9%;
+        background: #000;
+        right: 5%;
+    }
+
+    @media only screen and (max-width: 1024px) {
+        .hide_box_2 {
+            height: 4%;
+        }
+    }
+
+    @media only screen and (max-width: 820px) {
+        .hide_box {
+            top: 4%;
+            height: 96%;
+        }
+
+        .hide_box_2 {
+            top: 4.2%;
+            height: 3%;
+        }
+
+        .list_blog_top {
+            width: 728px;
+        }
+
+        .top_left {
+            overflow: auto;
+        }
     }
 </style>
