@@ -133,6 +133,13 @@
                         <a target="_blank" rel="dofollow" href="https://mikigame.vn/">socolive tv</a>
                     </strong>
                 </li>
+                <li class="item_content_sidebar">
+                    <img class="icon_li" src="/images/icons8-star-50.png" />
+                    Khám phá game tại
+                    <strong>
+                        <a target="_blank" rel="dofollow" href="http://f8bet0.loan/"> f8bet</a>
+                    </strong>
+                </li>
             </ul>
         </div>
     </div>
