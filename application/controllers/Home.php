@@ -65,9 +65,16 @@ class Home extends CI_Controller
         $alias = trim($alias);
         $data['canonical'] = base_url() . $alias . '/';
         $chuyenmuc = $this->Madmin->get_by(['alias' => $alias], 'category');
-        $blog = $this->Madmin->query_sql_row("SELECT blogs.*,category.name as name_cate,category.alias as alias_cate,category.image as img_cate FROM blogs INNER JOIN category ON category.id = blogs.chuyenmuc WHERE blogs.alias = '$alias' ");
-        $tags = $this->Madmin->get_by(['alias' => $alias], 'tags');
-        if ($chuyenmuc != null) { //chuyenmuc
+        if ($chuyenmuc == null) {
+            $page = $this->Madmin->query_sql_row("SELECT * FROM blogs WHERE type = 1 AND alias = '$alias' ");
+            if ($page == null) {
+                $blog = $this->Madmin->query_sql_row("SELECT blogs.*,category.name as name_cate,category.alias as alias_cate,category.image as img_cate FROM blogs INNER JOIN category ON category.id = blogs.chuyenmuc WHERE type = 0 AND index_blog =1 AND time_post<= $time AND blogs.alias = '$alias' ");
+                if ($blog == null) {
+                    $tags = $this->Madmin->get_by(['alias' => $alias], 'tags');
+                }
+            }
+        }
+        if (isset($chuyenmuc) && $chuyenmuc != null) { //chuyenmuc
             if ($_SERVER['REQUEST_URI'] != '/' . $alias . '/') {
                 redirect('/' . $alias . '/', 'location', 301);
             }
@@ -107,7 +114,7 @@ class Home extends CI_Controller
             $data['list_css'] = [
                 'chuyenmuc_blog.css',
             ];
-        } else if ($blog != null) { // blog
+        } else if (isset($blog) && $blog != null) { // blog
             if ($_SERVER['REQUEST_URI'] != '/' . $alias . '/') {
                 redirect('/' . $alias . '/', 'location', 301);
             }
@@ -138,7 +145,7 @@ class Home extends CI_Controller
             $data['meta_des'] = $blog['meta_des'];
             $data['meta_key'] = $blog['meta_key'];
             $data['meta_img'] = $blog['image'];
-        } else if ($tags != null) {
+        } else if (isset($tags) && $tags != null) {
             if ($_SERVER['REQUEST_URI'] != '/' . $alias . '/') {
                 redirect('/' . $alias . '/', 'location', 301);
             }
@@ -172,10 +179,34 @@ class Home extends CI_Controller
             $data['list_css'] = [
                 'css_tag.css',
             ];
+        } elseif (isset($page) && $page != null) {
+            return $this->page($page);
         } else {
             set_status_header(404);
             return $this->load->view('errors/html/error_404');
         }
+        $data['index'] = 1;
+        $this->load->view('index', $data);
+    }
+    public function page($page)
+    {
+        if ($_SERVER['REQUEST_URI'] != '/' . $page['alias'] . '/') {
+            redirect('/' . $page['alias'] . '/', 'location', 301);
+        }
+        $data['canonical'] = base_url() . $page['alias'] . '/';
+        $data['page'] = $page;
+        $data['content'] = 'page';
+        $data['list_js'] = [
+            'jquery.toc.min.js',
+            'detail_blog.js',
+        ];
+        $data['list_css'] = [
+            'page.css',
+        ];
+        $data['meta_title'] = $page['meta_title'];
+        $data['meta_des'] = $page['meta_des'];
+        $data['meta_key'] = $page['meta_key'];
+        $data['meta_img'] = $page['image'];
         $data['index'] = 1;
         $this->load->view('index', $data);
     }
@@ -190,7 +221,7 @@ class Home extends CI_Controller
         $data['meta_des'] = $chuyenmuc['meta_des'];
         $data['meta_key'] = $chuyenmuc['name'];
         $data['meta_img'] = $chuyenmuc['image'];
-        // $data['index'] = 1;
+        $data['index'] = 1;
         $data['list_css'] = [
             'chuyenmuc_blog.css',
         ];

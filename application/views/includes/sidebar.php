@@ -127,6 +127,12 @@
                         <a target="_blank" rel="dofollow" href="https://sunwin.cash/"> sunwin</a>
                     </strong>
                 </li>
+                <li class="item_content_sidebar">
+                    <img class="icon_li" src="/images/icons8-star-50.png" />
+                    <strong>
+                        <a target="_blank" rel="dofollow" href="https://mikigame.vn/">socolive tv</a>
+                    </strong>
+                </li>
             </ul>
         </div>
     </div>
