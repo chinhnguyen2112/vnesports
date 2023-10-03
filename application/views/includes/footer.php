@@ -57,6 +57,8 @@ if (count($menu_cate_parent) > 2) {
                         <input class="input_text" type="email" name="email" placeholder="Email Address" required>
                         <input class="btn_submit_form" value="SIGN UP" type="submit">
                     </form>
+                    <a target="_blank" style="margin-top: 15px;display:block" rel="nofollow" href="https://www.dmca.com/r/33wdzmm" title="DMCA.com Protection Status" class="dmca-badge"><img width="120" height="21" loading="lazy" src="https://images.dmca.com/Badges/dmca_protected_sml_120b.png?ID=f936b4b7-f675-4399-9627-694869ab0664" alt="DMCA.com Protection Status"></a>
+                    <script src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js"> </script>
                 </div>
             </div>
         </div>

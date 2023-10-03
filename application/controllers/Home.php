@@ -62,6 +62,7 @@ class Home extends CI_Controller
     }
     public function chuyenmuc($alias)
     {
+        $data['page'] = $this->Madmin->query_sql("SELECT title,alias FROM blogs WHERE type = 1");
         $time = time();
         $alias = trim($alias);
         $data['canonical'] = base_url() . $alias . '/';
@@ -191,6 +192,7 @@ class Home extends CI_Controller
     }
     public function page($page)
     {
+        $data['page'] = $this->Madmin->query_sql("SELECT title,alias FROM blogs WHERE type = 1");
         if ($_SERVER['REQUEST_URI'] != '/' . $page['alias'] . '/') {
             redirect('/' . $page['alias'] . '/', 'location', 301);
         }
@@ -213,6 +215,7 @@ class Home extends CI_Controller
     }
     public function lich_thi_dau($chuyenmuc)
     {
+        $data['page'] = $this->Madmin->query_sql("SELECT title,alias FROM blogs WHERE type = 1");
         $time = time();
         $data['content'] = 'lich_thi_dau';
         $data['blog_new'] = $this->Madmin->query_sql("SELECT * FROM blogs WHERE   time_post <= $time AND index_blog = 1 AND type = 0  ORDER BY id DESC LIMIT 5");
@@ -230,6 +233,7 @@ class Home extends CI_Controller
     }
     public function tag($alias1, $alias2)
     {
+        $data['page'] = $this->Madmin->query_sql("SELECT title,alias FROM blogs WHERE type = 1");
         $time = time();
         $alias1 = trim($alias1);
         $alias2 = trim($alias2);
@@ -271,6 +275,7 @@ class Home extends CI_Controller
     }
     public function detail_blog($alias)
     {
+        $data['page'] = $this->Madmin->query_sql("SELECT title,alias FROM blogs WHERE type = 1");
         $time = time();
         $blog = $this->Madmin->query_sql_row("SELECT blogs.*,category.name as name_cate,category.alias as alias_cate,category.image as img_cate FROM blogs INNER JOIN category ON category.id = blogs.chuyenmuc WHERE blogs.alias = '$alias' ");
         if ($blog != null) {
@@ -306,6 +311,7 @@ class Home extends CI_Controller
     }
     public function bxh()
     {
+        $data['page'] = $this->Madmin->query_sql("SELECT title,alias FROM blogs WHERE type = 1");
         if ($_SERVER['REQUEST_URI'] != '/bang-xep-hang/') {
             redirect('/bang-xep-hang/', 'location', 301);
         }
