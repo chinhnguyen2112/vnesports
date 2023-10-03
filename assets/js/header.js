@@ -1,10 +1,21 @@
 function show_menu(e, type) {
 	if (type == 1) {
-		$(".header_menu").show();
-		$(e).attr("onclick", "show_menu(this,2)");
+		$(".all_menu_drop").css("transform","scale(1)");
+		// $(e).attr("onclick", "show_menu(this,2)");
 	} else {
-		$(".header_menu").hide();
-		$(e).attr("onclick", "show_menu(this,1)");
+        $(".all_menu_drop").css("transform","scale(0)");
+		// $(e).attr("onclick", "show_menu(this,1)");
+	}
+}
+function show_menu_mobile(e, type) {
+	if (type == 1) {
+		$(".all_menu_drop").css("transform","scale(1)");
+		$(e).attr("onclick", "show_menu_mobile(this,2)");
+		$('#line_span').addClass('active_span');
+	} else {
+		$(".all_menu_drop").css("transform","scale(0)");
+		$(e).attr("onclick", "show_menu_mobile(this,1)");
+		$('#line_span').removeClass('active_span');
 	}
 }
 // function show_menu1(e) {

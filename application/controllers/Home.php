@@ -33,6 +33,7 @@ class Home extends CI_Controller
         $time = time();
         $data['canonical'] = base_url();
         $data['blog'] = $this->Madmin->get_limit("time_post <= $time AND index_blog = 1 AND type = 0", 'blogs', 0, 20);
+        $data['page'] = $this->Madmin->query_sql("SELECT title,alias FROM blogs WHERE type = 1");
         $data['blog_new'] = $this->Madmin->get_limit("time_post <= $time AND index_blog = 1 AND type = 0", 'blogs', 0, 5);
         $tags = $this->Madmin->query_sql("SELECT id FROM tags WHERE parent = 25");
         $where = "";
