@@ -3,11 +3,11 @@
         <div class="breadcrumb">
             <a href="/">Trang chủ</a>
             <span> / </span>
-            <span class="this_breadcrumb"><?= $page['title'] ?></span>
+            <span class="this_breadcrumb"><?= $pages['title'] ?></span>
         </div>
         <div class="left_detail">
             <div class="content_blog" id="content_blog">
-                <?= $page['content'] ?>
+                <?= $pages['content'] ?>
             </div>
         </div>
     </div>

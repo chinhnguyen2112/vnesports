@@ -197,7 +197,7 @@ class Home extends CI_Controller
             redirect('/' . $page['alias'] . '/', 'location', 301);
         }
         $data['canonical'] = base_url() . $page['alias'] . '/';
-        $data['page'] = $page;
+        $data['pages'] = $page;
         $data['content'] = 'page';
         $data['list_js'] = [
             'jquery.toc.min.js',
