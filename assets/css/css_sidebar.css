@@ -94,6 +94,40 @@
     font-weight: 500;
     display: block;
 }
+.sidebar_box_gray {
+    margin-bottom: 20px;
+    padding-bottom: 2px;
+    border: 1px solid #CECECE;
+    color: #666;
+}
+.box_linkout p {
+    font-weight: bold;
+    padding: 6px 10px;
+    border-bottom: 1px solid #CECECE;
+    font-size: 13px;
+    background: -webkit-linear-gradient(top, #fff, #ddd);
+    font-size: 16px;
+}
+.box_content_links ul {
+    line-height: 22px;
+    list-style: circle !important;
+    margin: 10px !important;
+    border: none;
+}
+
+.box_content_links li {
+    list-style: circle inside !important;
+    display: list-item !important;
+    background: none !important;
+    border-bottom: 1px dashed #CECECE;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    color: #000;
+}
+.box_content_links a {
+    color: #000;
+    font-size: 15px;
+}
 
 @media only screen and (max-width: 768px) {
     .sidebar_content {
