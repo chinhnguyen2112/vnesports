@@ -26,7 +26,7 @@
 <div class="sidebar_content">
     <div class="sidebar_box">
         <div class="box_heading">
-            <a href="#">Liên Kết Hữu Ích</a>
+            <a href="#">Bạn Có Biết ?</a>
         </div>
         <div class="box_content_sidebar">
             <ul>
@@ -76,6 +76,15 @@
                     </strong>
                     Riot Games
                 </li>
+            </ul>
+        </div>
+    </div>
+    <div class="sidebar_box">
+        <div class="box_heading">
+            <a href="#">Liên Kết Hữu Ích</a>
+        </div>
+        <div class="box_content_sidebar">
+            <ul>
                 <li class="item_content_sidebar">
                     <img class="icon_li" src="/images/icons8-star-50.png" />
                     Gaming Philippines
