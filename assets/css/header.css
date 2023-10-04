@@ -63,12 +63,12 @@ body {
     margin: auto;
     display: flex;
     flex-direction: column;
-    padding: 5px 20px;
+    padding: 5px 20px 0px 20px;
 }
 
 .header_menu {
     display: flex;
-    height: 58px;
+    height: 45px;
     align-items: center;
     border-top: 1px solid #bdbdbd;
 }
@@ -76,7 +76,7 @@ body {
 img.img_logo_bot_header {
     width: 155px;
     margin-right: 36px;
-    padding: 5px 0;
+    padding: 6px 0;
 }
 
 .this_menu {
@@ -125,7 +125,7 @@ img.img_logo_bot_header {
     align-items: center;
     width: 100%;
     justify-content: space-between;
-    padding: 12px 0;
+    padding: 6px 0;
 }
 .img_home {
     background: #e5e5e5;
