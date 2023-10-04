@@ -164,7 +164,7 @@
 }
 
 .date_post {
-    font-weight: 700;
+    font-weight: unset;
     font-size: 12px;
     line-height: 28px;
     color: #777777;
