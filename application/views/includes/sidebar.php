@@ -79,81 +79,50 @@
             </ul>
         </div>
     </div>
-    <div class="sidebar_box">
-        <div class="box_heading">
-            <a href="#">Liên Kết Hữu Ích</a>
+    <div class="sidebar_box_gray">
+        <div class="box_linkout">
+            <p>Liên Kết Hữu Ích</p>
         </div>
-        <div class="box_content_sidebar">
+        <div class="box_content_links">
             <ul>
-                <li class="item_content_sidebar">
-                    <img class="icon_li" src="/images/icons8-star-50.png" />
+                <li class="item_content_link">
                     Gaming Philippines
-                    <strong>
-                        <a rel="dofollow" href="https://tobet88.org/">TOBET88</a>
-                    </strong>
-
+                    <a rel="dofollow" href="https://tobet88.org/"><b>TOBET88</b></a>
                 </li>
-                <li class="item_content_sidebar">
-                    <img class="icon_li" src="/images/icons8-star-50.png" />
-                    <strong>
-                        <a target="_blank" rel="dofollow" href="https://mu88.tips/">MU88</a>
-                    </strong>
+                <li class="item_content_link">
+                    <a target="_blank" rel="dofollow" href="https://mu88.tips/"><b>MU88</b></a>
                 </li>
-                <li class="item_content_sidebar">
-                    <img class="icon_li" src="/images/icons8-star-50.png" />
-                    <strong>
-                        <a target="_blank" rel="dofollow" href="https://ketquabongda.io/">ketquabongda</a>
-                    </strong>
+                <li class="item_content_link">
+                    <a target="_blank" rel="dofollow" href="https://ketquabongda.io/"><b>ketquabongda</b></a>
                 </li>
-                <li class="item_content_sidebar">
-                    <img class="icon_li" src="/images/icons8-star-50.png" />
-                    <strong>
-                        <a target="_blank" rel="dofollow" href="https://123b.cx">123b</a>
-                    </strong>
+                <li class="item_content_link">
+                    <a target="_blank" rel="dofollow" href="https://123b.cx"><b>123b</b></a>
                 </li>
-                <li class="item_content_sidebar">
-                    <img class="icon_li" src="/images/icons8-star-50.png" />
-                    <strong>
-                        <a target="_blank" rel="dofollow" href="https://xoilack.co/">xôi lạc tv</a>
-                    </strong>
+                <li class="item_content_link">
+                    <a target="_blank" rel="dofollow" href="https://xoilack.co/"><b>xôi lạc tv</b></a>
                 </li>
-                <li class="item_content_sidebar">
-                    <img class="icon_li" src="/images/icons8-star-50.png" />
-                    <strong>
-                        <a target="_blank" rel="dofollow" href="https://eduvlog.org/">xoilac tv trực tiếp bóng đá</a>
-                    </strong>
+                <li class="item_content_link">
+                    <a target="_blank" rel="dofollow" href="https://eduvlog.org/"><b>xoilac tv trực tiếp bóng đá</b></a>
                 </li>
-                <li class="item_content_sidebar">
-                    <img class="icon_li" src="/images/icons8-star-50.png" />
-                    <strong>
-                        <a target="_blank" rel="dofollow" href="https://corgipals.org/">cakhia tv trực tiếp bóng đá</a>
-                    </strong>
+                <li class="item_content_link">
+                    <a target="_blank" rel="dofollow" href="https://corgipals.org/"><b>cakhia tv trực tiếp bóng đá</b></a>
                 </li>
-                <li class="item_content_sidebar">
-                    <img class="icon_li" src="/images/icons8-star-50.png" />
+                <li class="item_content_link">
                     Gaming
-                    <strong>
-                        <a target="_blank" rel="dofollow" href="https://sunwin.cash/"> sunwin</a>
-                    </strong>
+                    <a target="_blank" rel="dofollow" href="https://sunwin.cash/"><b>Sunwin</b></a>
                 </li>
-                <li class="item_content_sidebar">
-                    <img class="icon_li" src="/images/icons8-star-50.png" />
-                    <strong>
-                        <a target="_blank" rel="dofollow" href="https://mikigame.vn/">socolive tv</a>
-                    </strong>
+                <li class="item_content_link">
+                    <a target="_blank" rel="dofollow" href="https://mikigame.vn/"><b>Socolive tv</b></a>
                 </li>
-                <li class="item_content_sidebar">
-                    <img class="icon_li" src="/images/icons8-star-50.png" />
+                <li class="item_content_link">
                     Khám phá game tại
-                    <strong>
-                        <a target="_blank" rel="dofollow" href="http://f8bet0.loan/"> f8bet</a>
-                    </strong>
+                    <a target="_blank" rel="dofollow" href="http://f8bet0.loan/"><b>F8bet</b></a>
                 </li>
-                <li class="item_content_sidebar">
-                    <img class="icon_li" src="/images/icons8-star-50.png" />
-                    <strong>
-                        <a target="_blank" rel="dofollow" href="https://suncitytop1.com/"> sun city 888</a>
-                    </strong>
+                <li class="item_content_link">
+                    <a target="_blank" rel="dofollow" href="https://suncitytop1.com/"><b>Sun city 888</b></a>
+                </li>
+                <li class="item_content_link">
+                    <a target="_blank" rel="dofollow" href="https://caheotv.site/"><b>Caheo tv</b></a>
                 </li>
             </ul>
         </div>
