@@ -582,11 +582,11 @@ img.img_logo_bot_header {
     }
 }
 @media only screen and (max-width: 414px) {
+    .btn_top_header {
+        display: none;
+    }
     .all_menu_drop {
         overflow-y: auto;
-    }
-    .header_cont_menu {
-        display: none;
     }
     .content_left {
         width: 100%;
