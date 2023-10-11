@@ -66,6 +66,85 @@ body {
     padding: 5px 20px 0px 20px;
 }
 
+.top_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+img.img_logo_bot_header {
+    width: 155px;
+    margin-right: 36px;
+    padding: 6px 0;
+}
+.top_right_header {
+    display: flex;
+    align-items: center;
+}
+.btn_top_header {
+    display: flex;
+    align-items: center;
+}
+.search_mobile {
+    display: none;
+}
+.search_pc {
+    position: relative;
+    line-height: 32px;
+}   
+.img_search_pc {
+    width: 20px;
+    position: absolute;
+    top: 6px;
+    left: 8px;
+}
+.input_pc {
+    padding: 0 10px 0 33px;
+    width: 180px;
+    border-radius: 16px;
+    border: 1px solid #e5e5e5;
+    font-size: 13px;
+    color: #4f4f4f;
+    line-height: 32px;
+    box-sizing: border-box;
+}
+.btn_login {
+    margin-left: 20px;
+    line-height: 32px;
+    font-size: 14px;
+    color: #4f4f4f;
+    display: flex;
+    align-items: center;
+}
+.btn_login img {
+    width: 20px;
+    margin-right: 2px;  
+}
+
+.noti {
+    position: relative;
+    margin-left: 10px;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    align-items: center;
+    display: flex;
+    cursor: pointer;
+}
+.noti::before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    width: 4px;
+    height: 4px;
+    border-radius: 6px;
+    background-color: #087ECA;
+}
+.noti img {
+    width: 20px;
+    height: 20px;
+}
+
 .header_menu {
     display: flex;
     height: 45px;
@@ -73,11 +152,7 @@ body {
     border-top: 1px solid #bdbdbd;
 }
 
-img.img_logo_bot_header {
-    width: 155px;
-    margin-right: 36px;
-    padding: 6px 0;
-}
+
 
 .this_menu {
     position: relative;
@@ -283,7 +358,9 @@ img.img_logo_bot_header {
         position: absolute;
         right: 15px;
     }
-
+    .top_header {
+        width: 100%;
+    }
     .header_menu {
         display: none;
         height: unset;
@@ -474,6 +551,29 @@ img.img_logo_bot_header {
     }
 }
 @media only screen and (max-width: 540px) {
+    .search_pc {
+        display: none;
+    }
+    .search_mobile {
+        width: 100%;
+        display: block;
+    }
+    .img_search_mobile {
+        width: 20px;
+        position: absolute;
+        top: 20px;
+        left: 25px;
+    }
+    .input_mobile {
+        padding: 0 10px 0 33px;
+        width: 100%;
+        border-radius: 16px;
+        border: 1px solid #e5e5e5;
+        font-size: 13px;
+        color: #4f4f4f;
+        line-height: 32px;
+        box-sizing: border-box;
+    }
     .content_left {
         width: 72%;
     }
