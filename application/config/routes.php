@@ -74,6 +74,8 @@ $route['admin/info'] = 'Admin/info';
 $route['admin/ajax_author'] = 'Admin/ajax_author';
 $route['admin/list_author'] = 'Admin/list_author';
 $route['admin/pre_blog'] = 'Admin/pre_blog';
+$route['search'] = 'Ajax/search';
+$route['search/(:num)'] = 'Ajax/search/$1';
 
 
 $route['bang-xep-hang'] = 'Home/bxh';
