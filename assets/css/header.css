@@ -373,6 +373,9 @@ img.img_logo_bot_header {
     .top_header {
         width: 100%;
     }
+    .flex {
+        border-bottom: none;
+    }
     .header_menu {
         display: none;
         height: unset;
@@ -563,6 +566,9 @@ img.img_logo_bot_header {
     }
 }
 @media only screen and (max-width: 540px) {
+    .btn_top_header {
+        display: none;
+    }
     .search_pc {
         display: none;
     }
@@ -594,9 +600,7 @@ img.img_logo_bot_header {
     }
 }
 @media only screen and (max-width: 414px) {
-    .btn_top_header {
-        display: none;
-    }
+
     .all_menu_drop {
         overflow-y: auto;
     }
