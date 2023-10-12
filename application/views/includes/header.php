@@ -4,22 +4,24 @@
         <div class="btn_submenu_top" id="btn_submenu_top" onclick="show_menu_mobile(this,1)">
             <span id="line_span"></span>
         </div>
-        <div class="top_header">
-            <a href="/">
-                <img src="/images/logo.png" alt="logo" class="img_logo_bot_header">
-            </a>
-            <div class="top_right_header">
-                <form class="search_pc" id="search" method="get" action="/search">
-                    <img class="img_search_pc" id="img_search_pc" src="/images/icon_search.png" alt="icon search" />
-                    <input class="input_pc" id="search_input" type="text" autocomplete="off" name="search" placeholder="Tìm kiếm" />
-                </form>
-                <div class="btn_top_header">
-                    <a class="btn_login" href="/">
-                        <img src="/images/icon_account.png" alt="icon account">
-                        Đăng Nhập
-                    </a>
-                    <div class="noti">
-                        <img src="/images/icon_noti.png" alt="icon notification">
+        <div class="top_header" id="top_header" style="display:block">
+            <div class="flex">
+                <a href="/">
+                    <img src="/images/logo.png" alt="logo" class="img_logo_bot_header">
+                </a>
+                <div class="top_right_header">
+                    <form class="search_pc" id="search" method="get" action="/search">
+                        <img class="img_search_pc" id="img_search_pc" src="/images/icon_search.png" alt="icon search" />
+                        <input class="input_pc" id="search_input" type="text" autocomplete="off" name="search" placeholder="Tìm kiếm" />
+                    </form>
+                    <div class="btn_top_header">
+                        <a class="btn_login" href="/">
+                            <img src="/images/icon_account.png" alt="icon account">
+                            Đăng Nhập
+                        </a>
+                        <div class="noti">
+                            <img src="/images/icon_noti.png" alt="icon notification">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -27,6 +29,7 @@
         <div class="header_menu">
             <div class="list_menu">
                 <a class="img_home home_gray" href="/"><span></span></a>
+                <a class="icon_hidden" href="/" style="display: none"><img src="/images/fa-icon.png"></a>
                 <!-- <a class="img_home home_white" href="/"><img src="/images/icon_home_white.png" alt="icon home white"></a> -->
                 <!-- <div class="this_menu">
                     <span><a href="/">Trang chủ</a></span>

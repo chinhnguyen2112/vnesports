@@ -67,9 +67,14 @@ body {
 }
 
 .top_header {
+    display: none;
+    transition: 0.5s;
+}
+.flex {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-bottom: 1px solid #bdbdbd;
 }
 img.img_logo_bot_header {
     width: 155px;
@@ -149,7 +154,7 @@ img.img_logo_bot_header {
     display: flex;
     height: 45px;
     align-items: center;
-    border-top: 1px solid #bdbdbd;
+    
 }
 
 
@@ -201,6 +206,13 @@ img.img_logo_bot_header {
     width: 100%;
     justify-content: space-between;
     padding: 6px 0;
+}
+.icon_hidden {
+    display: none;
+    width: 25px;
+    padding-right: 15px;
+    height: 25px;
+    border-right: 1px solid #3333;
 }
 .img_home {
     background: #e5e5e5;
