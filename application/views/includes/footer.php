@@ -9,16 +9,16 @@ if (count($menu_cate_parent) > 2) {
             <div class="ft_left">
                 <img class="logo_ft" src="/images/logo.png" alt="logo footer">
                 <div class="widget">
-                    <p class="title_widget">WEB GIẢI TRÍ ESPORTS VIỆT NAM & THẾ GIỚI</p>
+                    <p class="title_widget">Cổng thông tin Game Esports được phát triển bởi Ohs Việt Nam...</p>
                     <div class="contact_infor">
                         <ul class="list_contact">
                             <li style="width:100%">
                                 <img src="/images/icon_address_ft.png" alt="icon address">
-                                <p>Số 111 đường Mễ Trì - Quận Nam Từ Liêm - Hà Nội.</p>
+                                <p>N01-T1, KĐT Đoàn Ngoại Giao, P. Xuân Tảo, Q. Bắc Từ Liêm, Hà Nội</p>
                             </li>
                             <li>
                                 <img src="/images/icon_website_ft.png" alt="icon website">
-                                <p>vnesports.vn -</p>
+                                <p>VnEsports.Vn -</p>
                             </li>
                             <li style="margin-left:3px;width:51%">
                                 <img src="/images/icon_mail_ft.png" alt="icon email">

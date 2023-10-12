@@ -18,6 +18,26 @@ function show_menu_mobile(e, type) {
 		$('#line_span').removeClass('active_span');
 	}
 }
+
+
+window.onscroll = function () {
+	scrollFunction();
+};
+var width = $(window).width();
+function scrollFunction() {
+	if (document.body.scrollTop > 80 && width > 1280  || document.documentElement.scrollTop > 80 && width > 1280) {
+		document.getElementById("top_header").style.display = "none";
+		$(".img_home").css("display","none");
+		$(".icon_hidden").css("display","block");
+	} else {
+		document.getElementById("top_header").style.display = "block";
+		$(".img_home").css("display","block");
+		$(".icon_hidden").css("display","none");
+	}
+}
+
+
+
 // function show_menu1(e) {
 // 	$(".box_menu").show();
 // }
