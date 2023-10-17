@@ -105,8 +105,8 @@ class Ajax extends CI_Controller
     public function search()
     {
         $time = time();
-        $list_news = $this->Madmin->query_sql("SELECT * FROM blogs WHERE index_blog = 1 AND type = 0 AND time_post <= $time ORDER BY id DESC LIMIT 5");
-        $data['list_news'] = $list_news;
+        $data['blog_new'] = $this->Madmin->get_limit("time_post <= $time AND index_blog = 1 AND type = 0", 'blogs', 0, 5);
+        $data['page'] = $this->Madmin->query_sql("SELECT title,alias FROM blogs WHERE type = 1");
         $key_search = $this->input->get('search');
         $data['key_search'] = $key_search;
         if ($key_search != '') {
@@ -119,7 +119,10 @@ class Ajax extends CI_Controller
             $count = $this->Madmin->query_sql("SELECT * FROM blogs WHERE index_blog = 1 AND type = 0 AND time_post <= $time AND title LIKE '%$key_search%'");
             pagination('/search', count($count), $limit);
             $result = $this->Madmin->query_sql("SELECT category.alias as cate_alias, category.name as cate_name, blogs.* FROM blogs INNER JOIN category ON category.id = blogs.chuyenmuc WHERE index_blog = 1 AND blogs.type = 0 AND time_post <= $time AND blogs.title LIKE '%$key_search%' ORDER BY blogs.id DESC LIMIT $start,$limit ");
-            $data['result'] = $result;
+            if ($result != null) {
+                $data['result'] = $result;
+            }
+            $data['count'] = count($count);
             $data['meta_title'] = 'Tất cả kết quả tìm kiếm';
             $data['content'] = 'result_search';
             $data['list_css'] = ['result_search.css'];
