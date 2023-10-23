@@ -99,13 +99,13 @@
                     <a target="_blank" rel="dofollow" href="https://123b.cx"><b>123b</b></a>
                 </li>
                 <li class="item_content_link">
-                    <a target="_blank" rel="dofollow" href="https://xoilack.co/"><b>xôi lạc tv</b></a>
+                    <a target="_blank" rel="dofollow" href="https://xoilactvtructiep.cc/"><b>xôi lạc tv</b></a>
                 </li>
                 <li class="item_content_link">
-                    <a target="_blank" rel="dofollow" href="https://eduvlog.org/"><b>xoilac tv trực tiếp bóng đá</b></a>
+                    <a target="_blank" rel="dofollow" href="https://chototdanang.com/"><b>xoilac tv trực tiếp bóng đá</b></a>
                 </li>
                 <li class="item_content_link">
-                    <a target="_blank" rel="dofollow" href="https://corgipals.org/"><b>cakhia tv trực tiếp bóng đá</b></a>
+                    <a target="_blank" rel="dofollow" href="https://cakhia11.live/"><b>cakhia tv trực tiếp bóng đá</b></a>
                 </li>
                 <li class="item_content_link">
                     Gaming
@@ -119,7 +119,7 @@
                     <a target="_blank" rel="dofollow" href="http://f8bet0.loan/"><b>F8bet</b></a>
                 </li>
                 <li class="item_content_link">
-                    <a target="_blank" rel="dofollow" href="https://suncitytop1.com/"><b>Sun city 888</b></a>
+                    <a target="_blank" rel="dofollow" href="https://suncity.top/"><b>Suncity</b></a>
                 </li>
                 <li class="item_content_link">
                     <a target="_blank" rel="dofollow" href="https://caheotv.site/"><b>Caheo tv</b></a>
