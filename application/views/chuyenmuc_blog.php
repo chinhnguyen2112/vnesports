@@ -106,5 +106,5 @@
         </div>
     </div>
 </div>
-<input id="chuyen_muc" value="<?= isset($chuyenmuc) ? $chuyenmuc : '' ?>" hidden />
-<input id="name_page" value="cate" hidden />
+<input id="chuyen_muc" value="<?= isset($chuyenmuc) ? $chuyenmuc : '' ?>" hidden>
+<input id="name_page" value="cate" hidden>

@@ -47,6 +47,7 @@ class Home extends CI_Controller
         $blog_tag = $this->Madmin->query_sql("SELECT * FROM blogs WHERE  time_post <= $time AND index_blog = 1 AND type = 0 AND ( $where ) ORDER BY id DESC LIMIT 4");
         $data['blog_tag'] = $blog_tag;
         $data['meta_title'] = 'VnEsports: Web Giải Trí eSports Việt Nam & Thế Giới';
+        $data['meta_des'] = 'VnEsports là nơi cập nhật nhanh và chính xác thông tin các game Esports thịnh hành nhất hiện nay. Theo dõi ngay để không bỏ lỡ các tin game mới và hấp dẫn!';
         $data['content'] = 'home';
         $data['list_js'] = [
             'slick.min.js',
@@ -65,6 +66,10 @@ class Home extends CI_Controller
         $data['page'] = $this->Madmin->query_sql("SELECT title,alias FROM blogs WHERE type = 1");
         $time = time();
         $alias = trim($alias);
+        $alias_new = strtolower($alias);
+        if ($alias != $alias_new) {
+            redirect('/' . $alias_new . '/', 'location', 301);
+        }
         $data['canonical'] = base_url() . $alias . '/';
         $chuyenmuc = $this->Madmin->get_by(['alias' => $alias], 'category');
         if ($chuyenmuc == null) {
@@ -331,4 +336,14 @@ class Home extends CI_Controller
         $data['index'] = 1;
         $this->load->view('index', $data);
     }
+    // public function replace_blog()
+    // {
+    //     $blog =  $this->Madmin->get_list('', 'blogs');
+    //     $search = [' white-space-collapse: preserve;', ' background-color: transparent;', 'font-size: 11pt;', 'font-family: Arial, sans-serif;', 'color: rgb(0, 0, 0);', 'font-variant-position: normal;', 'text-align: justify;', 'font-variant-position: normal;', 'font-variant-alternates: normal;', 'font-variant-east-asian: normal;', 'font-variant-numeric: normal;', 'vertical-align: baseline;', ' font-family: Arial;', 'white-space: pre-wrap;', 'line-height:1.7999999999999998;', 'margin-top:10pt;', 'margin-bottom:10pt;', 'text-align:center;', 'line-height: 1.8;', 'margin-top: 10pt;', 'margin-bottom: 10pt;', 'text-align:center', 'list-style-type: disc;', 'white-space: pre;', 'style=""'];
+    //     $replace   = '';
+    //     foreach ($blog as $val) {
+    //         $result = str_replace($search, '', $val);
+    //         $update = $this->Madmin->update(['id' => $val['id']], $result, 'blogs');
+    //     }
+    // }
 }

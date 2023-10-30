@@ -1,28 +1,4 @@
 <link rel="stylesheet" href="/assets/css/css_sidebar.css">
-<style>
-    .guest_post {
-        background: #8dc642;
-        margin-bottom: 20px;
-        border-radius: 16px;
-        padding: 10px 0;
-    }
-
-    .guest_post p {
-        color: #fff;
-        font-size: 18px;
-        font-weight: 600;
-        text-align: center;
-        margin-bottom: 5px;
-    }
-
-    .guest_post a {
-        font-size: 20px;
-        font-weight: 700;
-        display: block;
-        text-align: center;
-        color: #000;
-    }
-</style>
 <div class="sidebar_content">
     <div class="sidebar_box">
         <div class="box_heading">
@@ -31,14 +7,14 @@
         <div class="box_content_sidebar">
             <ul>
                 <li class="item_content_sidebar">
-                    <img class="icon_li" src="/images/icons8-star-50.png" />
+                    <img class="icon_li" src="/images/icons8-star-50.png" alt="icon">
                     Game Bắn Súng
                     <strong>
                         <a href="/csgo/">CSGO</a>
                     </strong>
                 </li>
                 <li class="item_content_sidebar">
-                    <img class="icon_li" src="/images/icons8-star-50.png" />
+                    <img class="icon_li" src="/images/icons8-star-50.png" alt="icon">
                     Khám Phá
                     <strong>
                         <a href="/pubg/">PUBG</a>
@@ -46,7 +22,7 @@
                     Phiên Bản Mới
                 </li>
                 <li class="item_content_sidebar">
-                    <img class="icon_li" src="/images/icons8-star-50.png" />
+                    <img class="icon_li" src="/images/icons8-star-50.png" alt="icon">
                     Bóng Đá
                     <strong>
                         <a href="/fifa-online-4/">Fifa Online 4</a>
@@ -54,14 +30,14 @@
                     Đỉnh Cao
                 </li>
                 <li class="item_content_sidebar">
-                    <img class="icon_li" src="/images/icons8-star-50.png" />
+                    <img class="icon_li" src="/images/icons8-star-50.png" alt="icon">
                     Garena
                     <strong>
                         <a href="/lien-quan-mobile/">Liên Quân Mobile</a>
                     </strong>
                 </li>
                 <li class="item_content_sidebar">
-                    <img class="icon_li" src="/images/icons8-star-50.png" />
+                    <img class="icon_li" src="/images/icons8-star-50.png" alt="icon">
                     Khám Phá
                     <strong>
                         <a href="/lien-minh-huyen-thoai/">LMHT</a>
@@ -69,7 +45,7 @@
                     Việt Nam
                 </li>
                 <li class="item_content_sidebar">
-                    <img class="icon_li" src="/images/icons8-star-50.png" />
+                    <img class="icon_li" src="/images/icons8-star-50.png" alt="icon">
                     News
                     <strong>
                         <a href="/valorant/">Valorant</a>
@@ -108,10 +84,6 @@
                     <a target="_blank" rel="dofollow" href="https://cakhia11.live/"><b>cakhia tv trực tiếp bóng đá</b></a>
                 </li>
                 <li class="item_content_link">
-                    Gaming
-                    <a target="_blank" rel="dofollow" href="https://sunwin.cash/"><b>Sunwin</b></a>
-                </li>
-                <li class="item_content_link">
                     <a target="_blank" rel="dofollow" href="https://mikigame.vn/"><b>Socolive tv</b></a>
                 </li>
                 <li class="item_content_link">
@@ -130,17 +102,16 @@
                 <li class="item_content_link">
                     <a target="_blank" rel="dofollow" href="https://go88s.vin/"><b>Go88</b></a>
                 </li>
+                <li class="item_content_link">
+                    <a target="_blank" rel="dofollow" href="https://tf88pow.com/"><b>TF88</b></a>
+                </li>
             </ul>
         </div>
     </div>
-    <!-- <div class="guest_post">
-        <p>Tải phần mềm tại</p>
-        <a rel="nofollow" href="https://kashi.com.vn/">Kashi.com.vn</a>
-    </div> -->
     <div class="hot_news">
         <div class="box_heading">
             <a href="#">
-                <img src="/images/icons8-fire-30.png" />
+                <img src="/images/icons8-fire-30.png" alt="icon">
                 Tin Mới Nóng
             </a>
         </div>

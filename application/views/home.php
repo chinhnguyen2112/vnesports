@@ -1,9 +1,5 @@
 <div class="content">
     <div class="content_about body_width">
-        <!-- <div class="banner_all">
-            <div class="this_nanner_all"><img src="/images/banner1.gif" alt="banner"></div>
-            <div class="this_nanner_all"><img src="/images/banner2.gif" alt="banner"></div>
-        </div> -->
         <div class="train_content">
             <div class="top_blog">
                 <div class="top_left">
@@ -55,46 +51,6 @@
                 <?php include('includes/sidebar.php') ?>
             </div>
             <div class="list_blog">
-
-                <div class="box_content" style="display: none;">
-                    <?php foreach ($blog_tag as $key => $val) {
-                        if ($key == 0) { ?>
-                            <div class="box_content_title">
-                                <div class="title_link">
-                                    <img src="/images/icon-title.png" />
-                                    <p>Xu hướng: Nền tảng Web Apps Giao Lưu Cùng Idol Yêu Thích</p>
-                                </div>
-                            </div>
-                        <?php } else  if ($key == 1) { ?>
-                            <div class="box_content_big">
-                                <a class="big_title" href="/<?= $val['alias'] ?>">
-                                    <div class="title_big"><?= $val['title'] ?></div>
-                                </a>
-                                <div class="big_content">
-                                    <a>
-                                        <img src="/<?= $val['image'] ?>" alt="<?= $val['title'] ?>">
-                                    </a>
-                                    <div class="box_title">
-                                        <div class="name_chuyenmuc">
-                                            <a><?php $cate_tag = chuyen_muc(['id' => $val['chuyenmuc']]);
-                                                echo $cate_tag[0]['name'];
-                                                ?></a>
-                                        </div>
-                                        <!-- <div class="crate_date"><?= date('d-m-Y', $val['created_at']) ?></div> -->
-                                        <div class="sapo"><?= $val['sapo'] ?></div>
-                                    </div>
-                                </div>
-                            </div>
-                        <?php } else { ?>
-                            <div class="item_small">
-                                <a class="content_small" href="/<?= $val['alias'] ?>">
-                                    <?= $val['title'] ?>
-                                </a>
-                                <div class="sapo"><?= $val['sapo'] ?></div>
-                            </div>
-                    <?php }
-                    } ?>
-                </div>
                 <div class="load_more">
                     <div class="div_bgr_load">
                         <span>Hiển thị thêm tin</span>
