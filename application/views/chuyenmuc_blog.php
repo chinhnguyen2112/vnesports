@@ -1,3 +1,4 @@
+<h1 style="display: none;"><?= $meta_title ?></h1>
 <div class="content">
     <div class="content_about body_width">
         <div class="banner_blog">
@@ -69,7 +70,7 @@
                     <table>
                         <tr class="btn_heading">
                             <th class="heading_table">
-                                <h1><?= $meta_title ?></h1>
+                                <p class="heading_table"><?= $meta_title ?></p>
                             </th>
                             <th class="heading_show">
                                 <div class="load_more">

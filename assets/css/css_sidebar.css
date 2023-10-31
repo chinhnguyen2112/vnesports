@@ -76,6 +76,7 @@
     text-align: center;
     cursor: pointer;
     transition: all .4s ease 0s, transform .4s ease 0s, visibility .4s linear 0s !important;
+    text-align: center;
 }
 
 .btn_see_more:hover {

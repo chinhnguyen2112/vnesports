@@ -380,7 +380,7 @@
     width: 21%;
 }
 
-.btn_heading h1 {
+.btn_heading .heading_table {
     font-weight: 700;
     color: #533c94;
     padding-left: 10px;
@@ -778,7 +778,7 @@ a.H4abc {
         width: 70%;
     }
 
-    .btn_heading h1 {
+    .btn_heading .heading_table {
         font-size: 13px;
     }
 

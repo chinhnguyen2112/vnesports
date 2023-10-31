@@ -124,9 +124,9 @@
                 <?php } ?>
             </ul>
             <div class="see_more_news">
-                <button class="btn_see_more">
+                <div class="btn_see_more">
                     <a href="/">Xem thêm tin mới nhất Vnesports</a>
-                </button>
+                </div>
             </div>
         </div>
     </div>
