@@ -78,3 +78,11 @@
         </div>
     </div>
 </footer>
+<div class="banner_site">
+    <div class="list_banner body_width">
+        <a href="https://vnadssb.com?a=vn24976&e=5" target="_blank" rel="nofollow" class="img_banner">
+            <img src="<?= base_url() ?>images/site/banner1.gif" alt="banner">
+        </a>
+        <img src="/images/icon_cancel.png" alt="đóng" class="close_banner">
+    </div>
+</div>

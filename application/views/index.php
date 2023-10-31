@@ -31,6 +31,7 @@
   <link rel="stylesheet" href="/assets/css/reset.css">
   <link rel="stylesheet" href="/assets/css/header.css">
   <link rel="stylesheet" href="/assets/css/footer.css">
+  <link rel="stylesheet" href="/assets/css/banner.css">
 
   <?php if (isset($list_css)) {
     foreach ($list_css as $css) { ?>
@@ -89,6 +90,7 @@
   <?php  }
   } ?>
   <script src="/assets/js/header.js"></script>
+  <script src="/assets/js/banner.js"></script>
 </body>
 
 </html>
