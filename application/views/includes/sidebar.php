@@ -122,7 +122,7 @@
             <ul>
                 <?php foreach ($blog_new as $key => $val) { ?>
                     <li class="item_hot_news">
-                        <a href="/<?= $val['alias'] ?>"><?= $val['title'] ?></a>
+                        <a href="/<?= $val['alias'] ?>/"><?= $val['title'] ?></a>
                     </li>
                 <?php } ?>
             </ul>

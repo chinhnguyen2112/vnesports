@@ -7,7 +7,7 @@
             <?php if ($result != null) { ?>
                 <div class="result_top">
                     <div class="first_result">
-                        <a class="linl_all_detail" title="<?= $result[0]['title'] ?>" href="/<?= alias_new($result[0]['alias'], $result[0]['id']) ?>">
+                        <a class="linl_all_detail" title="<?= $result[0]['title'] ?>" href="/<?= $result[0]['alias'] ?>/">
                             <div class="blog_top_content blog_top_left">
                                 <img src="/<?= $result[0]['image'] ?>" alt="<?= $result[0]['title'] ?>">
                             </div>
@@ -22,10 +22,10 @@
                     <?php foreach ($result as $key => $val) {
                         if ($key > 0) { ?>
                             <div class="item_result">
-                                <a title="<?= $val['title'] ?>" href="/<?= alias_new($val['alias'], $val['id']) ?>">
+                                <a title="<?= $val['title'] ?>" href="/<?= $val['alias'] ?>/">
                                     <p class="title_blog only_mobile"><?= $val['title'] ?></p>
                                 </a>
-                                <a class="linl_all_detail link_fl" title="<?= $val['title'] ?>" href="/<?= alias_new($val['alias'], $val['id']) ?>">
+                                <a class="linl_all_detail link_fl" title="<?= $val['title'] ?>" href="/<?= $val['alias'] ?>/">
                                     <img src="/<?= $val['image'] ?>" alt="<?= $val['title'] ?>">
                                     <div class="box_content_blog">
                                         <p class="title_blog"><?= $val['title'] ?></p>

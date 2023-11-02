@@ -37,9 +37,10 @@
                         if ($key > 4) { ?>
                             <div class="this_train">
                                 <a href="/<?= $val['alias'] ?>/">
+                                    <p class="title_blog only_mobile"><?= $val['title'] ?></p>
                                     <img src="/<?= $val['image'] ?>" alt="<?= $val['title'] ?>">
                                     <div class="box_right_data">
-                                        <p class="title_blog"><?= $val['title'] ?></p>
+                                        <p class="title_blog only_pc"><?= $val['title'] ?></p>
                                         <p class="date_post"><span><?= date('d-m-Y', $val['created_at']) ?></span></p>
                                         <div class="des_blog"><?= $val['sapo'] ?></div>
                                     </div>

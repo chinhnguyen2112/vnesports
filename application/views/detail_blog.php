@@ -5,7 +5,7 @@
                 <div class="breadcrumb">
                     <a href="/">Trang chủ</a>
                     <span> / </span>
-                    <a class="link_breadcrumb" href="/<?= $cate_alias ?>"><?= $breadcrumb ?></a>
+                    <a class="link_breadcrumb" href="/<?= $cate_alias ?>/"><?= $breadcrumb ?></a>
                     <span> / </span>
                     <span class="this_breadcrumb"><?= $blog['title'] ?></span>
                 </div>
@@ -57,9 +57,9 @@
                                         <img class="img_blog_same" src="/<?= $val['image'] ?>" alt="<?= $val['title'] ?>">
                                     </a>
                                     <div class="data_handbook">
-                                        <a class="title_handbook" href="/<?= $val['alias'] ?>"><?= $val['title'] ?></a>
+                                        <a class="title_handbook" href="/<?= $val['alias'] ?>/"><?= $val['title'] ?></a>
                                         <p class="date_post">
-                                            <a class="name_cate" href="/<?= $blog['alias_cate'] ?>"><?= $blog['name_cate'] ?></a>
+                                            <a class="name_cate" href="/<?= $blog['alias_cate'] ?>/"><?= $blog['name_cate'] ?></a>
                                             <span>
                                                 <?= date('d-m-Y', $val['created_at']) ?>
                                                 <span>
