@@ -5,12 +5,12 @@
             <div class="ft_left">
                 <img class="logo_ft" src="/images/logo.png" alt="logo footer">
                 <div class="widget">
-                    <p class="title_widget">Cổng thông tin Game Esports được phát triển bởi Ohs Việt Nam...</p>
+                    <p class="title_widget">Cập nhật thông tin mới về nhất Game Esports được phát triển bởi Ohs Việt Nam...</p>
                     <div class="contact_infor">
                         <ul class="list_contact">
                             <li style="width:100%">
                                 <img src="/images/icon_address_ft.png" alt="Địa chỉ">
-                                <p>N01-T1, KĐT Đoàn Ngoại Giao, P. Xuân Tảo, Q. Bắc Từ Liêm, Hà Nội</p>
+                                <p>KĐT Đoàn Ngoại Giao, P. Xuân Tảo, Q. Bắc Từ Liêm, Hà Nội</p>
                             </li>
                             <li>
                                 <img src="/images/icon_website_ft.png" alt="website">

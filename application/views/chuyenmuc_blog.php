@@ -1,20 +1,6 @@
 <h1 style="display: none;"><?= $meta_title ?></h1>
 <div class="content">
     <div class="content_about body_width">
-        <div class="banner_blog">
-            <div class="breadcrumb">
-                <div class="left_brea">
-                    <span class="before"></span>
-                    <span class="this_breadcrumb"><?= $title_page ?></span>
-                </div>
-                <div class="right_brea">
-                    <svg>
-                        <polyline class="line_pc" points="50 40, 120 40, 150 18, 240 18, 270 40, 1100 40 "></polyline>
-                        <polyline class="line_monbile" points="50 40, 120 40, 150 18, 240 18, 270 18, 1100 18 "></polyline>
-                    </svg>
-                </div>
-            </div>
-        </div>
         <div class="train_content">
             <div class="top_blog">
                 <div class="top_left">
@@ -60,49 +46,18 @@
                                     </div>
                                 </a>
                             </div>
-                    <?php }
-                    } ?>
+                        <?php }
+                    }
+                    if ($blog != null) { ?>
+                        <div class="load_more">
+                            <div class="div_bgr_load">
+                                <span>Hiển thị thêm tin</span>
+                                <img src="/images/arrow_loadmore.svg" alt="xem thêm">
+                            </div>
+                        </div>
+                    <?php } ?>
                 </div>
                 <?php include('includes/sidebar.php') ?>
-            </div>
-            <div class="list_blog">
-                <div id="table_bot" class="table_bot">
-                    <table>
-                        <tr class="btn_heading">
-                            <th class="heading_table">
-                                <p class="heading_table"><?= $meta_title ?></p>
-                            </th>
-                            <th class="heading_show">
-                                <div class="load_more">
-                                    <div class="div_bgr_load">
-                                        <span id="span_show" class="span_show_more">Hiển thị thêm tin</span>
-                                        <span id="span_end" class="span_show_more">Hết !</span>
-                                    </div>
-                                </div>
-                            </th>
-                        </tr>
-                        <tr>
-                            <td colspan="2">
-                                <?php if (isset($content_cate) && $content_cate != '') { ?>
-                                    <div class="blog_content">
-                                        <div class="left_detail">
-                                            <div class="content_blog" id="content_blog">
-                                                <?= $content_cate ?>
-                                            </div>
-                                            <div class="hide_show_content">
-                                                <p class="hide_show_text">Xem thêm</p>
-                                                <div class="list_img_arrow">
-                                                    <img src="/images/arrow.svg" alt="xem thêm">
-                                                    <img src="/images/arrow.svg" alt="xem thêm">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                <?php } ?>
-                            </td>
-                        </tr>
-                    </table>
-                </div>
             </div>
         </div>
     </div>

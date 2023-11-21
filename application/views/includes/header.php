@@ -32,16 +32,16 @@
                 <?php $menu_cate_parent = chuyen_muc(['parent' => 0]);
                 foreach ($menu_cate_parent as $val) {
                     $menu_cate = chuyen_muc(['parent' => $val['id']]); ?>
-                    <div class="this_menu">
-                        <span><a href="/<?= $val['alias'] ?>/"><?= $val['name'] ?></a></span>
-                        <?php if ($menu_cate != null) { ?>
-                            <div class="menu_con">
-                                <?php foreach ($menu_cate as $val1) { ?>
-                                    <p><a href="/<?= $val1['alias'] ?>/"><?= $val1['name'] ?></a></p>
-                                <?php } ?>
-                            </div>
+                <div class="this_menu">
+                    <span><a href="/<?= $val['alias'] ?>/"><?= $val['name'] ?></a></span>
+                    <?php if ($menu_cate != null) { ?>
+                    <div class="menu_con">
+                        <?php foreach ($menu_cate as $val1) { ?>
+                        <p><a href="/<?= $val1['alias'] ?>/"><?= $val1['name'] ?></a></p>
                         <?php } ?>
                     </div>
+                    <?php } ?>
+                </div>
                 <?php } ?>
                 <div class="btn_show_menu">
                     <div class="img_show_menu" onclick="show_menu(this,1)">
@@ -67,23 +67,23 @@
                     <?php $menu_cate_parent = chuyen_muc(['parent' => 0]);
                     foreach ($menu_cate_parent as $val) {
                         $menu_cate = chuyen_muc(['parent' => $val['id']]); ?>
-                        <div class="item_content_left">
-                            <span><a href="/<?= $val['alias'] ?>/"><?= $val['name'] ?></a></span>
-                            <?php if ($menu_cate != null) { ?>
-                                <div class="item_child">
-                                    <?php foreach ($menu_cate as $val1) { ?>
-                                        <p><a href="/<?= $val1['alias'] ?>/"><?= $val1['name'] ?></a></p>
-                                    <?php } ?>
-                                </div>
+                    <div class="item_content_left">
+                        <span><a href="/<?= $val['alias'] ?>/"><?= $val['name'] ?></a></span>
+                        <?php if ($menu_cate != null) { ?>
+                        <div class="item_child">
+                            <?php foreach ($menu_cate as $val1) { ?>
+                            <p><a href="/<?= $val1['alias'] ?>/"><?= $val1['name'] ?></a></p>
                             <?php } ?>
                         </div>
+                        <?php } ?>
+                    </div>
                     <?php } ?>
                 </div>
                 <div class="content_right">
                     <?php foreach ($page as $vall) { ?>
-                        <div class="item_page">
-                            <a href="/<?= $vall['alias'] ?>/"><?= $vall['title'] ?></a>
-                        </div>
+                    <div class="item_page">
+                        <a href="/<?= $vall['alias'] ?>/"><?= $vall['title'] ?></a>
+                    </div>
                     <?php } ?>
                 </div>
             </div>
@@ -91,3 +91,12 @@
     </div>
 </div>
 <div class="main_content">
+    <div class="banner_top">
+        <div class="list_banner_top body_width">
+            <a href="https://www.jun8830.com/?uagt=guanggao5a&path=signup" target="_blank" rel="nofollow"
+                class="img_banner">
+                <img src="<?= base_url() ?>images/site/jun88.gif" alt="banner">
+            </a>
+            <img src="/images/icon_cancel.png" alt="đóng" class="close_banner">
+        </div>
+    </div>

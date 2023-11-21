@@ -434,7 +434,9 @@ a.H4abc {
     .content_about {
         padding: 20px;
     }
-
+    .main_content {
+        padding-top: 55px;
+    }
     .content {
         padding-top: 0;
     }

@@ -1,3 +1,4 @@
+<h1 style="display: none;">VnEsports</h1>
 <div class="content">
     <div class="content_about body_width">
         <div class="train_content">

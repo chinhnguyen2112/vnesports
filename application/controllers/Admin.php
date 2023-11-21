@@ -12,7 +12,7 @@ class Admin extends CI_Controller
         $this->load->library(['session', 'pagination311', 'upload']);
         if (admin()) {
             $g_admin = $this->Madmin->get_by(['id' => $_SESSION['admin']['id']], 'admin');
-            $this->session->set_userdata('admin', $g_admin);
+                  $this->session->set_userdata('admin', $g_admin);
         }
     }
     public function admin()
