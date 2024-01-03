@@ -3,11 +3,23 @@
         <div class="main_content_blog">
             <div class="blog_content">
                 <div class="breadcrumb">
-                    <?php if (isset($cate)) { ?>
-                        <a href="/<?= $cate['alias'] ?>/">
-                            <?= $cate['name'] ?>
+                    <a class="link_breadcrumb " href="/">
+                        <svg aria-hidden="true" class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z">
+                            </path>
+                        </svg>
+                        Trang chủ
+                    </a>
+                    <?php if (isset($breadcrumb_parent)) { ?>
+                        <a class="link_breadcrumb last_breadcrumb" href="/<?= $breadcrumb_parent['alias'] ?>/">
+                            <?= $breadcrumb_parent['name'] ?>
                         </a>
                     <?php } ?>
+                    <a class="link_breadcrumb last_breadcrumb" href="/<?= $breadcrumb['alias'] ?>/">
+                        <?= $breadcrumb['name'] ?>
+                    </a>
                 </div>
                 <div class="box_data_blog">
                     <div class="left_blog">

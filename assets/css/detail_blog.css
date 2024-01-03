@@ -8,8 +8,9 @@
 }
 
 .breadcrumb {
-    padding: 0;
-    gap: 10px;
+    background: #e5e5e575;
+    padding: .5rem;
+    border-radius: 8px;
 }
 
 .this_breadcrumb {
@@ -19,19 +20,32 @@
     font-weight: 700;
 }
 
-.breadcrumb p,
-.breadcrumb span {
-    margin-bottom: 0;
-    font-weight: 400;
+.link_breadcrumb {
+    position: relative;
+    line-height: 1.5;
     font-size: 16px;
-    line-height: 24px;
-    text-align: center;
-    color: #808EA1;
+    color: #000;
+    font-weight: 600;
+    margin-right: 25px;
 }
 
-.breadcrumb a {
-    font-weight: 700;
-    color: #000;
+.last_breadcrumb:after {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-top: 1px solid #000;
+    border-right: 1px solid #000;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    position: absolute;
+    left: -19px;
+    top: 8px;
+}
+
+.link_breadcrumb svg {
+    width: 1rem;
+    height: 1rem;
+    margin-bottom: -2px;
 }
 
 .left_detail {
@@ -75,14 +89,6 @@ h6 p {
     font-weight: 500 !important;
     color: #0040ff !important;
     text-align: left !important;
-}
-
-.link_breadcrumb {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
-    text-align: center;
-    color: #59606A;
 }
 
 .box_data_blog {
@@ -339,17 +345,19 @@ li .toc-ul {
 
 figure {
     margin: auto;
+    width: 100%;
 }
 
 .content_blog div {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    /* display: flex; */
+    /* flex-wrap: wrap; */
+    /* justify-content: center; */
     margin: 10pt 0;
 }
 
 .content_blog img {
     height: auto;
+    width: 100%;
 }
 
 a.H3abc {
@@ -490,9 +498,11 @@ td:first-child {
     .container_widget_about {
         padding: 20px;
     }
+
     .main_content {
         padding-top: 55px;
     }
+
     .title_h1 {
         font-size: 28px;
         line-height: 48px;
@@ -585,11 +595,6 @@ td:first-child {
     .blog_content {
         width: 100%;
         margin-top: 0;
-    }
-
-    .breadcrumb p,
-    .breadcrumb span {
-        margin-bottom: 0;
     }
 
     .container_widget_about {

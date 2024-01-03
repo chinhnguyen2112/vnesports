@@ -1,7 +1,6 @@
 .site-footer {
     position: relative;
     padding-top: 40px;
-    /* background: url(/images/bg-footer.png); */
     background-color: #272932;
     background-size: cover;
 }
@@ -10,7 +9,6 @@
     z-index: 1;
     position: relative;
     background-repeat: no-repeat;
-    /* height: 356.55px; */
     background-size: cover;
     background-position: 50%;
     display: flex;
@@ -26,7 +24,6 @@
     color: #fff;
     background: #1d252c38;
     border-top: 1px solid #1f2128;
-    /* transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s; */
 }
 
 .site-info {
@@ -36,14 +33,12 @@
     font-weight: 400;
     font-size: 14px;
     line-height: 24px;
-    /* identical to box height, or 171% */
     color: #ffffff;
 }
 
 
 .content_footer {
     display: flex;
-    /* gap: 20px; */
     justify-content: space-between;
     width: 100%;
 }
@@ -280,8 +275,6 @@
     .footer-widgets {
         flex-direction: column;
         background-repeat: unset;
-        /* background-size: unset; */
-        /* margin-top: 30px; */
         background: unset;
         padding-bottom: 0;
     }

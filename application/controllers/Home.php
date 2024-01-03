@@ -1,7 +1,5 @@
 <?php
 
-use function PHPSTORM_META\type;
-
 defined('BASEPATH') or exit('No direct script access allowed');
 class Home extends CI_Controller
 {
@@ -46,7 +44,7 @@ class Home extends CI_Controller
         }
         $blog_tag = $this->Madmin->query_sql("SELECT * FROM blogs WHERE  time_post <= $time AND index_blog = 1 AND type = 0 AND ( $where ) ORDER BY id DESC LIMIT 4");
         $data['blog_tag'] = $blog_tag;
-        $data['meta_title'] = 'VnEsports: Web Giải Trí eSports Việt Nam & Thế Giới';
+        $data['meta_title'] = 'Cổng thông tin cập nhật xu hướng phát triển Game Online Việt Nam';
         $data['meta_des'] = 'VnEsports là nơi cập nhật nhanh và chính xác thông tin các game Esports thịnh hành nhất hiện nay. Theo dõi ngay để không bỏ lỡ các tin game mới và hấp dẫn!';
         $data['content'] = 'home';
         $data['list_js'] = [
@@ -71,6 +69,9 @@ class Home extends CI_Controller
             redirect('/' . $alias_new . '/', 'location', 301);
         }
         $data['canonical'] = base_url() . $alias . '/';
+        if ($alias == 'nha-cai-ta88-san-choi-cuoc-xanh-chin-hap-dan-nguoi-choi') {
+            $alias = 'nha-cai-ta88bet-san-choi-cuoc-xanh-chin-hap-dan-nguoi-choi';
+        }
         $chuyenmuc = $this->Madmin->get_by(['alias' => $alias], 'category');
         if ($chuyenmuc == null) {
             $page = $this->Madmin->query_sql_row("SELECT * FROM blogs WHERE type = 1 AND alias = '$alias' ");
@@ -121,6 +122,7 @@ class Home extends CI_Controller
             $data['list_css'] = [
                 'chuyenmuc_blog.css',
             ];
+            $data['index'] = 1;
         } else if (isset($blog) && $blog != null) { // blog
             if ($_SERVER['REQUEST_URI'] != '/' . $alias . '/') {
                 redirect('/' . $alias . '/', 'location', 301);
@@ -130,15 +132,10 @@ class Home extends CI_Controller
             }
             $data['blog_same'] = $this->Madmin->query_sql("SELECT * FROM blogs WHERE chuyenmuc = {$blog['chuyenmuc']} AND time_post <= $time AND index_blog = 1 AND type = 0 AND id != {$blog['id']}  ORDER BY updated_at DESC LIMIT 6");
             $data['blog_new'] = $this->Madmin->query_sql("SELECT * FROM blogs WHERE  id != {$blog['id']} AND time_post <= $time AND index_blog = 1 AND type = 0  ORDER BY id DESC LIMIT 5");
-            $cate = $this->Madmin->query_sql_row("SELECT *  FROM category  WHERE id = {$blog['chuyenmuc']} ");
-            $title_page = $cate['name'];
-            $cate_alias = $cate['alias'];
-            if ($cate['parent'] > 0) {
-                $cate_parent = $this->Madmin->query_sql_row("SELECT *  FROM category  WHERE id = {$cate['parent']} ");
-                $title_page = $cate_parent['name'] . ' - ' . $cate['name'];
+            $data['breadcrumb'] = $this->Madmin->query_sql_row("SELECT name,alias  FROM category  WHERE id = {$blog['chuyenmuc']} ");
+            if ($blog['chuyenmuc'] != $blog['cate_parent']) {
+                $data['breadcrumb_parent'] = $this->Madmin->query_sql_row("SELECT name,alias  FROM category  WHERE id = {$blog['cate_parent']} ");
             }
-            $data['breadcrumb'] = $title_page;
-            $data['cate_alias'] = $cate_alias;
             $data['blog'] = $blog;
             $data['content'] = 'detail_blog';
             $data['list_js'] = [
@@ -152,6 +149,7 @@ class Home extends CI_Controller
             $data['meta_des'] = $blog['meta_des'];
             $data['meta_key'] = $blog['meta_key'];
             $data['meta_img'] = $blog['image'];
+            $data['index'] = 1;
         } else if (isset($tags) && $tags != null) {
             if ($_SERVER['REQUEST_URI'] != '/' . $alias . '/') {
                 redirect('/' . $alias . '/', 'location', 301);
@@ -186,13 +184,13 @@ class Home extends CI_Controller
             $data['list_css'] = [
                 'css_tag.css',
             ];
+            $data['index'] = 1;
         } elseif (isset($page) && $page != null) {
             return $this->page($page);
         } else {
             set_status_header(404);
             return $this->load->view('errors/html/error_404');
         }
-        $data['index'] = 1;
         $this->load->view('index', $data);
     }
     public function page($page)
@@ -234,48 +232,6 @@ class Home extends CI_Controller
         $data['list_css'] = [
             'chuyenmuc_blog.css',
         ];
-        $this->load->view('index', $data);
-    }
-    public function tag($alias1, $alias2)
-    {
-        $data['page'] = $this->Madmin->query_sql("SELECT title,alias FROM blogs WHERE type = 1");
-        $time = time();
-        $alias1 = trim($alias1);
-        $alias2 = trim($alias2);
-        $tags_parent = $this->Madmin->get_by(['alias' => $alias1, 'parent' => 0], 'tags');
-        $tags = $this->Madmin->get_by(['alias' => $alias2, 'parent >' => 0], 'tags');
-        if ($tags['parent'] == $tags_parent['id']) {
-            if ($_SERVER['REQUEST_URI'] != '/' . $alias1 . '/' . $alias2 . '/') {
-                redirect('/' . $alias1 . '/' . $alias2 . '/', 'location', 301);
-            }
-            $id_tag = $tags['id'];
-            $page = $this->uri->segment(3);
-            if ($page < 1 || $page == '') {
-                $page = 1;
-            }
-            $limit = 18;
-            $start = $limit * ($page - 1);
-            $count = $this->Madmin->query_sql("SELECT blogs.*,category.name as name_cate,category.alias as alias_cate,category.image as img_cate FROM blogs INNER JOIN category ON category.id = blogs.chuyenmuc WHERE  time_post <= $time AND index_blog = 1 AND type = 0 AND FIND_IN_SET($id_tag,tag) ");
-            pagination('/' . $tags['alias'], count($count), $limit);
-            $data['blog'] = $this->Madmin->query_sql("SELECT * FROM blogs  WHERE time_post <= $time AND index_blog = 1 AND type = 0 AND FIND_IN_SET($id_tag,tag) ORDER BY id DESC LIMIT $start,$limit");
-            $data['title_page'] = $tags['name'];
-            $data['meta_title'] = $tags['meta_title'];
-            $data['meta_des'] = $tags['meta_des'];
-            $data['meta_key'] = $tags['meta_key'];
-            $data['content_tag'] = $tags['content'];
-            $data['canonical'] = base_url() . $alias1 . '/' . $alias2 . '/';
-            $data['content'] = 'chuyenmuc_blog';
-            $data['list_js'] = [
-                'chuyenmuc_blog.js',
-            ];
-            $data['list_css'] = [
-                'chuyenmuc_blog.css',
-            ];
-        } else {
-            set_status_header(404);
-            return $this->load->view('errors/html/error_404');
-        }
-        $data['index'] = 1;
         $this->load->view('index', $data);
     }
     public function detail_blog($alias)

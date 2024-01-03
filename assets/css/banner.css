@@ -23,6 +23,7 @@
     width: 15px;
     cursor: pointer;
 }
+
 .banner_top {
     margin-top: 20px;
     margin-bottom: -40px;
@@ -30,8 +31,8 @@
 
 .banner_top .img_banner {
     display: block;
-    width: 100%;
-    padding: 0 15px;
+    /* width: 100%; */
+    /* padding: 0 15px; */
 }
 
 .banner_top .img_banner img {
@@ -41,20 +42,31 @@
 
 .list_banner_top {
     position: relative;
+    display: flex;
+    justify-content: space-between;
 }
 
 .list_banner_top .close_banner {
     bottom: -15px;
     top: unset;
 }
+
 @media only screen and (max-width: 580px) {
     .img_banner {
         width: 100%;
     }
+
     .banner_top {
-    margin-top: 7px;
-    margin-bottom: -10px;}
-.banner_top .img_banner {
-    padding: 0;
-}
+        margin-top: 7px;
+        margin-bottom: -10px;
+    }
+
+    .banner_top .img_banner {
+        padding: 0;
+    }
+
+    .list_banner_top {
+        flex-direction: column;
+        gap: 5px;
+    }
 }

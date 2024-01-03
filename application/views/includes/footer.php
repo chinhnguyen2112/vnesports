@@ -5,7 +5,8 @@
             <div class="ft_left">
                 <img class="logo_ft" src="/images/logo.png" alt="logo footer">
                 <div class="widget">
-                    <p class="title_widget">Cập nhật thông tin mới về nhất Game Esports được phát triển bởi Ohs Việt Nam...</p>
+                    <p class="title_widget">Cập nhật thông tin mới về nhất Game Esports được phát triển bởi Ohs Việt
+                        Nam...</p>
                     <div class="contact_infor">
                         <ul class="list_contact">
                             <li style="width:100%">
@@ -35,14 +36,14 @@
                         <?php $menu_cate_parent = chuyen_muc('parent = 0 AND id != 42 AND id != 41');
                         foreach ($menu_cate_parent as $val) {
                             $menu_cate = chuyen_muc(['parent' => $val['id']]); ?>
-                            <div class="item_link_ft">
-                                <span onclick="big_item_menu(this,1)">
-                                    <a href="/<?= $val['alias'] ?>/">
-                                        <img src="/images/icon_arrow_ft.png" alt="Chuyên mục">
-                                        <?= $val['name'] ?>
-                                    </a>
-                                </span>
-                            </div>
+                        <div class="item_link_ft">
+                            <span onclick="big_item_menu(this,1)">
+                                <a href="/<?= $val['alias'] ?>/">
+                                    <img src="/images/icon_arrow_ft.png" alt="Chuyên mục">
+                                    <?= $val['name'] ?>
+                                </a>
+                            </span>
+                        </div>
                         <?php } ?>
                     </div>
                 </div>
@@ -53,7 +54,11 @@
                         <input class="input_text" type="email" name="email" placeholder="Email Address" required>
                         <input class="btn_submit_form" value="SIGN UP" type="submit">
                     </form>
-                    <a target="_blank" style="margin-top: 15px;display:block" rel="nofollow" href="https://www.dmca.com/r/33wdzmm" title="DMCA.com Protection Status" class="dmca-badge"><img width="120" height="21" loading="lazy" src="https://images.dmca.com/Badges/dmca_protected_sml_120b.png?ID=f936b4b7-f675-4399-9627-694869ab0664" alt="DMCA.com Protection Status"></a>
+                    <a target="_blank" style="margin-top: 15px;display:block" rel="nofollow"
+                        href="https://www.dmca.com/r/33wdzmm" title="DMCA.com Protection Status" class="dmca-badge"><img
+                            width="120" height="21" loading="lazy"
+                            src="https://images.dmca.com/Badges/dmca_protected_sml_120b.png?ID=f936b4b7-f675-4399-9627-694869ab0664"
+                            alt="DMCA.com Protection Status"></a>
                     <script src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js"> </script>
                 </div>
             </div>
@@ -80,8 +85,11 @@
 </footer>
 <div class="banner_site">
     <div class="list_banner body_width">
-        <a href="https://vnadssb.com?a=vn24976&e=5" target="_blank" rel="nofollow" class="img_banner">
-            <img src="<?= base_url() ?>images/site/banner1.gif" alt="banner">
+        <a href="https://shlive.tv/" target="_blank" rel="nofollow" class="img_banner">
+            <img src="<?= base_url() ?>images/site/SHLIVE.gif" alt="banner">
+        </a>
+        <a href="https://t.me/nguoiduongthoi" target="_blank" rel="nofollow" class="img_banner">
+            <img src="<?= base_url() ?>images/site/lienhe.jpg" alt="banner">
         </a>
         <img src="/images/icon_cancel.png" alt="đóng" class="close_banner">
     </div>
