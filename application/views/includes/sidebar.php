@@ -63,33 +63,27 @@
             <ul>
                 <li class="item_content_link">
                     Gaming Philippines
-                    <a rel="dofollow" href="https://tobet88.org/"><b>TOBET88</b></a>
+                    <a rel="dofollow" target="_blank" href="https://tobet88.pro/"><b>TOBET88</b></a>
+                </li>
+                <li class="item_content_link">
+                    <a rel="dofollow" target="_blank" href="https://shbetca.com/" ><b>shbetca</b></a>
                 </li>
                 <li class="item_content_link">
                     <a target="_blank" rel="dofollow" href="https://mu88.tips/"><b>MU88</b></a>
                 </li>
                 <li class="item_content_link">
-                    <a target="_blank" rel="dofollow" href="https://ketquabongda.io/"><b>ketquabongda</b></a>
+                    <a target="_blank" rel="dofollow" href="https://xoilac38.tv/"><b>xôi lạc tv</b></a>
                 </li>
                 <li class="item_content_link">
-                    <a target="_blank" rel="dofollow" href="https://shbetca.com"><b>shbetca.com</b></a>
-                </li>
-                <li class="item_content_link">
-                    <a target="_blank" rel="dofollow" href="https://aeacademy.org/"><b>xôi lạc tv</b></a>
-                </li>
-                <li class="item_content_link">
-                    <a target="_blank" rel="dofollow" href="https://icfhr2018.org/"><b>xoilac tv trực tiếp bóng
+                    <a target="_blank" rel="dofollow" href="https://www.best-edu.org/"><b>xoilac tv trực tiếp bóng
                             đá</b></a>
                 </li>
                 <li class="item_content_link">
-                    <a target="_blank" rel="dofollow" href="https://cakhia-tv.in/"><b>cakhia tv trực tiếp bóng
+                    <a target="_blank" rel="dofollow" href="https://cakhia-tv.us/"><b>cakhia tv trực tiếp bóng
                             đá</b></a>
                 </li>
                 <li class="item_content_link">
                     <a target="_blank" rel="dofollow" href="https://hollandspeedway.com/"><b>Socolive trực tiếp</b></a>
-                </li>
-                <li class="item_content_link">
-                    <a target="_blank" rel="dofollow" href="https://suncity.top/"><b>Suncity</b></a>
                 </li>
                 <li class="item_content_link">
                     <a target="_blank" rel="dofollow" href="https://tf88pow.com/"><b>TF88</b></a>
@@ -98,10 +92,7 @@
                     <a target="_blank" rel="dofollow" href="https://vin777.ws/"><b>Vin777</b></a>
                 </li>
                 <li class="item_content_link">
-                    <a target="_blank" rel="dofollow" href="https://link123b.com"><b>123b</b></a>
-                </li>
-                <li class="item_content_link">
-                    <a target="_blank" rel="dofollow" href="https://www.jun8830.com/"><b>Jun88city.net</b></a>
+                    <a target="_blank" rel="dofollow" href="https://www.jun8887.com/?uagt=guanggao5a&path=signup"><b>Jun88city.net</b></a>
                 </li>
                 <li class="item_content_link">
                     <a target="_blank" rel="dofollow" href="https://www.cosmicgalerie.com/"><b>Rakhoi tv</b></a>
@@ -122,30 +113,135 @@
                     <a target="_blank" rel="dofollow" href="https://bongdaso-66.com/"><b>https://bongdaso-66.com/</b></a>
                 </li>
                 <li class="item_content_link">
-                    <a target="_blank" rel="dofollow" href="https://68iwin.vin/"><b>iwin68</b></a>
-                </li>
-                <li class="item_content_link">
                     <a target="_blank" rel="dofollow" href="https://vodi.io/"><b>xôi lạc tv</b></a>
                 </li>
                 <li class="item_content_link">
-                    <a target="_blank" rel="dofollow" href="https://www.barchordnyc.com/"><b>bóng đá trực tiếp Xoilac
+                    <a target="_blank" rel="dofollow" href="https://appalachiarising.org/"><b>bóng đá trực tiếp Xoilac
                             TV</b></a>
                 </li>
                 <li class="item_content_link">Xem trực tuyến bóng đá
-                    <a target="_blank" rel="dofollow" href="https://rakhoitv.win/"><b> rakhoi tv</b></a>
-                </li>
-                <li class="item_content_link">
-                    <a target="_blank" rel="dofollow" href="https://sodo66i.com"><b>SODO66</b></a>
+                    <a target="_blank" rel="dofollow" href="https://www.hydraislandgreece.com/"><b> rakhoi tv</b></a>
                 </li>
                 <li class="item_content_link">
                     <a target="_blank" rel="dofollow" href="https://caheotv.li"><b>Caheo tv trực tiếp bóng đá
                         </b></a>
                 </li>
                 <li class="item_content_link">
-                    <a target="_blank" rel="dofollow" href="https://go88.blue"><b>go88</b></a>
+                    <a rel="dofollow" target="_blank" href="https://webnhacaiuytin.info"><b>Nhà cái uy tín</b></a>
                 </li>
                 <li class="item_content_link">
-                    <a target="_blank" rel="dofollow" href="https://shbet.id/"><b>Shbet</b></a>
+                    <a rel="dofollow" target="_blank" href="https://iwinclubb.com/"><b>iwin club</b></a>
+                </li>
+                <li class="item_content_link">
+                    <a rel="dofollow" target="_blank" href="https://shbet.mov"><b>SHbet</b></a>
+                </li>
+                <li class="item_content_link">
+                    <a rel="dofollow" target="_blank" href="https://b52game.today/" ><b>b52 club</b></a>
+                </li>   
+                <li class="item_content_link">
+                    <a rel="dofollow" target="_blank" href="http://sunwin.soy" ><b>sunwin</b></a>
+                </li>    
+                <li class="item_content_link">Link vào
+                    <a rel="dofollow" target="_blank" href="https://ku11.chat/" ><b> Ku11</b></a>
+                </li>
+                <li class="item_content_link">Link vào
+                    <a rel="dofollow" target="_blank" href="https://bj88.la/" ><b>bj88</b></a>
+                </li> 
+                <li class="item_content_link">Trực tiếp
+                    <a rel="dofollow" target="_blank" href="https://xoilaczza.tv/" ><b> Xoilac TV</b> chất lượng cao</a>
+                </li> 
+                <li class="item_content_link">
+                    <a rel="dofollow" target="_blank" href="https://sodo66i.com" ><b>SODO66</b></a>
+                </li> 
+                <li class="item_content_link">
+                    <a rel="dofollow" target="_blank" href="https://thabet.ph/" ><b>Thabet</b></a>
+                </li> 
+                <li class="item_content_link">
+                    <a rel="dofollow" target="_blank" href="https://onbet88.net/" ><b>onbet88</b></a>
+                </li> 
+                <li class="item_content_link">
+                    <a rel="dofollow" target="_blank" href="https://xoilac-tv.us/"  ><b>xôi lạc tv</b></a>
+                </li>
+                <li class="item_content_link">
+                    <a rel="dofollow" target="_blank" href="https://mitomtv.bz/"  ><b>mitom</b></a>
+                </li>
+                <li class="item_content_link">
+                    <a rel="dofollow" target="_blank" href="https://kubet88.tools" ><b>Link vào https://kubet88.tools</b></a>
+                </li>
+                <li class="item_content_link">
+                    <a rel="dofollow" target="_blank" href="https://nohu777.info/"><b>Nohu</b></a>
+                </li>
+                <li class="item_content_link">
+                    <a rel="dofollow" target="_blank" href="https://somosorlando.info/" ><b>xem bong da xoilac tv</b></a>
+                </li>
+                <li class="item_content_link">
+                    <a rel="dofollow" target="_blank" href="https://hi88ii.com/" ><b>Hi88</b></a>
+                </li>
+                <li class="item_content_link">
+                    <a rel="dofollow" target="_blank" href="https://hi881.com/" ><b>Hi88</b></a>
+                </li>
+                <li class="item_content_link">
+                    <a rel="dofollow" target="_blank" href="https://socolive.art/" ><b>socolive</b></a>
+                </li>
+                <li class="item_content_link">
+                    <a rel="dofollow" target="_blank" href="https://TK88.mov" ><b>TK88</b></a>
+                </li>
+                <li class="item_content_link">xem trực tiếp bóng đá 
+                    <a rel="dofollow" target="_blank" href="https://anstad.com/" ><b> xoilac</b></a>
+                </li>
+                <li class="item_content_link">xem bóng đá
+                    <a rel="dofollow" target="_blank" href="https://musical-theatre.net/" ><b> xoilac</b></a>
+                </li>
+                <li class="item_content_link">
+                    <a rel="dofollow" target="_blank" href="https://xoilactv.lat/" ><b>xoilac </b></a> tv
+                </li>
+                <li class="item_content_link">
+                    <a rel="dofollow" target="_blank" href="https://sirmalcolmcampbell.com/" ><b>mitom</b></a> tv
+                </li>
+                <li class="item_content_link">
+                    <a rel="dofollow" target="_blank" href="https://valcom.tv/" ><b>xôi lạc tv trực tiếp bóng đá hôm nay</b></a>
+                </li>
+                <li class="item_content_link">
+                    <a rel="dofollow" target="_blank" href="https://discapacidadonline.com/" ><b>xem bóng đá trực tuyến xoilac</b></a>
+                </li>
+                <li class="item_content_link">
+                    <a rel="dofollow" target="_blank" href="https://sunwinv1.com" ><b>sunwin</b></a>
+                </li>
+                <li class="item_content_link">
+                    <a rel="dofollow" target="_blank" href="https://bj88.pics" ><b>BJ88</b></a>
+                </li>
+                <li class="item_content_link">
+                    <a rel="dofollow" target="_blank" href="https://win55.blue/" ><b>Win55</b></a>
+                </li>
+                <li class="item_content_link">
+                    <a rel="dofollow" target="_blank" href="https://go88g.lat" ><b>go88</b></a>
+                </li>
+                <li class="item_content_link">
+                    <a rel="dofollow" target="_blank" href="https://sunwinn.tel" ><b>sunwin</b></a>
+                </li>
+                <li class="item_content_link">
+                    <a rel="dofollow" target="_blank" href="https://win55.ong/" ><b>https://win55.ong/</b></a>
+                </li>
+                <li class="item_content_link">
+                    <a rel="dofollow" target="_blank" href="https://taigamebai68.link/" ><b>68 game bài</b></a>
+                </li>
+                <li class="item_content_link">
+                    <a rel="dofollow" target="_blank" href="https://ae388.club/" ><b>ae388.club</b></a>
+                </li>
+                <li class="item_content_link">
+                    <a rel="dofollow" target="_blank" href="https://alfinal.com" ><b>Xoilac Tv</b></a>
+                </li>
+                <li class="item_content_link">
+                    <a rel="dofollow" target="_blank" href="https://barbeque-nation.com" ><b>Xoilac Tv</b></a>
+                </li>
+                <li class="item_content_link">
+                    <a rel="dofollow" target="_blank" href="https://dau-thau.com" ><b>Xoilac7 Tv</b></a>
+                </li>
+                <li class="item_content_link">
+                    <a rel="dofollow" target="_blank" href="https://vin777okvip.com/" ><b>https://vin777okvip.com/</b></a>
+                </li>
+                <li class="item_content_link">
+                    <a rel="dofollow" target="_blank" href="https://152.42.176.91/" ><b>Kubet</b></a>
                 </li>
             </ul>
         </div>

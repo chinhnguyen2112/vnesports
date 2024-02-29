@@ -30,7 +30,7 @@ class Home extends CI_Controller
     {
         $time = time();
         $data['canonical'] = base_url();
-        $data['blog'] = $this->Madmin->get_limit("time_post <= $time AND index_blog = 1 AND type = 0", 'blogs', 0, 20);
+        $data['blog'] = $this->Madmin->query_sql("SELECT * FROM blogs WHERE  time_post <= $time AND index_blog = 1 AND type = 0 ORDER BY time_post DESC LIMIT 20");
         $data['page'] = $this->Madmin->query_sql("SELECT title,alias FROM blogs WHERE type = 1");
         $data['blog_new'] = $this->Madmin->get_limit("time_post <= $time AND index_blog = 1 AND type = 0", 'blogs', 0, 5);
         $tags = $this->Madmin->query_sql("SELECT id FROM tags WHERE parent = 25");
@@ -44,7 +44,7 @@ class Home extends CI_Controller
         }
         $blog_tag = $this->Madmin->query_sql("SELECT * FROM blogs WHERE  time_post <= $time AND index_blog = 1 AND type = 0 AND ( $where ) ORDER BY id DESC LIMIT 4");
         $data['blog_tag'] = $blog_tag;
-        $data['meta_title'] = 'Cổng thông tin cập nhật xu hướng phát triển Game Online Việt Nam';
+        $data['meta_title'] = 'Cổng thông tin tổng hợp thông tin Game eSports Việt Nam';
         $data['meta_des'] = 'VnEsports là nơi cập nhật nhanh và chính xác thông tin các game Esports thịnh hành nhất hiện nay. Theo dõi ngay để không bỏ lỡ các tin game mới và hấp dẫn!';
         $data['content'] = 'home';
         $data['list_js'] = [
@@ -71,6 +71,8 @@ class Home extends CI_Controller
         $data['canonical'] = base_url() . $alias . '/';
         if ($alias == 'nha-cai-ta88-san-choi-cuoc-xanh-chin-hap-dan-nguoi-choi') {
             $alias = 'nha-cai-ta88bet-san-choi-cuoc-xanh-chin-hap-dan-nguoi-choi';
+        } else  if ($alias == 'tai-xiu-go88-gioi-thieu-cach-choi-tuyet-nhanh-an-tuyet-cu-meo') {
+            $alias = 'tai-xiu-go88';
         }
         $chuyenmuc = $this->Madmin->get_by(['alias' => $alias], 'category');
         if ($chuyenmuc == null) {
@@ -149,7 +151,9 @@ class Home extends CI_Controller
             $data['meta_des'] = $blog['meta_des'];
             $data['meta_key'] = $blog['meta_key'];
             $data['meta_img'] = $blog['image'];
-            $data['index'] = 1;
+            if ($blog['id'] != 789) {
+                $data['index'] = 1;
+            }
         } else if (isset($tags) && $tags != null) {
             if ($_SERVER['REQUEST_URI'] != '/' . $alias . '/') {
                 redirect('/' . $alias . '/', 'location', 301);

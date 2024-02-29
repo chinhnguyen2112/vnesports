@@ -29,23 +29,23 @@
             <div class="list_menu">
                 <a class="img_home home_gray" href="/"><span></span></a>
                 <a class="icon_hidden" href="/" style="display: none"><img src="/images/fa-icon.png" alt="icon"></a>
-                <?php $menu_cate_parent = chuyen_muc(['parent' => 0]);
+                <?php $menu_cate_parent = chuyen_muc('parent = 0  AND id != 9');
                 foreach ($menu_cate_parent as $val) {
                     $menu_cate = chuyen_muc(['parent' => $val['id']]); ?>
-                <div class="this_menu">
-                    <span><a href="/<?= $val['alias'] ?>/">
-                            <?= $val['name'] ?>
-                        </a></span>
-                    <?php if ($menu_cate != null) { ?>
-                    <div class="menu_con">
-                        <?php foreach ($menu_cate as $val1) { ?>
-                        <p><a href="/<?= $val1['alias'] ?>/">
-                                <?= $val1['name'] ?>
-                            </a></p>
+                    <div class="this_menu">
+                        <span><a href="/<?= $val['alias'] ?>/">
+                                <?= $val['name'] ?>
+                            </a></span>
+                        <?php if ($menu_cate != null) { ?>
+                            <div class="menu_con">
+                                <?php foreach ($menu_cate as $val1) { ?>
+                                    <p><a href="/<?= $val1['alias'] ?>/">
+                                            <?= $val1['name'] ?>
+                                        </a></p>
+                                <?php } ?>
+                            </div>
                         <?php } ?>
                     </div>
-                    <?php } ?>
-                </div>
                 <?php } ?>
                 <div class="btn_show_menu">
                     <div class="img_show_menu" onclick="show_menu(this,1)">
@@ -68,32 +68,32 @@
                     </div>
                 </div>
                 <div class="content_left">
-                    <?php $menu_cate_parent = chuyen_muc(['parent' => 0]);
+                    <?php $menu_cate_parent = chuyen_muc('parent = 0  AND id != 9');
                     foreach ($menu_cate_parent as $val) {
                         $menu_cate = chuyen_muc(['parent' => $val['id']]); ?>
-                    <div class="item_content_left">
-                        <span><a href="/<?= $val['alias'] ?>/">
-                                <?= $val['name'] ?>
-                            </a></span>
-                        <?php if ($menu_cate != null) { ?>
-                        <div class="item_child">
-                            <?php foreach ($menu_cate as $val1) { ?>
-                            <p><a href="/<?= $val1['alias'] ?>/">
-                                    <?= $val1['name'] ?>
-                                </a></p>
+                        <div class="item_content_left">
+                            <span><a href="/<?= $val['alias'] ?>/">
+                                    <?= $val['name'] ?>
+                                </a></span>
+                            <?php if ($menu_cate != null) { ?>
+                                <div class="item_child">
+                                    <?php foreach ($menu_cate as $val1) { ?>
+                                        <p><a href="/<?= $val1['alias'] ?>/">
+                                                <?= $val1['name'] ?>
+                                            </a></p>
+                                    <?php } ?>
+                                </div>
                             <?php } ?>
                         </div>
-                        <?php } ?>
-                    </div>
                     <?php } ?>
                 </div>
                 <div class="content_right">
                     <?php foreach ($page as $vall) { ?>
-                    <div class="item_page">
-                        <a href="/<?= $vall['alias'] ?>/">
-                            <?= $vall['title'] ?>
-                        </a>
-                    </div>
+                        <div class="item_page">
+                            <a href="/<?= $vall['alias'] ?>/">
+                                <?= $vall['title'] ?>
+                            </a>
+                        </div>
                     <?php } ?>
                 </div>
             </div>
@@ -103,12 +103,17 @@
 <div class="main_content">
     <div class="banner_top">
         <div class="list_banner_top body_width">
-            <a href="https://www.jun8830.com/?uagt=guanggao5a&path=signup" target="_blank" rel="nofollow"
-                class="img_banner">
+            <a href="https://www.jun8887.com/?uagt=guanggao5a&path=signup" target="_blank" rel="nofollow" class="img_banner">
                 <img src="<?= base_url() ?>images/site/jun88.gif" alt="banner">
             </a>
             <a href="http://shbet23.com/?a=1114342" target="_blank" rel="nofollow" class="img_banner">
                 <img src="<?= base_url() ?>images/site/okvip.gif" alt="banner">
+            </a>
+            <a href="https://ituoitho.com/rotation-lucks/" target="_blank" rel="nofollow" class="img_banner">
+                <img src="<?= base_url() ?>images/site/ituoitho.jpg" alt="banner">
+            </a>
+            <a href="https://shlive.tv/" target="_blank" rel="nofollow" class="img_banner">
+                <img src="<?= base_url() ?>images/site/SHLIVE.gif" alt="banner">
             </a>
             <img src="/images/icon_cancel.png" alt="đóng" class="close_banner" onclick="$('.list_banner_top').hide()">
         </div>
