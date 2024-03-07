@@ -100,9 +100,16 @@
 
 <div class="notify_auto">
     <div class="content_notify">
-        <a href="https://ituoitho.com/rotation-lucks/" target="_blank" class="body_notify">
+        <a href="https://ituoitho.com/rotation-lucks/"  rel="nofollow" target="_blank" class="body_notify">
             <img src="/images/site/mini.png" alt="Vòng quay may mắn">
             <p>VÒNG QUAY MAY MẮN</p>
         </a>
     </div>
 </div>
+<!-- <div class="popup_link">
+    <div class="bodypopup">
+        <p class="text_popup">Tôi không phải là người máy</p>
+        <p class="btn_popup"><a href="https://ituoitho.com/" target="_blank" rel="nofollow" >Xác nhận</a></p>
+        <a href="http://" ></a>
+    </div>
+</div> -->
