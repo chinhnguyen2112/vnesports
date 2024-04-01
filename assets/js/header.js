@@ -57,6 +57,3 @@ $(document).ready(function(){
 $('.btn_popup').click(function (event) {
 	$('.popup_link').hide();
 })
-setTimeout(function(){
-	$('.popup_link').show();
-}, 5000); // 5000 milliseconds = 5 seconds

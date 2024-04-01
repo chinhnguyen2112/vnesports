@@ -81,17 +81,8 @@
 </footer>
 <div class="banner_site">
     <div class="list_banner body_width">
-        <a href="https://www.11i9bet.com/Register?a=714579" target="_blank" rel="nofollow" class="img_banner">
-            <img src="<?= base_url() ?>images/site/728-x-90.gif" alt="banner">
-        </a>
         <a href="https://t.me/nguoiduongthoi" target="_blank" rel="nofollow" class="img_banner">
             <img src="<?= base_url() ?>images/site/lienhe.jpg" alt="banner">
-        </a>
-        <a href="https://www.bitlyvi.com/vnesrts" target="_blank" rel="nofollow" class="img_banner">
-            <img src="<?= base_url() ?>images/site/720X90-123B.gif" alt="banner">
-        </a>
-        <a href="https://www.bitlyviet.com/vnesrts" target="_blank" rel="nofollow" class="img_banner">
-            <img src="<?= base_url() ?>images/site/720x90-ee88.gif" alt="banner">
         </a>
         <img src="/images/icon_cancel.png" alt="đóng" class="close_banner">
     </div>
@@ -106,10 +97,3 @@
         </a>
     </div>
 </div>
-<!-- <div class="popup_link">
-    <div class="bodypopup">
-        <p class="text_popup">Tôi không phải là người máy</p>
-        <p class="btn_popup"><a href="https://ituoitho.com/" target="_blank" rel="nofollow" >Xác nhận</a></p>
-        <a href="http://" ></a>
-    </div>
-</div> -->

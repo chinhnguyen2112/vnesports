@@ -109,8 +109,8 @@
             <a href="http://shbet23.com/?a=1114342" target="_blank" rel="nofollow" class="img_banner">
                 <img src="<?= base_url() ?>images/site/okvip.gif" alt="banner">
             </a>
-            <a href="https://ituoitho.com/rotation-lucks/" target="_blank" rel="nofollow" class="img_banner">
-                <img src="<?= base_url() ?>images/site/ituoitho.jpg" alt="banner">
+            <a href="https://sunwins.cc" target="_blank" rel="nofollow" class="img_banner" >
+                <img src="<?= base_url() ?>images/site/SUN-720.gif" alt="đăng nhập sunwin">
             </a>
             <a href="https://shlive.tv/" target="_blank" rel="nofollow" class="img_banner">
                 <img src="<?= base_url() ?>images/site/SHLIVE.gif" alt="banner">

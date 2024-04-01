@@ -426,6 +426,7 @@
         margin-top: 15px;
     }
     .notify_auto {
+        display: none;
         right: 0;
         padding: 3px;
         bottom: 0;
