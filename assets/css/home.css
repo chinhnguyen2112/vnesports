@@ -156,8 +156,8 @@
 
 .this_train_right {
     border-bottom: 1px solid #ccc;
-    margin-bottom: 15px;
-    padding-bottom: 17px;
+    margin-bottom: 5px;
+    padding-bottom: 0px;
 }
 
 .this_train_right:last-child {
@@ -429,6 +429,7 @@
     .right_blog .des_blog span {
         font-size: 13px !important;
         line-height: 18px !important;
+        overflow: hidden;
     }
 
     .this_train a img {
@@ -446,7 +447,7 @@
     }
 
     .des_blog {
-        -webkit-line-clamp: 4;
+        -webkit-line-clamp: 3;
     }
 
     .only_pc {

@@ -29,7 +29,7 @@
                         <div class="box_author">
                             <div class="box_date">
                                 <p class="date_blog">
-                                    <?= replace_date($blog['created_at']) ?>
+                                    <?= replace_date($blog['updated_at']) ?>
                                 </p>
                             </div>
                             <a rel="nofollow" class="follow_ggnew" target="_blank"
@@ -74,11 +74,11 @@
                             <?php
                             foreach ($blog_same as $val) { ?>
                                 <div class="this_handbook ">
-                                    <a class="img_item" href="/<?= $val['alias'] ?>/">
+                                    <a class="img_item" href="/<?= $val['alias'] ?><?= ($val['id'] > 1024) ? '' : '/' ?>">
                                         <img class="img_blog_same" src="/<?= $val['image'] ?>" alt="<?= $val['title'] ?>">
                                     </a>
                                     <div class="data_handbook">
-                                        <a class="title_handbook" href="/<?= $val['alias'] ?>/">
+                                        <a class="title_handbook" href="/<?= $val['alias'] ?><?= ($val['id'] > 1024) ? '' : '/' ?>">
                                             <?= $val['title'] ?>
                                         </a>
                                         <p class="date_post">
@@ -86,7 +86,7 @@
                                                 <?= $blog['name_cate'] ?>
                                             </a>
                                             <span>
-                                                <?= date('d-m-Y', $val['created_at']) ?>
+                                                <?= date('d-m-Y', $val['updated_at']) ?>
                                                 <span>
                                         </p>
                                         <div class="this_des_handbook">

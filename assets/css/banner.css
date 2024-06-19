@@ -37,6 +37,7 @@
 
 .banner_top .img_banner img {
     width: 100%;
+    height: auto;
 }
 
 
@@ -52,7 +53,10 @@
     bottom: -15px;
     top: unset;
 }
-
+.img_banner img {
+    width: 100%;
+    height: auto;
+}
 @media only screen and (max-width: 580px) {
     .img_banner {
         width: 100%;

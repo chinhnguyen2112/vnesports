@@ -3,26 +3,26 @@
     <div class="footer-widgets body_width">
         <div class="content_footer">
             <div class="ft_left">
-                <img class="logo_ft" src="/images/logo.png" alt="logo footer">
+                <img class="logo_ft" src="/images/logo.png" alt="logo footer" width="300px" height="58px">
                 <div class="widget">
                     <p class="title_widget">Cập nhật thông tin mới về nhất Game Esports được phát triển bởi Ohs Việt
                         Nam...</p>
                     <div class="contact_infor">
                         <ul class="list_contact">
                             <li style="width:100%">
-                                <img src="/images/icon_address_ft.png" alt="Địa chỉ">
+                                <img src="/images/icon_address_ft.png" alt="Địa chỉ"  width="15px" height="15px">
                                 <p>KĐT Đoàn Ngoại Giao, P. Xuân Tảo, Q. Bắc Từ Liêm, Hà Nội</p>
                             </li>
                             <li>
-                                <img src="/images/icon_website_ft.png" alt="website">
+                                <img src="/images/icon_website_ft.png" alt="website"  width="15px" height="15px">
                                 <p>VnEsports.Vn -</p>
                             </li>
                             <li style="margin-left:3px;width:51%">
-                                <img src="/images/icon_mail_ft.png" alt="email">
+                                <img src="/images/icon_mail_ft.png" alt="email"  width="15px" height="15px">
                                 <p>vnesports@gmail.com</p>
                             </li>
                             <li>
-                                <img src="/images/icon_fb_ft.png" alt="facebook">
+                                <img src="/images/icon_fb_ft.png" alt="facebook"  width="15px" height="15px">
                                 <p>fb.com/vnesports.vn</p>
                             </li>
                         </ul>
@@ -39,7 +39,7 @@
                             <div class="item_link_ft">
                                 <span onclick="big_item_menu(this,1)">
                                     <a href="/<?= $val['alias'] ?>/">
-                                        <img src="/images/icon_arrow_ft.png" alt="Chuyên mục">
+                                        <img src="/images/icon_arrow_ft.png" alt="Chuyên mục" width="15px" height="15px">
                                         <?= $val['name'] ?>
                                     </a>
                                 </span>
@@ -49,7 +49,7 @@
                 </div>
                 <div class="r_02">
                     <p class="title_r">ĐĂNG KÝ NHẬN TIN</p>
-                    <form class="form_email" id="newsletter">
+                    <form class="form_email" id="newsletter" target="_blank">
                         <p><strong>Đăng ký nhận bản tin</strong> , bài viết tư vấn câp nhật hằng ngày.</p>
                         <input class="input_text" type="email" name="email" placeholder="Email Address" required>
                         <input class="btn_submit_form" value="SIGN UP" type="submit">
@@ -80,20 +80,5 @@
     </div>
 </footer>
 <div class="banner_site">
-    <div class="list_banner body_width">
-        <a href="https://t.me/nguoiduongthoi" target="_blank" rel="nofollow" class="img_banner">
-            <img src="<?= base_url() ?>images/site/lienhe.jpg" alt="banner">
-        </a>
-        <img src="/images/icon_cancel.png" alt="đóng" class="close_banner">
-    </div>
-</div>
-
-
-<div class="notify_auto">
-    <div class="content_notify">
-        <a href="https://ituoitho.com/rotation-lucks/"  rel="nofollow" target="_blank" class="body_notify">
-            <img src="/images/site/mini.png" alt="Vòng quay may mắn">
-            <p>VÒNG QUAY MAY MẮN</p>
-        </a>
-    </div>
+    
 </div>

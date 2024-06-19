@@ -7,7 +7,7 @@
             <?php if ($result != null) { ?>
                 <div class="result_top">
                     <div class="first_result">
-                        <a class="linl_all_detail" title="<?= $result[0]['title'] ?>" href="/<?= $result[0]['alias'] ?>/">
+                        <a class="linl_all_detail" title="<?= $result[0]['title'] ?>" href="/<?= $result[0]['alias'] ?><?= ($result[0]['id'] > 1024) ? '' : '/' ?>">
                             <div class="blog_top_content blog_top_left">
                                 <img src="/<?= $result[0]['image'] ?>" alt="<?= $result[0]['title'] ?>">
                             </div>
@@ -22,10 +22,10 @@
                     <?php foreach ($result as $key => $val) {
                         if ($key > 0) { ?>
                             <div class="item_result">
-                                <a title="<?= $val['title'] ?>" href="/<?= $val['alias'] ?>/">
+                                <a title="<?= $val['title'] ?>" href="/<?= $val['alias'] ?><?= ($val['id'] > 1024) ? '' : '/' ?>">
                                     <p class="title_blog only_mobile"><?= $val['title'] ?></p>
                                 </a>
-                                <a class="linl_all_detail link_fl" title="<?= $val['title'] ?>" href="/<?= $val['alias'] ?>/">
+                                <a class="linl_all_detail link_fl" title="<?= $val['title'] ?>" href="/<?= $val['alias'] ?><?= ($val['id'] > 1024) ? '' : '/' ?>">
                                     <img src="/<?= $val['image'] ?>" alt="<?= $val['title'] ?>">
                                     <div class="box_content_blog">
                                         <p class="title_blog"><?= $val['title'] ?></p>
@@ -33,7 +33,7 @@
                                             <p class="cate_post"><?php $cate = chuyen_muc(['id' => $val['chuyenmuc']]);
                                                                     echo $cate[0]['name']; ?></p>
                                             <span class="dot_item"></span>
-                                            <p class="date_post"><?= date('d-m-Y', $val['created_at']) ?></p>
+                                            <p class="date_post"><?= date('d-m-Y', $val['updated_at']) ?></p>
                                         </div>
                                         <span class="des_post"><?= $val['sapo'] ?></span>
                                     </div>

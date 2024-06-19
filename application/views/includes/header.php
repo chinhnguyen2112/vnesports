@@ -3,10 +3,10 @@
         <div class="top_header" id="top_header" style="display:block">
             <div class="flex">
                 <a href="/">
-                    <img src="/images/logo.png" alt="logo" class="img_logo_bot_header">
+                    <img src="/images/logo.png" alt="logo" class="img_logo_bot_header"   width="155px" height="30px">
                 </a>
                 <div class="top_right_header">
-                    <form class="search_pc" id="search_pc" method="get" action="/search">
+                    <form class="search_pc" id="search_pc" method="get" action="/search" target="_blank">
                         <img class="img_search_pc" src="/images/icon_search.png" alt="search">
                         <input class="input_pc" type="text" autocomplete="off" name="search" placeholder="Tìm kiếm">
                     </form>
@@ -28,7 +28,7 @@
         <div class="header_menu">
             <div class="list_menu">
                 <a class="img_home home_gray" href="/"><span></span></a>
-                <a class="icon_hidden" href="/" style="display: none"><img src="/images/fa-icon.png" alt="icon"></a>
+                <a class="icon_hidden" href="/" style="display: none"><img src="/images/favicon.png" alt="icon"></a>
                 <?php $menu_cate_parent = chuyen_muc('parent = 0  AND id != 9');
                 foreach ($menu_cate_parent as $val) {
                     $menu_cate = chuyen_muc(['parent' => $val['id']]); ?>
@@ -57,7 +57,7 @@
         <div class="all_menu_drop">
             <div class="content_menu">
                 <div class="header_cont_menu">
-                    <form class="search_mobile" id="search" method="get" action="/search">
+                    <form class="search_mobile" id="search" method="get" action="/search"  target="_blank">
                         <img class="img_search_mobile" src="/images/icon_search.png" alt="Tìm kiếm">
                         <input class="input_mobile" type="text" autocomplete="off" name="search" placeholder="Tìm kiếm">
                     </form>
@@ -102,19 +102,5 @@
 </div>
 <div class="main_content">
     <div class="banner_top">
-        <div class="list_banner_top body_width">
-            <a href="https://www.jun8887.com/?uagt=guanggao5a&path=signup" target="_blank" rel="nofollow" class="img_banner">
-                <img src="<?= base_url() ?>images/site/jun88.gif" alt="banner">
-            </a>
-            <a href="http://shbet23.com/?a=1114342" target="_blank" rel="nofollow" class="img_banner">
-                <img src="<?= base_url() ?>images/site/okvip.gif" alt="banner">
-            </a>
-            <a href="https://sunwins.cc" target="_blank" rel="nofollow" class="img_banner" >
-                <img src="<?= base_url() ?>images/site/SUN-720.gif" alt="đăng nhập sunwin">
-            </a>
-            <a href="https://shlive.tv/" target="_blank" rel="nofollow" class="img_banner">
-                <img src="<?= base_url() ?>images/site/SHLIVE.gif" alt="banner">
-            </a>
-            <img src="/images/icon_cancel.png" alt="đóng" class="close_banner" onclick="$('.list_banner_top').hide()">
-        </div>
+        
     </div>

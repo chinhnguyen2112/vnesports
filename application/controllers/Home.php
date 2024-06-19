@@ -30,30 +30,17 @@ class Home extends CI_Controller
     {
         $time = time();
         $data['canonical'] = base_url();
-        $data['blog'] = $this->Madmin->query_sql("SELECT * FROM blogs WHERE  time_post <= $time AND index_blog = 1 AND type = 0 ORDER BY time_post DESC LIMIT 20");
+        $data['blog'] = $this->Madmin->query_sql("SELECT * FROM blogs WHERE  time_post <= $time AND index_blog = 1 AND type = 0 AND chuyenmuc != 9 ORDER BY time_post DESC LIMIT 20");
         $data['page'] = $this->Madmin->query_sql("SELECT title,alias FROM blogs WHERE type = 1");
-        $data['blog_new'] = $this->Madmin->get_limit("time_post <= $time AND index_blog = 1 AND type = 0", 'blogs', 0, 5);
-        $tags = $this->Madmin->query_sql("SELECT id FROM tags WHERE parent = 25");
-        $where = "";
-        foreach ($tags as $key => $val) {
-            if ($key == 0) {
-                $where .= ' FIND_IN_SET(' . $val['id'] . ',tag) ';
-            } else {
-                $where .= ' OR FIND_IN_SET(' . $val['id'] . ',tag) ';
-            }
-        }
-        $blog_tag = $this->Madmin->query_sql("SELECT * FROM blogs WHERE  time_post <= $time AND index_blog = 1 AND type = 0 AND ( $where ) ORDER BY id DESC LIMIT 4");
-        $data['blog_tag'] = $blog_tag;
-        $data['meta_title'] = 'Cổng thông tin tổng hợp thông tin Game eSports Việt Nam';
+        $data['blog_new'] = $this->Madmin->get_limit("time_post <= $time AND index_blog = 1 AND type = 0  AND chuyenmuc != 9", 'blogs', 0, 5);
+        $data['meta_title'] = 'Cổng tin tức thể thao điện tử eSports Việt Nam mới nhất';
         $data['meta_des'] = 'VnEsports là nơi cập nhật nhanh và chính xác thông tin các game Esports thịnh hành nhất hiện nay. Theo dõi ngay để không bỏ lỡ các tin game mới và hấp dẫn!';
         $data['content'] = 'home';
         $data['list_js'] = [
-            'slick.min.js',
+            // 'lazysizes.min.js',
             'home.js',
         ];
         $data['list_css'] = [
-            'slick.css',
-            'slick-theme.css',
             'home.css'
         ];
         $data['index'] = 1;
@@ -61,18 +48,39 @@ class Home extends CI_Controller
     }
     public function chuyenmuc($alias)
     {
+        if ($alias == 'review-1xbet-san-choi-game-uy-tin-hang-dau-tai-viet-nam') {
+            $alias = 'review-san-choi-game-uy-tin-hang-dau-tai-viet-nam';
+        }
         $data['page'] = $this->Madmin->query_sql("SELECT title,alias FROM blogs WHERE type = 1");
         $time = time();
         $alias = trim($alias);
         $alias_new = strtolower($alias);
-        if ($alias != $alias_new) {
-            redirect('/' . $alias_new . '/', 'location', 301);
+        //
+        $check_blog = $this->Madmin->query_sql_row("SELECT id FROM blogs WHERE alias = '$alias' ");
+        if ($check_blog != null && $check_blog['id'] > 1024) {
+            if ($alias != $alias_new || $_SERVER['REQUEST_URI'] !=  '/' . $alias) {
+                redirect('/' . $alias_new, 'location', 301);
+            }
+            $data['canonical'] = base_url() . $alias;
+            $data['canonical_amp'] = base_url() .'amp/'. $alias;
+        } else if($check_blog != null && $check_blog['id'] <= 1024) {
+            if ($alias != $alias_new) {
+                redirect('/' . $alias_new . '/', 'location', 301);
+            }
+            $data['canonical'] = base_url() . $alias . '/';
+            $data['canonical_amp'] = base_url() .'amp/'. $alias . '/';
         }
-        $data['canonical'] = base_url() . $alias . '/';
         if ($alias == 'nha-cai-ta88-san-choi-cuoc-xanh-chin-hap-dan-nguoi-choi') {
             $alias = 'nha-cai-ta88bet-san-choi-cuoc-xanh-chin-hap-dan-nguoi-choi';
         } else  if ($alias == 'tai-xiu-go88-gioi-thieu-cach-choi-tuyet-nhanh-an-tuyet-cu-meo') {
             $alias = 'tai-xiu-go88';
+        } else  if ($alias == 'review-1xbet-san-choi-game-uy-tin-hang-dau-tai-viet-nam') {
+            redirect('/review-san-choi-game-uy-tin-hang-dau-tai-viet-nam/', 'location', 301);
+        }
+        // var_dump($_SERVER['REQUEST_URI']);
+        $alias_new = alias_301($_SERVER['REQUEST_URI']);
+        if ($_SERVER['REQUEST_URI'] !=  $alias_new) {
+            redirect( $alias_new, 'location', 301);
         }
         $chuyenmuc = $this->Madmin->get_by(['alias' => $alias], 'category');
         if ($chuyenmuc == null) {
@@ -126,7 +134,9 @@ class Home extends CI_Controller
             ];
             $data['index'] = 1;
         } else if (isset($blog) && $blog != null) { // blog
-            if ($_SERVER['REQUEST_URI'] != '/' . $alias . '/') {
+            if ($blog['id'] > 1024 && $_SERVER['REQUEST_URI'] != '/' . $alias) {
+                redirect('/' . $alias, 'location', 301);
+            } else if($blog['id'] <= 1024 && $_SERVER['REQUEST_URI'] != '/' . $alias.'/') {
                 redirect('/' . $alias . '/', 'location', 301);
             }
             if (!admin() && $blog['time_post'] > $time) {
@@ -295,6 +305,34 @@ class Home extends CI_Controller
         ];
         $data['index'] = 1;
         $this->load->view('index', $data);
+    }
+    public function author($alias)
+    {
+        $author = $this->Madmin->get_by(['alias' => $alias], 'admin');
+        if ($author == null) {
+            set_status_header(404);
+            return $this->load->view('errors/html/error_404');
+        } else {
+            $time = time();
+            if ($_SERVER['REQUEST_URI'] != '/author/' . $author['alias'] . '.html') {
+                redirect('/author/' . $author['alias'] . '.html', 'location', 301);
+            }
+            $data['author'] = $author;
+            $data['list_js'] = [
+                'jquery.toc.min.js',
+            ];
+            $data['list_css'] = [
+                'author.css',
+            ];
+            $data['meta_title'] = $author['name'] ;
+            $data['meta_des'] = "CEO Bùi Thanh Huế là nữ giám đốc điều hành tài năng của Công Cụ Hỗ Trợ Chơi DTCL TFTactics.iO, sỡ hữu học vấn và thành tích ấn tượng. Chi tiết tại đây!";
+            $data['meta_key'] = $author['name'];
+            $data['meta_img'] = $author['image'];
+                $data['index'] = 1;
+            $data['content'] = 'author';
+            $data['canonical'] = base_url('author/' . $author['alias'] . '.html');
+            return $this->load->view('index', $data);
+        }
     }
     // public function replace_blog()
     // {

@@ -84,6 +84,8 @@ $route['bang-xep-hang'] = 'Home/bxh';
 $route['load_more'] = 'Ajax/load_more';
 $route['load_more_cate'] = 'Ajax/load_more_cate';
 
+$route['amp/(:any)'] = 'Amp/detail_blog/$1 ';
+$route['author/(:any).html'] = 'Home/author/$1';
 $route['(:any)'] = 'Home/chuyenmuc/$1 ';
 $route['(:any)/(:num)'] = 'Home/chuyenmuc/$1 ';
 // $route['(:any)/(:any)'] = 'Home/tag/$1/$2 ';

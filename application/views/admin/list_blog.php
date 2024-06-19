@@ -200,7 +200,7 @@
                                                 <?php if ($val['index_blog'] == 0 || $val['time_post'] > time()) {  ?>
                                                     <a href="/admin/pre_blog?id=<?= $val['id'] ?>/" target="_blank">Xem tin</a>
                                                 <?php } else { ?>
-                                                    <a href="/<?= $val['alias'] ?>/" target="_blank">Xem tin</a>
+                                                    <a href="/<?= $val['alias'] ?><?= ($val['id'] > 1024) ? '' : '/' ?>" target="_blank">Xem tin</a>
                                                 <?php } ?>
                                             </td>
                                             <td>

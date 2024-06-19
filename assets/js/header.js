@@ -1,10 +1,8 @@
 function show_menu(e, type) {
 	if (type == 1) {
 		$(".all_menu_drop").css("transform", "scale(1)");
-		// $(e).attr("onclick", "show_menu(this,2)");
 	} else {
 		$(".all_menu_drop").css("transform", "scale(0)");
-		// $(e).attr("onclick", "show_menu(this,1)");
 	}
 }
 function show_menu_mobile(e, type) {
@@ -33,27 +31,24 @@ function scrollFunction() {
 		$(".icon_hidden").css("display", "block");
 	}
 }
-$(document).ready(function(){
-    setTimeout(function(){
-        $('.popup_main').show()
-    }, 3000); // 15 giây
+$(document).ready(function () {
+	var banner_header = `<div class="list_banner_top body_width">
+	<a href="https://t.me/nguoiduongthoi" target="_blank" rel="nofollow" class="img_banner">
+		<img src="/images/site/lienhe.jpg" alt="banner"  width="375px" height="46px">
+	</a>
+	<img src="/images/icon_cancel.png" alt="đóng" class="close_banner" onclick="$('.list_banner_top').hide()">
+</div>`;
+	var banner_footer = `<div class="list_banner body_width">
+	<a href="https://shlive.tv/" target="_blank" rel="nofollow" class="img_banner">
+		<img src="/images/site/SHLIVE.gif" alt="banner" width="375px" height="46px">
+	</a>
+	<a href="https://shbet24h.info/" target="_blank" rel="nofollow" class="img_banner">
+		<img src="/images/site/okvip.gif" alt="banner"  width="375px" height="46px">
+	</a>
+	<img src="/images/icon_cancel.png" alt="đóng" class="close_banner" onclick="$('.banner_site').hide()">
+</div>`;
+	setTimeout(function () {
+		$('.banner_top').html(banner_header)
+		$('.banner_site').html(banner_footer)
+	}, 5000); // 15 giây
 });
-// function show_menu1(e) {
-// 	$(".box_menu").show();
-// }
-// if ($(window).width() <= 1024) {
-// 	$(document).click(function (event) {
-// 		$target = $(event.target);
-// 		if (
-// 			!$target.closest(".box_menu").length &&
-// 			$(".box_menu").is(":visible") &&
-// 			!$target.closest(".img_show_2").length
-// 		) {
-// 			$(".box_menu").hide(100);
-// 		}
-// 	});
-// }
-
-$('.btn_popup').click(function (event) {
-	$('.popup_link').hide();
-})

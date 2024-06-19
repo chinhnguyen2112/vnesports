@@ -12,7 +12,7 @@ class Admin extends CI_Controller
         $this->load->library(['session', 'pagination311', 'upload']);
         if (admin()) {
             $g_admin = $this->Madmin->get_by(['id' => $_SESSION['admin']['id']], 'admin');
-                  $this->session->set_userdata('admin', $g_admin);
+            $this->session->set_userdata('admin', $g_admin);
         }
     }
     public function admin()
@@ -101,7 +101,6 @@ class Admin extends CI_Controller
             $data['meta_key']     = $this->input->post('meta_key');
             $data['meta_des']     = $this->input->post('meta_des');
             $data['created_at'] = $time_post;
-            $data['updated_at'] = $time;
             $data['author_id'] = $_SESSION['admin']['id'];
             $data['index_blog'] = $this->input->post('index_blog');
             if ($this->input->post('type') == 1) {
@@ -153,18 +152,22 @@ class Admin extends CI_Controller
                         $error = array('error' => $this->upload->display_errors());
                     } else {
                         $imageThumb = new Image($filedata);
-                        $imageThumb->resize(600, 346, 'crop');
+                        $imageThumb->resize(500, 288, 'crop');
                         $imageThumb->save($alias, $config['upload_path'], 'jpg');
+                        $imageThumb->resize(250, 144, 'crop');
+                        $imageThumb->save($alias . 'x250x144', $config['upload_path'], 'jpg');
                         $data['image'] = $thumb_path;
                     }
                 }
                 if ($id > 0) {
+                    $data['updated_at'] = $time;
                     $insert_blog = 0;
                     $update_blog = $this->Madmin->update(['id' => $id], $data, 'blogs');
                     if ($update_blog) {
                         $insert_blog = $id;
                     }
                 } else {
+                    $data['updated_at'] = $time_post;
                     $insert_blog = $this->Madmin->insert($data, 'blogs');
                 }
                 if ($insert_blog > 0) {
@@ -666,7 +669,7 @@ class Admin extends CI_Controller
         $page = ceil($count / 200);
         for ($i = 1; $i <= $page; $i++) {
             $check_page = ($i - 1) * 200;
-            $sql_limit = "SELECT id,alias,updated_at FROM blogs WHERE type = 0 AND index_blog = 1 AND  time_post <= $time ORDER BY id ASC LIMIT {$check_page}, 200";
+            $sql_limit = "SELECT id,alias,chuyenmuc,updated_at FROM blogs WHERE type = 0 AND index_blog = 1 AND  time_post <= $time ORDER BY id ASC LIMIT {$check_page}, 200";
             $blog_limit = $this->Madmin->query_sql($sql_limit);
             $doc = new DOMDocument("1.0", "utf-8");
             $doc->formatOutput = true;
@@ -676,16 +679,24 @@ class Admin extends CI_Controller
             foreach ($blog_limit as $val) {
                 $url = $doc->createElement("url");
                 $name = $doc->createElement("loc");
-                $name->appendChild($doc->createTextNode(base_url() . $val['alias'] . '/'));
+                if ($val['id'] > 1024) {
+                    $name->appendChild($doc->createTextNode(base_url() . $val['alias']));
+                } else {
+                    $name->appendChild($doc->createTextNode(base_url() . $val['alias'] . '/'));
+                }
                 $url->appendChild($name);
                 $changefreq = $doc->createElement("changefreq");
-                $changefreq->appendChild($doc->createTextNode('daily'));
+                $changefreq->appendChild($doc->createTextNode('hourly'));
                 $url->appendChild($changefreq);
                 $lastmod = $doc->createElement("lastmod");
-                $lastmod->appendChild($doc->createTextNode(date('Y-m-d', $val['updated_at']) . 'T07:24:06+00:00'));
+                $lastmod->appendChild($doc->createTextNode(date('Y-m-d', $val['updated_at'])));
                 $url->appendChild($lastmod);
                 $priority = $doc->createElement("priority");
-                $priority->appendChild($doc->createTextNode('0.8'));
+                if ($val['chuyenmuc'] == 9) {
+                    $priority->appendChild($doc->createTextNode('0.3'));
+                } else {
+                    $priority->appendChild($doc->createTextNode('0.8'));
+                }
                 $url->appendChild($priority);
                 $r->appendChild($url);
             }
@@ -761,7 +772,7 @@ class Admin extends CI_Controller
                 $lastmod->appendChild($doc->createTextNode(date('Y-m-d', $val['created_at']) . 'T07:24:06+00:00'));
                 $url->appendChild($lastmod);
                 $priority = $doc->createElement("priority");
-                $priority->appendChild($doc->createTextNode('0.9'));
+                $priority->appendChild($doc->createTextNode('0.5'));
                 $url->appendChild($priority);
                 $r->appendChild($url);
             }
@@ -827,7 +838,7 @@ class Admin extends CI_Controller
                 $lastmod->appendChild($doc->createTextNode(date('Y-m-d', $val['created_at']) . 'T07:24:06+00:00'));
                 $url->appendChild($lastmod);
                 $priority = $doc->createElement("priority");
-                $priority->appendChild($doc->createTextNode('0.9'));
+                $priority->appendChild($doc->createTextNode('0.7'));
                 $url->appendChild($priority);
                 $r->appendChild($url);
             }
@@ -901,7 +912,7 @@ class Admin extends CI_Controller
             $changefreq->appendChild($doc->createTextNode('daily'));
             $url->appendChild($changefreq);
             $priority = $doc->createElement("priority");
-            $priority->appendChild($doc->createTextNode('0.9'));
+            $priority->appendChild($doc->createTextNode('0.3'));
             $url->appendChild($priority);
             $r->appendChild($url);
         }

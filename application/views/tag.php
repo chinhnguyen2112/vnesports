@@ -10,7 +10,7 @@
                     <div class="blog_top">
                         <?php foreach ($blog as $key => $val) {
                             if ($key == 0) { ?>
-                                <a class="linl_all_detail" title="<?= $val['title'] ?>" href="/<?= $val['alias'] ?>/">
+                                <a class="linl_all_detail" title="<?= $val['title'] ?>" href="/<?= $val['alias'] ?><?= ($val['id'] > 1024) ? '' : '/' ?>">
                                     <img src="/<?= $val['image'] ?>" alt="<?= $val['title'] ?>">
                                     <div class="box_data_top">
                                         <p class="title_blog_top"><?= $val['title'] ?></p>
@@ -24,11 +24,11 @@
                         <?php foreach ($blog as $key => $val) {
                             if ($key > 0) { ?>
                                 <div class="this_train">
-                                    <a href="/<?= $val['alias'] ?>/">
+                                    <a href="/<?= $val['alias'] ?><?= ($val['id'] > 1024) ? '' : '/' ?>">
                                         <img src="/<?= $val['image'] ?>" alt="<?= $val['title'] ?>">
                                         <div class="box_right_data">
                                             <p class="title_blog"><?= $val['title'] ?></p>
-                                            <p class="date_post"><span><?= date('d-m-Y', $val['created_at']) ?></span></p>
+                                            <p class="date_post"><span><?= date('d-m-Y', $val['updated_at']) ?></span></p>
                                             <div class="des_blog"><?= $val['sapo'] ?></div>
                                         </div>
                                     </a>

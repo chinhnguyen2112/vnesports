@@ -192,3 +192,50 @@ function replace_date($time)
 	}
 	return $weekday . ', ' . date('d/m/Y - H:i ', $time);
 }
+function alias_301($alias)
+{
+	if ($alias == '/review-trai-nghiem-choi-game-hit-club-tu-cong-dong-game-thu/') {
+		$alias = '/review-trai-nghiem-choi-game-tu-cong-dong-game-thu/';
+	}
+	if ($alias == '/hi88-dia-chi-choi-game-truc-tuyen-hap-dan-cho-game-thu/') {
+		$alias = '/dia-chi-choi-game-truc-tuyen-hap-dan-cho-game-thu/';
+	}
+	if ($alias == '/bsport-nen-tang-choi-game-truc-tuyen-dinh-cao-uy-tin-nhat/') {
+		$alias = '/nen-tang-choi-game-truc-tuyen-dinh-cao-uy-tin-nhat/';
+	}
+	if ($alias == '/hi88-trai-nghiem-trang-game-the-thao-dinh-cao-hoi-hop/') {
+		$alias = '/trai-nghiem-trang-game-the-thao-dinh-cao-hoi-hop/';
+	}
+	if ($alias == '/web-game-b52club-san-choi-uy-tin-cho-cac-game-thu') {
+		$alias = '/san-choi-game-dinh-cao-chat-luong/';
+	}
+	if ($alias == '/bi-kip-choi-nohu-tai-game-bai-doi-thuong-hieu-qua-nhat/') {
+		$alias = '/bi-kip-choi-nohu-tai-trang-game-hieu-qua-nhat/';
+	}
+	if ($alias == '/web-game-b52club-san-choi-uy-tin-cho-cac-game-thu') {
+		$alias = '/web-game-san-choi-uy-tin-cho-cac-game-thu';
+	}
+	if ($alias == '/huong-dan-tan-thu-cach-choi-poker-de-dang-cung-hitclub') {
+		$alias = '/huong-dan-tan-thu-cach-choi-poker-de-dang';
+	}
+	if ($alias == '/xo-so-go789-doi-doi-sau-17gio-30-phut-hang-ngay') {
+		$alias = '/xo-so-doi-doi-sau-17gio-30-phut-hang-ngay';
+	}
+	if ($alias == '/lien-minh-huyen-thoai-meo-choi-gianh-thang-dam-tai-win55') {
+		$alias = '/lien-minh-huyen-thoai-meo-choi-gianh-thang-dam';
+	}
+	if ($alias == '/trai-nghiem-chan-thuc-tai-sanh-truc-tuyen-hitclub') {
+		$alias = '/trai-nghiem-chan-thuc-tai-sanh-truc-tuyen';
+	}
+	if ($alias == '/68-game-bai/') {
+		$alias = '/review-68-nen-tang-game-hap-dan-hang-dau-hien-nay/';
+	}
+	if ($alias == '/review-1xbet-san-choi-game-uy-tin-hang-dau-tai-viet-nam/') {
+		$alias = '/review-san-choi-game-uy-tin-hang-dau-tai-viet-nam/';
+	}
+	if ($alias == '/huong-dan-cach-tai-go88-apk-va-cai-dat-cho-dien-thoai-android/') {
+		$alias = '/';
+	}
+
+	return $alias;
+}

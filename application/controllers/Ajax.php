@@ -16,17 +16,21 @@ class Ajax extends CI_Controller
         $time = time();
         $page = $this->input->post('page');
         $page = 20 * ($page - 1);
-        $blog = $this->Madmin->get_limit("time_post <= $time AND index_blog = 1 AND type = 0 ", 'blogs', $page, 20);
+        $blog = $this->Madmin->get_limit("time_post <= $time AND index_blog = 1 AND type = 0 AND chuyenmuc != 9", 'blogs', $page, 20);
         $html = '';
         if ($blog != null) {
             foreach ($blog as $val) {
                 // $cate = chuyen_muc(['id' => $val['chuyenmuc']]);
+                $alias=$val['alias'];
+                if ($val['id'] <= 1024) {
+                    $alias = $val['alias'] . '/';
+                }
                 $html .= ' <div class="this_train">
-                                <a href="/' . $val['alias'] . '/">
+                                <a href="/' . $alias . '">
                                     <img src="/' . $val['image'] . '" alt="' . $val['title'] . '">
                                     <div class="box_right_data">
                                         <p class="title_blog">' . $val['title'] . '</p>
-                                        <p class="date_post"><span>' . date('d-m-Y', $val['created_at']) . '</span></p>
+                                        <p class="date_post"><span>' . date('d-m-Y', $val['updated_at']) . '</span></p>
                                         <div class="des_blog">' . $val['sapo'] . '</div>
                                     </div>
                                 </a>
@@ -71,13 +75,17 @@ class Ajax extends CI_Controller
         $html = '';
         if ($blog_cate != null) {
             foreach ($blog_cate as $val) {
+                $alias=$val['alias'];
+                if ($val['id'] <= 1024) {
+                    $alias = $val['alias'] . '/';
+                }
                 $html .= '
                 <div class="this_train">
-                    <a href="/' . $val['alias'] . '/">
+                    <a href="/' . $alias . '">
                         <img src="/' . $val['image'] . '" alt="' . $val['title'] . '">
                         <div class="box_right_data">
                             <p class="title_blog">' . $val['title'] . '</p>
-                            <p class="date_post"><span>' . date('d-m-Y', $val['created_at']) . '</span></p>
+                            <p class="date_post"><span>' . date('d-m-Y', $val['updated_at']) . '</span></p>
                             <div class="des_blog">' . $val['sapo'] . '</div>
                         </div>
                     </a>
